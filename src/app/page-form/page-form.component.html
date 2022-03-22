@@ -13,10 +13,13 @@
 
 
 <nes-container>
-  <form class="nes-max-w-md">
+  <form class="nes-max-w-lg">
     <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Persoonsgegevens</nes-heading>
-      <nes-input label="Voornaam"></nes-input>
+      <nes-input label="Voornaam" required></nes-input>
+      <nes-input label="Achternaam" required></nes-input>
+      <nes-input label="E-mailadres" required type="email"></nes-input>
+      <nes-button variant="brand">Versturen</nes-button>
     </nes-section>
   </form>
 </nes-container>
