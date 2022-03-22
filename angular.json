@@ -24,9 +24,20 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@nessie/webcomponents/dist/design-system-stenciljs/assets",
+                "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@nessie/webcomponents/dist/design-system-stenciljs/i18n",
+                "output": "./build/i18n"
+              }
             ],
             "styles": [
+              "./node_modules/@nessie/webcomponents/dist/design-system-stenciljs/design-system-stenciljs.css",
               "src/styles.css"
             ],
             "scripts": []
