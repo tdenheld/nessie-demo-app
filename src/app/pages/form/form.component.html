@@ -15,8 +15,20 @@
 <nes-container>
   <form class="nes-max-w-lg nes-pb-16">
     <nes-section class="nes-space-y-8">
+      <nes-heading tag="h2">Reisgegevens</nes-heading>
+      <nes-autosuggest hidden-label [itemGroups]="mockGroupedAPI" label="NS-vertrekstation" nes-id="to" name="to"
+        trigger-event="onFocus" placeholder="NS-vertrekstation" full-screen>
+      </nes-autosuggest>
+      <nes-date-input label="Reisdatum" nes-id="traveldate" required></nes-date-input>
+      <nes-input label="Vertrektijd" help-text="Volgens dienstregeling vanaf je NS-vertrekstation.
+        " nes-id="time" required type="time" class="nes-max-w-[200px]"></nes-input>
+      <nes-radio-button-group [options]="transportOptions" nes-id="transport" label="Vervoerbewijs" name="vervoer" tooltip="Vul hier je betreffende vervoerbewijs in.">
+      </nes-radio-button-group>
+    </nes-section>
+
+    <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Persoonsgegevens</nes-heading>
-      <nes-input label="Voornaam" nes-id="firstname" required></nes-input>
+      <nes-input label="Voornaam" nes-id="firstname" required class="nes-max-w-xs"></nes-input>
       <nes-input label="Achternaam" nes-id="lastname" required></nes-input>
       <nes-input label="E-mailadres" nes-id="email" required type="email"></nes-input>
       <nes-button variant="brand">Versturen</nes-button>
