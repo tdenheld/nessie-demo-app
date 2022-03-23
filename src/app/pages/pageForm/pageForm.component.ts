@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-page-form',
-  templateUrl: './page-form.component.html',
-  styleUrls: ['./page-form.component.css']
+  selector: 'page-form',
+  templateUrl: './pageForm.component.html',
+  styleUrls: ['./pageForm.component.css']
 })
 export class PageFormComponent implements OnInit {
 
