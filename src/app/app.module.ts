@@ -4,8 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppNavComponent } from './appNav/appNav.component';
-import { PageFormComponent } from './pages/pageForm/pageForm.component';
-import { PageHomeComponent } from './pages/pageHome/pageHome.component';
+import { PageFormComponent } from './pages/form/form.component';
+import { PageHomeComponent } from './pages/home/home.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
