@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class PageHomeComponent implements OnInit {
+  routes = [
+    { name: 'Form', url: '/form' },
+  ];
   constructor() { }
   ngOnInit(): void { }
 }

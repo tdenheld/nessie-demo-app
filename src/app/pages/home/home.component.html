@@ -1,8 +1,10 @@
 <nes-section>
   <nes-container>
     <ul class="nes-grid nes-gap-3">
-      <li>
-        <nes-link class="nes-cursor-pointer" stand-alone routerLink="/form" font-size="lg">Form</nes-link>
+      <li *ngFor="let entry of routes">
+        <nes-link stand-alone [routerLink]="entry.url" font-size="lg" class="nes-cursor-pointer">
+          {{ entry.name }}
+        </nes-link>
       </li>
     </ul>
   </nes-container>

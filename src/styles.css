@@ -36,5 +36,6 @@
 }
 
 * {
+  @apply focus:nes-outline-none;
   -webkit-tap-highlight-color: transparent;
 }
