@@ -34,3 +34,9 @@
   font-style: italic;
   font-display: swap;
 }
+
+a,
+button {
+    @apply focus:nes-outline-none;
+    -webkit-tap-highlight-color: transparent;
+}
