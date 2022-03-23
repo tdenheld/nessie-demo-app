@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHomeComponent implements OnInit {
   routes = [
-    { name: 'Form', url: '/form' },
+    { name: 'Form', url: '/form', icon: 'file' },
   ];
   constructor() { }
   ngOnInit(): void { }
