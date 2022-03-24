@@ -59,6 +59,7 @@ export class PageFormComponent implements OnInit {
     ],
   },
   ];
+
   transportOptions = [{
     value: true,
     label: "OV-chipkaart",
@@ -73,6 +74,29 @@ export class PageFormComponent implements OnInit {
     label: "E-ticket of mobiel ticket",
   },
   ];
+
+  klasse = [{
+    value: true,
+    label: "2e klas",
+    checked: true,
+  },
+  {
+    value: false,
+    label: "1e klas",
+  },
+  ];
+
+  typeTravel = [{
+    value: true,
+    label: "Enkele reis",
+    checked: true,
+  },
+  {
+    value: false,
+    label: "Retour",
+  },
+  ];
+
   constructor() { }
   ngOnInit(): void { }
 }
