@@ -6,10 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppNavComponent } from './appNav/appNav.component';
 import { PageFormComponent } from './pages/form/form.component';
 import { PageHomeComponent } from './pages/home/home.component';
+import { PageCampaignComponent } from './pages/campaign/campaign.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
-  { path: 'form', component: PageFormComponent }
+  { path: 'form', component: PageFormComponent },
+  { path: 'campaign', component: PageCampaignComponent },
 ];
 
 @NgModule({
@@ -18,6 +20,7 @@ const appRoutes: Routes = [
     AppNavComponent,
     PageFormComponent,
     PageHomeComponent,
+    PageCampaignComponent,
   ],
   imports: [
     BrowserModule,
