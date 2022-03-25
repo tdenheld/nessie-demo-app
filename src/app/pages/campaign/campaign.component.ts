@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import subscriptions from '../../../data/subscriptions.json';
 
 @Component({
   selector: 'app-campaign',
@@ -21,6 +22,13 @@ export class PageCampaignComponent implements OnInit {
     description: 'Je checkt zorgeloos in en uit bij de trein, bus, tram en metro zonder dat je saldo nodig hebt.',
     icon: 'tram',
   },];
+
+  subscriptions = subscriptions.filter(subs =>
+    subs.title === 'Weekend Voordeel' ||
+    subs.title === 'Dal Voordeel' ||
+    subs.title === 'Altijd Voordeel'
+  );
+
   constructor() { }
   ngOnInit(): void { }
 }

@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Jaarabonnement",
+    "price": 75,
+    "meta": "Onbeperkt toegang tot de stalling",
+    "usps": [
+      "Bij 1 stalling, gegarandeerd plek",
+      "Betaal het eerste jaar met iDeal, daarna automatisch incasso",
+      "Alleen persoonlijke OV‑Chipkaart"
+    ]
+  },
+  {
+    "title": "Weekend Voordeel",
+    "price": 2,
+    "usps": [
+      "40% korting in de weekend",
+      "40% korting in het weekend + feestdagen",
+      "40% Samenreiskorting in de daluren voor 3 medereizigers"
+    ]
+  },
+  {
+    "title": "Dal Voordeel",
+    "price": 2.5,
+    "discount": 5.1,
+    "usps": [
+      "40% korting in de daluren",
+      "40% korting in het weekend + feestdagen",
+      "40% Samenreiskorting in de daluren voor 3 medereizigers"
+    ],
+    "sticker": "Aanbieding"
+  },
+  {
+    "title": "Altijd Voordeel",
+    "price": 24.20,
+    "usps": [
+      "20% korting in de spits",
+      "40% korting in de daluren",
+      "40% korting in het weekend + feestdagen",
+      "40% Samenreiskorting in de daluren voor 3 medereizigers"
+    ]
+  },
+  {
+    "title": "Altijd Vrij",
+    "price": 362.40,
+    "usps": [
+      "Onbeperkt reizen in de spits",
+      "Onbeperkt reizen in de daluren",
+      "Onbeperkt korting in het weekend + feestdagen",
+      "40% Samenreiskorting in de daluren voor 3 medereizigers"
+    ]
+  }
+]
