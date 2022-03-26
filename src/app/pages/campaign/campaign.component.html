@@ -1,7 +1,7 @@
-<nes-hero src="./assets/img/banner-ns-flex-shanta3.jpg" heading="NS Flex is hét abonnement dat met je meebeweegt"
+<nes-hero src="./assets/img/bruce-mars-DBGwy7s3QY0-unsplash.jpg" alt="Dame die danst met een koptelefoon op" heading="NS Flex is hét abonnement dat met je meebeweegt"
   intro-text="Wat je vandaag of morgen ook gaat doen, met NS Flex reis je altijd met voordeel en gemak.">
   <div slot="button" class="nes-py-3">
-    <nes-button variant="brand" inverted>Bekijk abonnementen</nes-button>
+    <nes-button>Bekijk abonnementen</nes-button>
   </div>
 </nes-hero>
 
@@ -37,7 +37,7 @@
     <nes-heading tag="h2">
       Meest gekozen abonnementen
     </nes-heading>
-    <div class="nes-mt-12 nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
+    <div class="nes-mt-8 md:nes-mt-12 nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
       <nes-tile-product border="false" *ngFor="let entry of subscriptions" [heading]="entry.title" [list]="entry.usps"
         [price]="entry.price" [discount]="entry.discount" price-trailing-text="/ mnd" [meta]="entry.meta">
         <div slot="sticker" *ngIf="entry.sticker">
@@ -54,6 +54,26 @@
           </nes-button-group>
         </div>
       </nes-tile-product>
+    </div>
+  </nes-container>
+</nes-section>
+
+<nes-section [spacing]="{xl: {top: 32, bottom: 32}}">
+  <nes-container>
+    <div class="nes-max-w-4xl nes-mx-auto">
+      <div class="nes-grid md:nes-grid-cols-2 nes-gap-16 nes-items-center">
+        <div class="nes-space-y-5">
+          <nes-heading tag="h2">
+            Vind het abonnement dat bij je past
+          </nes-heading>
+          <nes-text size="lg">
+            Doe een snelle check om te ontdekken welk abonnement het meest
+            voordelig is voor jou. Binnen 3 minuten advies op maat.
+          </nes-text>
+          <nes-button variant="secondary">Start keuzehulp</nes-button>
+        </div>
+        <img src="./assets/img/atikh-bana-_KaMTEmJnxY-unsplash.jpg" alt="img" class="nes-rounded-lg">
+      </div>
     </div>
   </nes-container>
 </nes-section>
