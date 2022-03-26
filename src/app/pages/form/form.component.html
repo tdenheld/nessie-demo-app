@@ -20,7 +20,7 @@
       </nes-autosuggest>
       <nes-date-input label="Reisdatum" nes-id="traveldate" required></nes-date-input>
       <nes-input label="Vertrektijd" help-text="Volgens dienstregeling vanaf je NS-vertrekstation.
-        " nes-id="time" required type="time" size="20"></nes-input>
+        " nes-id="time" required type="time" max-width="120px"></nes-input>
       <nes-textarea label="Bericht" nes-id="text-1" name="text-1" required>
       </nes-textarea>
       <nes-radio-button-group [options]="transportOptions" nes-id="transport" label="Vervoerbewijs" name="vervoer"
@@ -93,7 +93,7 @@
 
     <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Persoonsgegevens</nes-heading>
-      <nes-input label="Voornaam" nes-id="firstname" required size="36"></nes-input>
+      <nes-input label="Voornaam" nes-id="firstname" required max-width="240px"></nes-input>
       <nes-input label="Achternaam" nes-id="lastname" required></nes-input>
       <nes-input label="E-mailadres" nes-id="email" required type="email"></nes-input>
     </nes-section>
