@@ -5,6 +5,11 @@
       "signature": "370f2371ac12cc6d073bd275236279e8",
       "file": true,
       "replaced": "^1.2.2"
+    },
+    "@nessie/web-fundamentals": {
+      "signature": "0d24352c96e3010316b8a8034ae79f30",
+      "file": true,
+      "replaced": "^1.2.1"
     }
   }
 }
