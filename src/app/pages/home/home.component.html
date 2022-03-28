@@ -2,9 +2,19 @@
   <nes-container>
     <ul class="nes-max-w-lg md:nes-border md:nes-rounded-lg md:nes-p-2 nes-space-y-2">
       <li *ngFor="let entry of routes">
-        <a [routerLink]="entry.url" class="nes-block nes-rounded focus:nes-ring-center md:nes-px-3">
-          <nes-list-item [subtext]="entry.subtext" icon-trailing="chevron-right">
-            <nes-heading tag="h3" size="lg" slot="label">{{ entry.name }}</nes-heading>
+        <a
+          [routerLink]="entry.url"
+          class="nes-block nes-rounded focus:nes-ring-center md:nes-px-3"
+        >
+          <nes-list-item
+            [subtext]="entry.subtext"
+            icon-trailing="chevron-right"
+          >
+            <nes-heading
+              tag="h3"
+              size="lg"
+              slot="label"
+            >{{ entry.name }}</nes-heading>
           </nes-list-item>
         </a>
       </li>

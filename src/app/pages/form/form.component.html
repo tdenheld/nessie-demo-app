@@ -1,7 +1,10 @@
 <section class="nes-pt-10 lg:nes-pt-16">
   <nes-container>
     <nes-heading>Geld terug bij vertraging</nes-heading>
-    <nes-text class="nes-mt-6 nes-max-w-prose" size="lg">
+    <nes-text
+      class="nes-mt-6 nes-max-w-prose"
+      size="lg"
+    >
       Heeft u minimaal 30 minuten vertraging gehad bij NS dan kunt u met dit formulier een aanvraag voor een
       vergoeding indienen. U kunt uw aanvraag ook indienen via Mijn NS, dat gaat nóg eenvoudiger.</nes-text>
 
@@ -15,68 +18,166 @@
   <form class="nes-max-w-lg nes-pb-16 md:nes-pb-24">
     <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Reisgegevens</nes-heading>
-      <nes-autosuggest hidden-label [itemGroups]="mockGroupedAPI" label="NS-vertrekstation" nes-id="to" name="to"
-        trigger-event="onFocus" placeholder="NS-vertrekstation" full-screen>
+      <nes-autosuggest
+        hidden-label
+        [itemGroups]="mockGroupedAPI"
+        label="NS-vertrekstation"
+        nes-id="to"
+        name="to"
+        trigger-event="onFocus"
+        placeholder="NS-vertrekstation"
+        full-screen
+      >
       </nes-autosuggest>
-      <nes-date-input label="Reisdatum" nes-id="traveldate" required></nes-date-input>
-      <nes-input label="Vertrektijd" help-text="Volgens dienstregeling vanaf je NS-vertrekstation.
-        " nes-id="time" required type="time" max-width="120px"></nes-input>
-      <nes-textarea label="Bericht" nes-id="text-1" name="text-1" required>
+      <nes-date-input
+        label="Reisdatum"
+        nes-id="traveldate"
+        required
+      ></nes-date-input>
+      <nes-input
+        label="Vertrektijd"
+        help-text="Volgens dienstregeling vanaf je NS-vertrekstation."
+        nes-id="time"
+        required
+        type="time"
+        max-width="120px"
+      ></nes-input>
+      <nes-textarea
+        label="Bericht"
+        nes-id="text-1"
+        name="text-1"
+        required
+      >
       </nes-textarea>
-      <nes-radio-button-group [options]="transportOptions" nes-id="transport" label="Vervoerbewijs" name="vervoer"
-        tooltip="Vul hier je betreffende vervoerbewijs in.">
+      <nes-radio-button-group
+        [options]="transportOptions"
+        nes-id="transport"
+        label="Vervoerbewijs"
+        name="vervoer"
+        tooltip="Vul hier je betreffende vervoerbewijs in."
+      >
       </nes-radio-button-group>
-      <nes-chipcard-input tooltip="Vul de 16 cijfers van je OV-chipkaart in" label="OV-chipkaartnummer" required>
+      <nes-chipcard-input
+        tooltip="Vul de 16 cijfers van je OV-chipkaart in"
+        label="OV-chipkaartnummer"
+        required
+      >
       </nes-chipcard-input>
-      <nes-creditcard-input label="Creditcard gegevens" required nes-id="creditcard-input"
-      tooltip="The details can be found on your credit card">
-    </nes-creditcard-input>
+      <nes-creditcard-input
+        label="Creditcard gegevens"
+        required
+        nes-id="creditcard-input"
+        tooltip="The details can be found on your credit card"
+      >
+      </nes-creditcard-input>
     </nes-section>
 
     <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Instellingen</nes-heading>
       <div>
-        <nes-toggle class="nes-py-4 nes-border-t nes-border-b" name="toggle-two" value="toggle-two" nes-id="toggle-two"
-          label="Intercity direct" checked>
+        <nes-toggle
+          class="nes-py-4 nes-border-t nes-border-b"
+          name="toggle-two"
+          value="toggle-two"
+          nes-id="toggle-two"
+          label="Intercity direct"
+          checked
+        >
         </nes-toggle>
-        <nes-toggle class="nes-py-4 nes-border-b" name="toggle-three" value="toggle-three" nes-id="toggle-three"
-          label="Jaarabonnement Fietsenstalling">
+        <nes-toggle
+          class="nes-py-4 nes-border-b"
+          name="toggle-three"
+          value="toggle-three"
+          nes-id="toggle-three"
+          label="Jaarabonnement Fietsenstalling"
+        >
         </nes-toggle>
-        <nes-toggle class="nes-py-4 nes-border-b" name="toggle-four" value="toggle-four" nes-id="toggle-four"
-          label="Altijd in de 1e klas">
+        <nes-toggle
+          class="nes-py-4 nes-border-b"
+          name="toggle-four"
+          value="toggle-four"
+          nes-id="toggle-four"
+          label="Altijd in de 1e klas"
+        >
         </nes-toggle>
       </div>
     </nes-section>
 
     <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Reisvoorkeuren</nes-heading>
-      <nes-radio-panel label="Klasse" required name="radio-panel-a" nes-id="radio-panel-a" [options]="klasse">
+      <nes-radio-panel
+        label="Klasse"
+        required
+        name="radio-panel-a"
+        nes-id="radio-panel-a"
+        [options]="klasse"
+      >
       </nes-radio-panel>
-      <nes-radio-panel label="Type reis" required name="radio-panel-b" nes-id="radio-panel-b" [options]="typeTravel">
+      <nes-radio-panel
+        label="Type reis"
+        required
+        name="radio-panel-b"
+        nes-id="radio-panel-b"
+        [options]="typeTravel"
+      >
       </nes-radio-panel>
     </nes-section>
 
     <nes-section>
       <nes-fieldset class="nes-space-y-8">
-        <nes-heading tag="h2" slot="legend">Inloggen</nes-heading>
-        <nes-input type="email" label="E-mailadres" placeholder="ex@example.com" required="true" nes-id="emailInput"
-          name="emailInput">
+        <nes-heading
+          tag="h2"
+          slot="legend"
+        >Inloggen</nes-heading>
+        <nes-input
+          type="email"
+          label="E-mailadres"
+          placeholder="ex@example.com"
+          required="true"
+          nes-id="emailInput"
+          name="emailInput"
+        >
         </nes-input>
-        <nes-input type="password" label="Password" placeholder="•••••••••" required="true" nes-id="passInput"
-          name="passInput"></nes-input>
+        <nes-input
+          type="password"
+          label="Password"
+          placeholder="•••••••••"
+          required="true"
+          nes-id="passInput"
+          name="passInput"
+        ></nes-input>
       </nes-fieldset>
     </nes-section>
 
     <nes-section>
       <div class="nes-space-y-8">
         <nes-heading tag="h2">Samenstelling reizigers</nes-heading>
-        <nes-stepper label="Zonder korting" value="1" min="1" max="10"></nes-stepper>
-        <nes-stepper label="Met korting" value="2" help-text="40% korting buiten de spits">
+        <nes-stepper
+          label="Zonder korting"
+          value="1"
+          min="1"
+          max="10"
+        ></nes-stepper>
+        <nes-stepper
+          label="Met korting"
+          value="2"
+          help-text="40% korting buiten de spits"
+        >
         </nes-stepper>
-        <nes-stepper label="Dagje uit" value="3" min="1" icon="elephant">
+        <nes-stepper
+          label="Dagje uit"
+          value="3"
+          min="1"
+          icon="elephant"
+        >
         </nes-stepper>
-        <nes-stepper label="Internationaal" value="4" min="1" icon="eiffel-tower"
-          help-text="Met NS International reis je voordelig.">
+        <nes-stepper
+          label="Internationaal"
+          value="4"
+          min="1"
+          icon="eiffel-tower"
+          help-text="Met NS International reis je voordelig."
+        >
         </nes-stepper>
       </div>
     </nes-section>
@@ -84,21 +185,53 @@
     <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Voorwaarden</nes-heading>
       <div class="nes-grid nes-gap-1">
-        <nes-checkbox label="Algemene Voorwaarden" nes-id="conditions" name="conditions"></nes-checkbox>
-        <nes-checkbox label="Inschrijven nieuwsbrief" nes-id="news" name="news"></nes-checkbox>
-        <nes-checkbox indeterminate label="Ja, ik wil NS Extra" nes-id="xtra" name="xtra">
+        <nes-checkbox
+          label="Algemene Voorwaarden"
+          nes-id="conditions"
+          name="conditions"
+        ></nes-checkbox>
+        <nes-checkbox
+          label="Inschrijven nieuwsbrief"
+          nes-id="news"
+          name="news"
+        ></nes-checkbox>
+        <nes-checkbox
+          indeterminate
+          label="Ja, ik wil NS Extra"
+          nes-id="extra"
+          name="extra"
+        >
         </nes-checkbox>
       </div>
     </nes-section>
 
     <nes-section class="nes-space-y-8">
       <nes-heading tag="h2">Persoonsgegevens</nes-heading>
-      <nes-input label="Voornaam" nes-id="firstname" required max-width="240px"></nes-input>
-      <nes-input label="Achternaam" nes-id="lastname" required></nes-input>
-      <nes-input label="E-mailadres" nes-id="email" required type="email"></nes-input>
+      <nes-input
+        label="Voornaam"
+        nes-id="firstname"
+        required
+        max-width="240px"
+      ></nes-input>
+      <nes-input
+        label="Achternaam"
+        nes-id="lastname"
+        required
+      ></nes-input>
+      <nes-input
+        label="E-mailadres"
+        nes-id="email"
+        required
+        type="email"
+      ></nes-input>
     </nes-section>
 
-    <nes-button type="submit" variant="brand" icon-trailing id="nes-submit-button">
+    <nes-button
+      type="submit"
+      variant="brand"
+      icon-trailing
+      id="nes-submit-button"
+    >
       Verder naar betalen
     </nes-button>
 
