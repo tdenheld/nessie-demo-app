@@ -26,7 +26,7 @@ export class PageCampaignComponent implements OnInit {
   more = [{
     title: 'Automatische correctie als je vergeet uit te checken',
     description: 'Je kunt tot 6 uur na je reis alsnog uitchecken. Lukt dat niet? Dan proberen we het automatisch te corrigeren als we dat kunnen achterhalen, bijvoorbeeld omdat je vaak dezelfde route aflegt.',
-    icon: 'check-xs',
+    icon: 'check-circle',
   },
   {
     title: 'OV-fiets en fietsenstalling inbegrepen',
