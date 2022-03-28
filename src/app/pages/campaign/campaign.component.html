@@ -55,9 +55,18 @@
 >
   <nes-container>
     <div class="nes-space-y-8 md:nes-space-y-12">
-      <nes-heading tag="h2">
-        Meest gekozen abonnementen
-      </nes-heading>
+      <header>
+        <nes-heading tag="h2">
+          Meest gekozen abonnementen
+        </nes-heading>
+        <nes-link
+          stand-alone
+          routerLink="/abonnementen"
+          href="#"
+          (click)="$event.preventDefault()"
+          class="nes-mt-2"
+        >Bekijk alle abonnementen</nes-link>
+      </header>
       <div class="nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
         <nes-tile-product
           border="false"
@@ -88,7 +97,6 @@
           </div>
         </nes-tile-product>
       </div>
-      <nes-button variant="secondary">Alle abonnementen</nes-button>
     </div>
   </nes-container>
 </nes-section>
