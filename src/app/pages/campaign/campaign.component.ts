@@ -68,6 +68,23 @@ export class PageCampaignComponent implements OnInit {
     subs.title === 'Altijd Voordeel'
   );
 
+  convince = [
+    {
+      icon: "card",
+      heading: "Resterende saldo teruggestort",
+      description: "Stap je over op NS Flex met je huidige OV-chipkaart? Dan wordt het saldo dat nog op die kaart staat automatisch verrekend op je NS Flex-factuur."
+    },
+    {
+      icon: "filter",
+      heading: "Je zit nergens aan vast",
+      description: "Of je nu veel, weinig of even helemaal niet reist; je kunt je Flex-abonnement elke maand wijzigen of opzeggen. Zo beweegt NS Flex met je mee."
+    },{
+      icon: "calendar",
+      heading: "Bedenktijd",
+      description: "Na het afsluiten van een abonnement heb je 14 dagen bedenktijd. In die tijd kun je van het abonnement afzien door middel van het herroepingsrecht."
+    },
+  ];
+
   constructor() { }
   ngOnInit(): void { }
 }

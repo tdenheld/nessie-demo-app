@@ -245,3 +245,43 @@
     </nes-text>
   </nes-container>
 </nes-section>
+
+<nes-section
+  [spacing]="{xl: {top: 32, bottom: 32}}"
+  background-color="bg-tint-primary"
+>
+  <nes-container>
+    <nes-heading
+      tag="h2"
+      class="nes-sr-only"
+    >
+      Veelgestelde vragen over NS Flex
+    </nes-heading>
+    <ul class="nes-grid sm:nes-grid-cols-2 lg:nes-grid-cols-3 nes-gutter">
+      <li
+        *ngFor="let entry of convince"
+        class="nes-p-5 nes-rounded nes-bg-elevated nes-space-y-4"
+      >
+        <div class="
+          nes-h-12
+          nes-flex nes-items-center">
+          <nes-icon
+            [name]="entry.icon"
+            color="text-brand-primary"
+            class="nes-scale-[2] nes-origin-left"
+          >
+          </nes-icon>
+        </div>
+        <nes-heading
+          tag="h3"
+          [size]="{xs:'xl', md:'2xl'}"
+        >
+          {{ entry.heading }}
+        </nes-heading>
+        <nes-text size="lg">
+          {{ entry.description }}
+        </nes-text>
+      </li>
+    </ul>
+  </nes-container>
+</nes-section>
