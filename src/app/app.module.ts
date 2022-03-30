@@ -1,9 +1,10 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
-import { AppNavComponent } from './appNav/appNav.component';
+import { LogoComponent } from './logo/logo.component';
+import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
 import { PageFormComponent } from './pages/form/form.component';
 import { PageHomeComponent } from './pages/home/home.component';
 import { PageCampaignComponent } from './pages/campaign/campaign.component';
@@ -17,10 +18,11 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AppNavComponent,
+    NavComponent,
     PageFormComponent,
     PageHomeComponent,
     PageCampaignComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule,
