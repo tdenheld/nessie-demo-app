@@ -1,0 +1,33 @@
+<footer class="nes-py-8 nes-bg-default nes-border-t">
+  <nes-container>
+    <div class="nes-flex nes-gap-6 nes-justify-between md:nes-items-center">
+      <ul class="nes-grid md:nes-grid-flow-col nes-gap-4 md:nes-gap-8">
+        <li
+          *ngFor="let entry of data.terms"
+          class="
+            md:nes-inline-block
+            first-letter:nes-uppercase"
+        >
+          <a
+            href="#"
+            class="
+              nes-text-subtle
+              hover:nes-underline
+              nes-underline-offset-[3px]"
+          >
+            {{ entry }}
+          </a>
+        </li>
+      </ul>
+      <div class="
+        nes-w-12
+        nes-text-default
+        nes-shrink-0
+        nes-relative
+        nes-top-[5px]
+        md:nes-top-auto">
+        <app-logo></app-logo>
+      </div>
+    </div>
+  </nes-container>
+</footer>

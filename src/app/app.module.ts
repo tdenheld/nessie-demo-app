@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { PageFormComponent } from './pages/form/form.component';
 import { PageHomeComponent } from './pages/home/home.component';
 import { PageCampaignComponent } from './pages/campaign/campaign.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
     PageHomeComponent,
     PageCampaignComponent,
     LogoComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
