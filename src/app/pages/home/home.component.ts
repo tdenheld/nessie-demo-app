@@ -9,6 +9,7 @@ export class PageHomeComponent implements OnInit {
   routes = [
     { name: 'Form', subtext: 'Geld terug bij vertraging', url: '/form' },
     { name: 'Campaign', subtext: 'NS Flex abonnementen', url: '/campaign' },
+    { name: 'Abonnementen', subtext: 'Overzichtspagina', url: '/abonnementen' },
   ];
   constructor() { }
   ngOnInit(): void { }

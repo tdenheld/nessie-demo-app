@@ -9,11 +9,13 @@ import { PageFormComponent } from './pages/form/form.component';
 import { PageHomeComponent } from './pages/home/home.component';
 import { PageCampaignComponent } from './pages/campaign/campaign.component';
 import { FooterComponent } from './footer/footer.component';
+import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
   { path: 'form', component: PageFormComponent },
   { path: 'campaign', component: PageCampaignComponent },
+  { path: 'abonnementen', component: PageAbonnementenComponent },
 ];
 
 @NgModule({
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
     PageFormComponent,
     PageHomeComponent,
     PageCampaignComponent,
+    PageAbonnementenComponent,
     LogoComponent,
     FooterComponent,
   ],
