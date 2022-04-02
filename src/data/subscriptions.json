@@ -7,7 +7,18 @@
       "Bij 1 stalling, gegarandeerd plek",
       "Betaal het eerste jaar met iDeal, daarna automatisch incasso",
       "Alleen persoonlijke OV‑Chipkaart"
-    ]
+    ],
+    "type": "fiets"
+  },
+  {
+    "title": "Basis",
+    "price": 0,
+    "usps": [
+      "Geen abonnementskosten",
+      "Reizen zonder korting",
+      "Wel de voordelen van NS Flex"
+    ],
+    "type": "gratis"
   },
   {
     "title": "Weekend Voordeel",
@@ -16,7 +27,8 @@
       "40% korting in de weekend",
       "40% korting in het weekend + feestdagen",
       "40% Samenreiskorting in de daluren voor 3 medereizigers"
-    ]
+    ],
+    "type": "korting"
   },
   {
     "title": "Dal Voordeel",
@@ -27,7 +39,8 @@
       "40% korting in het weekend + feestdagen",
       "40% Samenreiskorting in de daluren voor 3 medereizigers"
     ],
-    "sticker": "Aanbieding"
+    "sticker": "Aanbieding",
+    "type": "korting"
   },
   {
     "title": "Altijd Voordeel",
@@ -47,6 +60,7 @@
       "Onbeperkt reizen in de daluren",
       "Onbeperkt korting in het weekend + feestdagen",
       "40% Samenreiskorting in de daluren voor 3 medereizigers"
-    ]
+    ],
+    "type": "vrij"
   }
 ]
