@@ -10,7 +10,7 @@ export class PageAbonnementenComponent implements OnInit {
   subscriptions = [{
     heading: "Gratis basisabonnement",
     products: subscriptions.filter(subs => subs.type === 'gratis')
-  },{
+  }, {
     heading: "Reizen met korting",
     products: subscriptions.filter(subs => subs.type === 'korting')
   },
@@ -21,6 +21,10 @@ export class PageAbonnementenComponent implements OnInit {
   {
     heading: "Overige abonnementen",
     products: subscriptions.filter(subs => subs.type === 'overig')
+  },
+  {
+    heading: "Extra mogelijkheden",
+    products: subscriptions.filter(subs => subs.type === 'extra')
   }];
 
   constructor() { }

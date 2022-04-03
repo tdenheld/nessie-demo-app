@@ -432,7 +432,7 @@
         <div slot="footer">
           <nes-button
             compact
-            [variant]="entry.type != 'overig' && 'extra' ? 'brand' : 'secondary'"
+            [variant]="entry.type === 'overig' || entry.type === 'extra' ? 'secondary' : 'brand'"
             width-auto
           >
             Bekijk meer

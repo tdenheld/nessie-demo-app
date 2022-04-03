@@ -106,5 +106,23 @@
     "icon": "cross-border",
     "body": "Met het Grensabonnement reis je onbeperkt op 1 traject vanaf een grensstation.",
     "type": "overig"
+  },
+  {
+    "title": "OV-fiets",
+    "icon": "ov-fiets",
+    "body": "OV-fiets is de makkelijke huurfiets voor het laatste stukje van je reis. Als je met de trein aankomt op het station, huur je snel een OV-fiets om naar je afspraak te fietsen.",
+    "type": "extra"
+  },
+  {
+    "title": "Samenreiskorting",
+    "icon": "co-traveller",
+    "body": "Met Samenreiskorting krijg je 40% korting op je ritprijs in de daluren. Zet Samenreiskorting aan in de NS-app of in Mijn NS.",
+    "type": "extra"
+  },
+  {
+    "title": "NS-fietsenstalling",
+    "icon": "bike-shed-account",
+    "body": "Je fiets stallen en repareren op het station. Maak je regelmatig gebruik van de fietsenstalling op jouw station? Dan is een abonnement wel zo handig.",
+    "type": "extra"
   }
 ]
