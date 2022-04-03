@@ -62,7 +62,8 @@
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "vrij"
-  },  {
+  },
+  {
     "title": "Dal Vrij",
     "price": 107.90,
     "usps": [
@@ -93,5 +94,17 @@
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "vrij"
+  },
+  {
+    "title": "Kids Vrij",
+    "icon": "children",
+    "body": "Met Kids Vrij reizen kinderen van 4 t/m 11 jaar gratis en onbeperkt met jou mee, ook tijdens de spits.",
+    "type": "overig"
+  },
+  {
+    "title": "Grensabonnement",
+    "icon": "cross-border",
+    "body": "Met het Grensabonnement reis je onbeperkt op 1 traject vanaf een grensstation.",
+    "type": "overig"
   }
 ]

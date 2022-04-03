@@ -17,6 +17,10 @@ export class PageAbonnementenComponent implements OnInit {
   {
     heading: "Onbeperkt reizen",
     products: subscriptions.filter(subs => subs.type === 'vrij')
+  },
+  {
+    heading: "Overige abonnementen",
+    products: subscriptions.filter(subs => subs.type === 'overig')
   }];
 
   constructor() { }
