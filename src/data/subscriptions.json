@@ -26,7 +26,7 @@
     "usps": [
       "40% korting in de weekend",
       "40% korting in het weekend + feestdagen",
-      "40% Samenreiskorting in de daluren voor 3 medereizigers"
+      "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "korting"
   },
@@ -35,9 +35,9 @@
     "price": 2.5,
     "discount": 5.1,
     "usps": [
-      "40% korting in de daluren",
+      "40% korting buiten de spits",
       "40% korting in het weekend + feestdagen",
-      "40% Samenreiskorting in de daluren voor 3 medereizigers"
+      "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "sticker": "Aanbieding",
     "type": "korting"
@@ -47,19 +47,50 @@
     "price": 24.20,
     "usps": [
       "20% korting in de spits",
-      "40% korting in de daluren",
+      "40% korting buiten de spits",
       "40% korting in het weekend + feestdagen",
-      "40% Samenreiskorting in de daluren voor 3 medereizigers"
-    ]
+      "40% Samenreiskorting buiten de spits voor 3 medereizigers"
+    ],
+    "type": "korting"
+  },
+  {
+    "title": "Weekend Vrij",
+    "price": 31.60,
+    "usps": [
+      "Onbeperkt reizen in het weekend",
+      "Onbeperkt reizen op feestdagen",
+      "40% Samenreiskorting buiten de spits voor 3 medereizigers"
+    ],
+    "type": "vrij"
+  },  {
+    "title": "Dal Vrij",
+    "price": 107.90,
+    "usps": [
+      "Onbeperkt reizen buiten de spits",
+      "Onbeperkt reizen in het weekend + feestdagen",
+      "40% Samenreiskorting buiten de spits voor 3 medereizigers"
+    ],
+    "type": "vrij"
   },
   {
     "title": "Altijd Vrij",
     "price": 362.40,
     "usps": [
       "Onbeperkt reizen in de spits",
-      "Onbeperkt reizen in de daluren",
-      "Onbeperkt korting in het weekend + feestdagen",
-      "40% Samenreiskorting in de daluren voor 3 medereizigers"
+      "Onbeperkt reizen buiten de spits",
+      "Onbeperkt reizen in het weekend + feestdagen",
+      "40% Samenreiskorting buiten de spits voor 3 medereizigers"
+    ],
+    "type": "vrij"
+  },
+  {
+    "title": "Traject Vrij",
+    "meta": "Prijs trajectafhankelijk",
+    "usps": [
+      "Onbeperkt reizen op een vast traject",
+      "40% korting buiten de spits op andere trajecten",
+      "40% korting in het weekend + feestdagen op andere trajecten",
+      "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "vrij"
   }
