@@ -113,12 +113,14 @@
   </nes-container>
 </section>
 
-<nes-section [spacing]="{xl: {top: 32, bottom: 32}}">
+<div class="nes-section nes-pb-0"></div>
+
+<nes-section *ngFor="let group of subscriptions">
   <nes-container>
-    <nes-heading tag="h2" weight="normal">Reizen met korting</nes-heading>
+    <nes-heading tag="h2" weight="normal">{{ group.heading }}</nes-heading>
     <div class="nes-mt-6 md:nes-mt-12 nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
       <nes-tile-product
-        *ngFor="let entry of subscriptions"
+        *ngFor="let entry of group.products"
         [heading]="entry.title"
         [list]="entry.usps"
         [price]="entry.price"
@@ -149,3 +151,5 @@
 
   </nes-container>
 </nes-section>
+
+<div class="nes-section nes-pb-0"></div>

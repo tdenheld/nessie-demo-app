@@ -7,7 +7,17 @@ import subscriptions from '../../../data/subscriptions.json';
   styleUrls: ['./abonnementen.component.css']
 })
 export class PageAbonnementenComponent implements OnInit {
-  subscriptions = subscriptions;
+  subscriptions = [{
+    heading: "Gratis basisabonnement",
+    products: subscriptions.filter(subs => subs.type === 'gratis')
+  },{
+    heading: "Reizen met korting",
+    products: subscriptions.filter(subs => subs.type === 'korting')
+  },
+  {
+    heading: "Onbeperkt reizen",
+    products: subscriptions.filter(subs => subs.type === 'vrij')
+  }];
 
   constructor() { }
   ngOnInit(): void { }
