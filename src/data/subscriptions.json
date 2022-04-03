@@ -85,7 +85,7 @@
   },
   {
     "title": "Traject Vrij",
-    "priceTrail": "Prijs trajectafhankelijk",
+    "price": "Prijs trajectafhankelijk",
     "usps": [
       "Onbeperkt reizen op een vast traject",
       "40% korting buiten de spits op andere trajecten",
