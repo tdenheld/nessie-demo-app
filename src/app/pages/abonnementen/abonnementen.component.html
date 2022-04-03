@@ -125,7 +125,7 @@
         [list]="entry.usps"
         [price]="entry.price"
         [discount]="entry.discount"
-        price-trailing-text="/ mnd"
+        [price-trailing-text]="entry.priceTrail || '/ mnd'"
         [meta]="entry.meta"
       >
         <div
