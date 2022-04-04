@@ -8,9 +8,11 @@
         <p class="nes-text-default nes-text-xl md:nes-text-3xl">
           NS Flex beweegt met je mee
         </p>
-        <a routerLink="/keuzehulp" class="nes-block nes-rounded focus:nes-ring md:nes-px-3">
+        <a
+          routerLink="/keuzehulp"
+          class="nes-mt-6 sm:nes-max-w-[280px] nes-block nes-rounded focus:nes-ring nes-transition"
+        >
           <nes-tile-container
-            class="nes-mt-6 sm:nes-max-w-[280px]"
             padding="false"
             border="false"
           >
@@ -430,6 +432,7 @@
         price-trailing-text="/ mnd"
         [meta]="entry.meta"
         [iconDetail]="entry.icon"
+        [routerLink]="entry.id"
       >
         <div
           slot="sticker"
@@ -461,6 +464,7 @@
             compact
             [variant]="getOddSubs(entry.type) ? 'secondary' : 'brand'"
             width-auto
+            [routerLink]="entry.id"
           >
             Bekijk meer
           </nes-button>

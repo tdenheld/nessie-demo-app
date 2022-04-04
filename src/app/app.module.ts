@@ -10,12 +10,14 @@ import { PageHomeComponent } from './pages/home/home.component';
 import { PageCampaignComponent } from './pages/campaign/campaign.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.component';
+import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
   { path: 'form', component: PageFormComponent },
   { path: 'campaign', component: PageCampaignComponent },
   { path: 'abonnementen', component: PageAbonnementenComponent },
+  { path: 'abonnementen/:id', component: PageAbonnementenDetailComponent },
 ];
 
 @NgModule({
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
     PageAbonnementenComponent,
     LogoComponent,
     FooterComponent,
+    PageAbonnementenDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 [
   {
     "title": "Jaarabonnement",
+    "id": "jaarabonnement",
     "price": 75,
     "meta": "Onbeperkt toegang tot de stalling",
     "usps": [
@@ -12,6 +13,7 @@
   },
   {
     "title": "Basis",
+    "id": "basis",
     "price": 0,
     "usps": [
       "Geen abonnementskosten",
@@ -22,6 +24,7 @@
   },
   {
     "title": "Weekend Voordeel",
+    "id": "weekend-voordeel",
     "price": 2,
     "usps": [
       "40% korting in de weekend",
@@ -32,6 +35,7 @@
   },
   {
     "title": "Dal Voordeel",
+    "id": "dal-voordeel",
     "price": 2.5,
     "discount": 5.1,
     "usps": [
@@ -44,6 +48,7 @@
   },
   {
     "title": "Altijd Voordeel",
+    "id": "altijd-voordeel",
     "price": 24.20,
     "usps": [
       "20% korting in de spits",
@@ -55,6 +60,7 @@
   },
   {
     "title": "Weekend Vrij",
+    "id": "weekend-vrij",
     "price": 31.60,
     "usps": [
       "Onbeperkt reizen in het weekend",
@@ -65,6 +71,7 @@
   },
   {
     "title": "Dal Vrij",
+    "id": "dal-vrij",
     "price": 107.90,
     "usps": [
       "Onbeperkt reizen buiten de spits",
@@ -75,6 +82,7 @@
   },
   {
     "title": "Altijd Vrij",
+    "id": "altijd-vrij",
     "price": 362.40,
     "usps": [
       "Onbeperkt reizen in de spits",
@@ -86,6 +94,7 @@
   },
   {
     "title": "Traject Vrij",
+    "id": "traject-vrij",
     "price": "Prijs trajectafhankelijk",
     "usps": [
       "Onbeperkt reizen op een vast traject",
@@ -97,30 +106,35 @@
   },
   {
     "title": "Kids Vrij",
+    "id": "kids-vrij",
     "icon": "children",
     "body": "Met Kids Vrij reizen kinderen van 4 t/m 11 jaar gratis en onbeperkt met jou mee, ook tijdens de spits.",
     "type": "overig"
   },
   {
     "title": "Grensabonnement",
+    "id": "grensabonnement",
     "icon": "cross-border",
     "body": "Met het Grensabonnement reis je onbeperkt op 1 traject vanaf een grensstation.",
     "type": "overig"
   },
   {
     "title": "OV-fiets",
+    "id": "ov-fiets",
     "icon": "ov-fiets",
     "body": "OV-fiets is de makkelijke huurfiets voor het laatste stukje van je reis. Als je met de trein aankomt op het station, huur je snel een OV-fiets om naar je afspraak te fietsen.",
     "type": "extra"
   },
   {
     "title": "Samenreiskorting",
+    "id": "samenreiskorting",
     "icon": "co-traveller",
     "body": "Met Samenreiskorting krijg je 40% korting op je ritprijs in de daluren. Zet Samenreiskorting aan in de NS-app of in Mijn NS.",
     "type": "extra"
   },
   {
     "title": "NS-fietsenstalling",
+    "id": "ns-fietsenstalling",
     "icon": "bike-shed-account",
     "body": "Je fiets stallen en repareren op het station. Maak je regelmatig gebruik van de fietsenstalling op jouw station? Dan is een abonnement wel zo handig.",
     "type": "extra"
