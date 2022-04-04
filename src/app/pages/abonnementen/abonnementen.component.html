@@ -1,15 +1,32 @@
 <section class="nes-bg-tint-secondary">
   <nes-container>
-    <div class="nes-grid sm:nes-grid-cols-7 sm:nes-gap-16 nes-items-center">
-      <header class="nes-pt-8 nes-pb-4 sm:nes-py-0 sm:nes-col-span-4">
+    <div class="nes-grid md:nes-grid-cols-7 md:nes-gap-16 nes-items-center">
+      <header class="nes-py-8 sm:nes-py-16 md:nes-col-span-4">
         <nes-heading [size]="{xs: '6xl', md: '8xl', lg: '9xl', xl: '10xl'}">
           Abonnementen
         </nes-heading>
         <p class="nes-text-default nes-text-xl md:nes-text-3xl">
           NS Flex beweegt met je mee
         </p>
+        <nes-tile-container
+          class="nes-mt-6 sm:nes-max-w-[280px]"
+          padding="false"
+          border="false"
+        >
+          <nes-list-item
+            label="Start keuzehulp"
+            hover="false"
+            indent
+            icon-leading="filter"
+            color="text-info"
+            icon-trailing="chevron-right"
+            label-bold
+            class="nes-py-[6px]"
+            subtext="Help mij kiezen"
+          ></nes-list-item>
+        </nes-tile-container>
       </header>
-      <div class="nes-max-w-xl sm:nes-col-span-3">
+      <div class="nes-max-w-xl md:nes-col-span-3 nes-self-end">
         <svg
           viewBox="0 0 734 480"
           fill="none"
@@ -401,7 +418,7 @@
       tag="h2"
       weight="normal"
     >{{ group.heading }}</nes-heading>
-    <div class="nes-mt-4 md:nes-mt-8 nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
+    <div class="nes-mt-6 md:nes-mt-8 nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
       <nes-tile-product
         *ngFor="let entry of group.products"
         [heading]="entry.title"
@@ -429,60 +446,32 @@
             {{ entry.body }}
           </nes-text>
         </div>
-        <div slot="footer">
+        <div
+          slot="footer"
+          class="
+            nes-flex
+            nes-gap-4
+            nes-items-center
+            nes-justify-between
+            nes-h-[42px]"
+        >
           <nes-button
             compact
-            [variant]="entry.type === 'overig' || entry.type === 'extra' ? 'secondary' : 'brand'"
+            [variant]="getOddSubs(entry.type) ? 'secondary' : 'brand'"
             width-auto
           >
             Bekijk meer
           </nes-button>
+          <nes-checkbox
+            *ngIf="!getOddSubs(entry.type)"
+            label="Vergelijk"
+          ></nes-checkbox>
         </div>
       </nes-tile-product>
     </div>
 
   </nes-container>
 </nes-section>
-
-<!-- <nes-section>
-  <nes-container>
-    <div class="nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
-      <div *ngFor="let group of subscriptions">
-        <nes-heading tag="h2" weight="normal">{{ group.heading }}</nes-heading>
-        <div class="nes-mt-6 nes-grid nes-gutter">
-          <nes-tile-product
-            *ngFor="let entry of group.products"
-            [heading]="entry.title"
-            [list]="entry.usps"
-            [price]="entry.price"
-            [discount]="entry.discount"
-            price-trailing-text="/ mnd"
-            [meta]="entry.meta"
-          >
-            <div
-              slot="sticker"
-              *ngIf="entry.sticker"
-            >
-              <nes-sticker
-                filled
-                compact
-              >{{ entry.sticker }}</nes-sticker>
-            </div>
-            <div slot="footer">
-              <nes-button
-                compact
-                variant="brand"
-                width-auto
-              >
-                Bekijk abonnement
-              </nes-button>
-            </div>
-          </nes-tile-product>
-        </div>
-      </div>
-    </div>
-  </nes-container>
-</nes-section> -->
 
 <div class="nes-section nes-pb-0"></div>
 

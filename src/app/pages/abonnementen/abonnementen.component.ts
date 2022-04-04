@@ -27,6 +27,10 @@ export class PageAbonnementenComponent implements OnInit {
     products: subscriptions.filter(subs => subs.type === 'extra')
   }];
 
+  getOddSubs(type: string) {
+    return type === 'overig' || type === 'extra';
+  }
+
   constructor() { }
   ngOnInit(): void { }
 
