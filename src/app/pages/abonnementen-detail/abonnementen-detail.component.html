@@ -1,4 +1,4 @@
-<section class="nes-bg-tint-secondary">
+<nes-section class="nes-bg-tint-secondary">
   <nes-container>
     <div class="nes-grid md:nes-grid-cols-7 md:nes-gap-16 nes-items-center">
       <header class="md:nes-col-span-4">
@@ -10,6 +10,11 @@
               routerLink="/abonnementen"
               stand-alone
             >Abonnementen</nes-link>
+          </nes-breadcrumb-item>
+          <nes-breadcrumb-item>
+            <nes-link
+              stand-alone
+            >{{ product.title }}</nes-link>
           </nes-breadcrumb-item>
         </nes-breadcrumb>
         <nes-heading
@@ -28,9 +33,9 @@
           </nes-text-list-item>
         </nes-text-list>
       </header>
-      <div class="nes-max-w-xl md:nes-col-span-3 nes-self-end">
-        <svg-icon src="./assets/img/hero-1.svg"></svg-icon>
+      <div class="nes-max-w-xl md:nes-col-span-3 nes-justify-self-center">
+        <svg-icon src="./assets/img/hand-percentage.svg" [svgStyle]="{ 'width':'100%' }"></svg-icon>
       </div>
     </div>
   </nes-container>
-</section>
+</nes-section>
