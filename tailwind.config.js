@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        // Complex site-specific column configuration
+        '1-m': '1fr max-content',
+      }
+    }
   },
   plugins: [],
 }

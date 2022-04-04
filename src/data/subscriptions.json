@@ -20,7 +20,12 @@
       "Reizen zonder korting",
       "Wel de voordelen van NS Flex"
     ],
-    "type": "gratis"
+    "type": "gratis",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Weekend Voordeel",
@@ -31,7 +36,12 @@
       "40% korting in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
-    "type": "korting"
+    "type": "korting",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Dal Voordeel",
@@ -44,7 +54,12 @@
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "sticker": "Aanbieding",
-    "type": "korting"
+    "type": "korting",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Altijd Voordeel",
@@ -56,7 +71,12 @@
       "40% korting in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
-    "type": "korting"
+    "type": "korting",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Weekend Vrij",
@@ -67,7 +87,12 @@
       "Onbeperkt reizen op feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
-    "type": "vrij"
+    "type": "vrij",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Dal Vrij",
@@ -90,7 +115,12 @@
       "Onbeperkt reizen in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
-    "type": "vrij"
+    "type": "vrij",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Traject Vrij",
@@ -102,7 +132,12 @@
       "40% korting in het weekend en feestdagen op andere trajecten",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
-    "type": "vrij"
+    "type": "vrij",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Kids Vrij",

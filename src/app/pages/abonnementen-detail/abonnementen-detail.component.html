@@ -35,3 +35,53 @@
     </div>
   </nes-container>
 </nes-section>
+
+<nes-section>
+  <nes-container>
+    <div class="nes-grid nes-gutter lg:nes-gap-24 md:nes-grid-cols-1-m">
+      <aside class="md:nes-order-last lg:nes-w-[480px]">
+        <div class="nes-border nes-rounded-lg nes-p-5 nes-space-y-5">
+          <nes-heading
+            tag="h3"
+            [size]="{xs: 'xl', md: '3xl'}"
+          >Bestel {{ product.title }}</nes-heading>
+          <nes-radio-panel
+            label="Betalingsopties"
+            hidden-label
+            [options]="[{label:'NS Flex', checked:true}, {label:'Op saldo'}]"
+            required
+            name="payment"
+            nes-id="payment"
+          ></nes-radio-panel>
+          <nes-text-list *ngFor="let option of product.options">
+            <nes-text-list-item>{{ option }}</nes-text-list-item>
+          </nes-text-list>
+          <nes-divider></nes-divider>
+          <nes-price price="2.5" discount="5.1" trailing-text="/ mnd"></nes-price>
+          <nes-button width-full variant="brand">
+            Bestellen
+          </nes-button>
+        </div>
+      </aside>
+      <main>
+        <nes-heading
+          tag="h2"
+          [size]="{xs: '2xl', md: '5xl'}"
+          weight="normal"
+        >
+          Het abonnement voor buiten de spits
+        </nes-heading>
+        <nes-text class="nes-mt-6">
+          Buiten de spits, in het weekend en op feestdagen. Zijn dat de momenten dat je de trein pakt? Dan is NS Flex
+          Dal
+          Voordeel een voordelige keuze.
+          <br><br>
+          De meeste reizigers hebben hun abonnementskosten er al met 1 retour buiten de spits
+          per maand uit. Je kunt ook kiezen voor een Dal Voordeel-abonnement op saldo. Dan zet je geld op je
+          OV-chipkaart
+          voordat je reist.
+        </nes-text>
+      </main>
+    </div>
+  </nes-container>
+</nes-section>
