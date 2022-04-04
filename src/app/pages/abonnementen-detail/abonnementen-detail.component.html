@@ -20,13 +20,19 @@
           list-type="checked"
           size="lg"
           class="nes-mt-6"
+          color="text-default"
         >
           <nes-text-list-item *ngFor="let entry of product.usps">
             {{ entry }}
           </nes-text-list-item>
         </nes-text-list>
       </header>
-      <div class="nes-hidden md:nes-block nes-max-w-xl md:nes-col-span-3 nes-justify-self-center">
+      <div class="
+            nes-hidden
+            md:nes-block
+            nes-max-w-xl
+            md:nes-col-span-3
+            nes-justify-self-center">
         <svg-icon
           src="./assets/img/hand-percentage.svg"
           [svgStyle]="{ 'width':'100%' }"
@@ -38,8 +44,8 @@
 
 <nes-section>
   <nes-container>
-    <div class="nes-grid nes-gutter lg:nes-gap-24 md:nes-grid-cols-1-m">
-      <aside class="md:nes-order-last lg:nes-w-[480px]">
+    <div class="nes-grid nes-gap-12 xl:nes-gap-24 md:nes-grid-cols-2 xl:nes-grid-cols-1-m">
+      <aside class="md:nes-order-last xl:nes-w-[480px]">
         <div class="nes-border nes-rounded-lg nes-p-5 nes-space-y-5">
           <nes-heading
             tag="h3"
@@ -53,12 +59,21 @@
             name="payment"
             nes-id="payment"
           ></nes-radio-panel>
-          <nes-text-list *ngFor="let option of product.options">
-            <nes-text-list-item>{{ option }}</nes-text-list-item>
+          <nes-text-list>
+            <nes-text-list-item *ngFor="let option of product.options">
+              {{ option }}
+            </nes-text-list-item>
           </nes-text-list>
           <nes-divider></nes-divider>
-          <nes-price price="2.5" discount="5.1" trailing-text="/ mnd"></nes-price>
-          <nes-button width-full variant="brand">
+          <nes-price
+            [price]="product.price"
+            [discount]="product.discount"
+            trailing-text="/ mnd"
+          ></nes-price>
+          <nes-button
+            width-full
+            variant="brand"
+          >
             Bestellen
           </nes-button>
         </div>
@@ -66,8 +81,7 @@
       <main>
         <nes-heading
           tag="h2"
-          [size]="{xs: '2xl', md: '5xl'}"
-          weight="normal"
+          [size]="{xs: 'xl', md: '3xl'}"
         >
           Het abonnement voor buiten de spits
         </nes-heading>
@@ -75,7 +89,8 @@
           Buiten de spits, in het weekend en op feestdagen. Zijn dat de momenten dat je de trein pakt? Dan is NS Flex
           Dal
           Voordeel een voordelige keuze.
-          <br><br>
+        </nes-text>
+        <nes-text class="nes-mt-4">
           De meeste reizigers hebben hun abonnementskosten er al met 1 retour buiten de spits
           per maand uit. Je kunt ook kiezen voor een Dal Voordeel-abonnement op saldo. Dan zet je geld op je
           OV-chipkaart

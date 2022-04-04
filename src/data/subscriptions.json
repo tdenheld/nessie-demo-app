@@ -103,7 +103,12 @@
       "Onbeperkt reizen in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
-    "type": "vrij"
+    "type": "vrij",
+    "options": [
+      "Elk moment opzegbaar (na eerste maand)",
+      "Geen saldo op OV-chipkaart nodig",
+      "Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso"
+    ]
   },
   {
     "title": "Altijd Vrij",
