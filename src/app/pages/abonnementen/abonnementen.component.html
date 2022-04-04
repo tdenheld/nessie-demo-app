@@ -8,23 +8,25 @@
         <p class="nes-text-default nes-text-xl md:nes-text-3xl">
           NS Flex beweegt met je mee
         </p>
-        <nes-tile-container
-          class="nes-mt-6 sm:nes-max-w-[280px]"
-          padding="false"
-          border="false"
-        >
-          <nes-list-item
-            label="Start keuzehulp"
-            hover="false"
-            indent
-            icon-leading="filter"
-            color="text-info"
-            icon-trailing="chevron-right"
-            label-bold
-            class="nes-py-[6px]"
-            subtext="Help mij kiezen"
-          ></nes-list-item>
-        </nes-tile-container>
+        <a routerLink="/keuzehulp" class="nes-block nes-rounded focus:nes-ring md:nes-px-3">
+          <nes-tile-container
+            class="nes-mt-6 sm:nes-max-w-[280px]"
+            padding="false"
+            border="false"
+          >
+            <nes-list-item
+              label="Start keuzehulp"
+              hover="false"
+              indent
+              icon-leading="filter"
+              color="text-info"
+              icon-trailing="chevron-right"
+              label-bold
+              class="nes-py-[6px]"
+              subtext="Help mij kiezen"
+            ></nes-list-item>
+          </nes-tile-container>
+        </a>
       </header>
       <div class="nes-max-w-xl md:nes-col-span-3 nes-self-end">
         <svg
