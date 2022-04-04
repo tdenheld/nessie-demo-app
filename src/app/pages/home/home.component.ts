@@ -10,6 +10,7 @@ export class PageHomeComponent implements OnInit {
     { name: 'Form', subtext: 'Geld terug bij vertraging', url: '/form' },
     { name: 'Campaign', subtext: 'NS Flex abonnementen', url: '/campaign' },
     { name: 'Abonnementen', subtext: 'Overzichtspagina', url: '/abonnementen' },
+    { name: 'Product', subtext: 'Dal Voordeel', url: '/abonnementen/dal-voordeel' },
   ];
   constructor() { }
   ngOnInit(): void { }

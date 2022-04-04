@@ -28,7 +28,7 @@
     "price": 2,
     "usps": [
       "40% korting in de weekend",
-      "40% korting in het weekend + feestdagen",
+      "40% korting in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "korting"
@@ -40,7 +40,7 @@
     "discount": 5.1,
     "usps": [
       "40% korting buiten de spits",
-      "40% korting in het weekend + feestdagen",
+      "40% korting in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "sticker": "Aanbieding",
@@ -53,7 +53,7 @@
     "usps": [
       "20% korting in de spits",
       "40% korting buiten de spits",
-      "40% korting in het weekend + feestdagen",
+      "40% korting in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "korting"
@@ -75,7 +75,7 @@
     "price": 107.90,
     "usps": [
       "Onbeperkt reizen buiten de spits",
-      "Onbeperkt reizen in het weekend + feestdagen",
+      "Onbeperkt reizen in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "vrij"
@@ -87,7 +87,7 @@
     "usps": [
       "Onbeperkt reizen in de spits",
       "Onbeperkt reizen buiten de spits",
-      "Onbeperkt reizen in het weekend + feestdagen",
+      "Onbeperkt reizen in het weekend en feestdagen",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "vrij"
@@ -99,7 +99,7 @@
     "usps": [
       "Onbeperkt reizen op een vast traject",
       "40% korting buiten de spits op andere trajecten",
-      "40% korting in het weekend + feestdagen op andere trajecten",
+      "40% korting in het weekend en feestdagen op andere trajecten",
       "40% Samenreiskorting buiten de spits voor 3 medereizigers"
     ],
     "type": "vrij"

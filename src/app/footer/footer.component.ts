@@ -12,11 +12,11 @@ export class FooterComponent implements OnInit {
       {}
     ],
     terms: [
-      "disclaimer",
-      "privacy",
-      "cookies",
-      "bedrijfsinformatie",
-      "voorwaarden en folders",
+      'disclaimer',
+      'privacy',
+      'cookies',
+      'bedrijfsinformatie',
+      'voorwaarden en folders',
     ]
   };
 
