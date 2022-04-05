@@ -10,6 +10,8 @@ export class ProductPreviewComponent implements OnInit {
 
   @Input() heading: string = '';
   @Input() link: boolean = false;
+  @Input() buttonVariant: string = 'brand';
+
   @Input() subscriptions = subscriptions.filter(subs =>
     subs.title === 'Weekend Voordeel' ||
     subs.title === 'Dal Voordeel' ||
