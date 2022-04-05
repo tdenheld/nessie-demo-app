@@ -60,8 +60,14 @@
             nes-id="payment"
           ></nes-radio-panel>
           <nes-text-list>
-            <nes-text-list-item *ngFor="let option of product.options">
-              {{ option }}
+            <nes-text-list-item>
+              Elk moment opzegbaar (na eerste maand)
+            </nes-text-list-item>
+            <nes-text-list-item>
+              Geen saldo op OV-chipkaart nodig
+            </nes-text-list-item>
+            <nes-text-list-item>
+              Reiskosten voor trein en overige OV maandelijks betalen via automatische incasso
             </nes-text-list-item>
           </nes-text-list>
           <nes-divider></nes-divider>
@@ -70,6 +76,11 @@
             [discount]="product.discount"
             trailing-text="/ mnd"
           ></nes-price>
+          <nes-divider></nes-divider>
+          <nes-text size="sm" color="text-subtle">
+            Exclusief reiskosten<br>
+            <span class="nes-text-success-contrast">3 maanden lang, élke maand € 2,60 korting</span>
+          </nes-text>
           <nes-button
             width-full
             variant="brand"
