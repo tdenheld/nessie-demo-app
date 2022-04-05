@@ -7,7 +7,17 @@
       nes-grid nes-grid-cols-2 md:nes-grid-cols-3-2
       nes-group nes-leading-tight
       nes-text-sm
-      sm:nes-text-base"
+      sm:nes-text-base
+      nes-relative
+      after:nes-absolute
+      after:nes-inset-0
+      after:nes--inset-x-3
+      first:after:nes-top-3
+      last:after:nes-bottom-3
+      after:nes-rounded
+      after:nes-transition
+      after:nes-duration-1000
+      after:hover:nes-bg-alpha-black-50"
     *ngFor="let entry of features"
   >
     <div class="
@@ -15,20 +25,19 @@
           nes-grid nes-items-center
           nes-text-default
           group-first:nes-pt-5
-          group-first:nes-rounded-t
-          group-last:nes-pb-5
-          group-last:nes-rounded-b">
+          group-last:nes-pb-5">
       {{ entry[0] }}
     </div>
     <div class="
-          nes-px-5 nes-py-2
+          nes-px-5 nes-py-3
           nes-bg-tint-primary
           nes-grid nes-place-content-center
           nes-text-center
+          nes-text-body
           group-first:nes-pt-5
-          group-first:nes-rounded-t
+          group-first:nes-rounded-t-lg
           group-last:nes-pb-5
-          group-last:nes-rounded-b">
+          group-last:nes-rounded-b-lg">
 
       {{ entry[1] !== 'check-icon' ? entry[1] : '' }}
 
@@ -40,4 +49,8 @@
       ></nes-icon>
     </div>
   </div>
+</div>
+
+<div class="nes-text-body nes-text-xs nes-pt-2">
+  *na eerste maand
 </div>

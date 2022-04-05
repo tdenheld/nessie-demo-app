@@ -62,12 +62,6 @@ export class PageCampaignComponent implements OnInit {
     }
   ];
 
-  subscriptions = subscriptions.filter(subs =>
-    subs.title === 'Weekend Voordeel' ||
-    subs.title === 'Dal Voordeel' ||
-    subs.title === 'Altijd Voordeel'
-  );
-
   convince = [
     {
       icon: 'card',

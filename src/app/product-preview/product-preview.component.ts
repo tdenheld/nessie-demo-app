@@ -1,0 +1,21 @@
+import { Component, OnInit, Input } from '@angular/core';
+import subscriptions from '../../data/subscriptions.json';
+
+@Component({
+  selector: 'app-product-preview',
+  templateUrl: './product-preview.component.html',
+  styleUrls: ['./product-preview.component.css']
+})
+export class ProductPreviewComponent implements OnInit {
+
+  @Input() heading: string = '';
+  @Input() link: boolean = false;
+  @Input() subscriptions = subscriptions.filter(subs =>
+    subs.title === 'Weekend Voordeel' ||
+    subs.title === 'Dal Voordeel' ||
+    subs.title === 'Altijd Voordeel'
+  );;
+
+  constructor() { }
+  ngOnInit(): void { }
+}

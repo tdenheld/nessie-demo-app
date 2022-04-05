@@ -8,7 +8,10 @@
   intro-text="Wat je vandaag of morgen ook gaat doen, met NS Flex reis je altijd met voordeel en gemak."
 >
   <div slot="button">
-    <nes-button width-auto routerLink="/abonnementen">Bekijk abonnementen</nes-button>
+    <nes-button
+      width-auto
+      routerLink="/abonnementen"
+    >Bekijk abonnementen</nes-button>
   </div>
 </nes-hero>
 
@@ -54,51 +57,7 @@
   [spacing]="{xl: {top: 32, bottom: 32}}"
 >
   <nes-container>
-    <div class="nes-space-y-8 md:nes-space-y-12">
-      <header>
-        <nes-heading tag="h2">
-          Meest gekozen abonnementen
-        </nes-heading>
-        <nes-link
-          stand-alone
-          routerLink="/abonnementen"
-          href="#"
-          (click)="$event.preventDefault()"
-          class="nes-mt-2"
-        >Bekijk alle abonnementen</nes-link>
-      </header>
-      <div class="nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
-        <nes-tile-product
-          border="false"
-          *ngFor="let entry of subscriptions"
-          [heading]="entry.title"
-          [list]="entry.usps"
-          [price]="entry.price"
-          [discount]="entry.discount"
-          price-trailing-text="/ mnd"
-          [meta]="entry.meta"
-        >
-          <div
-            slot="sticker"
-            *ngIf="entry.sticker"
-          >
-            <nes-sticker
-              filled
-              compact
-            >{{ entry.sticker }}</nes-sticker>
-          </div>
-          <div slot="footer">
-            <nes-button
-              compact
-              variant="brand"
-              width-auto
-            >
-              Bekijk abonnement
-            </nes-button>
-          </div>
-        </nes-tile-product>
-      </div>
-    </div>
+    <app-product-preview [heading]="'Meest gekozen abonnementen'"></app-product-preview>
   </nes-container>
 </nes-section>
 

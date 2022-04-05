@@ -1,0 +1,47 @@
+<div class="nes-space-y-8 md:nes-space-y-12">
+  <header>
+    <nes-heading tag="h2">
+      {{ heading }}
+    </nes-heading>
+    <nes-link
+      *ngIf="link"
+      stand-alone
+      routerLink="/abonnementen"
+      href="#"
+      (click)="$event.preventDefault()"
+      class="nes-mt-2"
+    >Bekijk alle abonnementen</nes-link>
+  </header>
+  <div class="nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
+    <nes-tile-product
+      border="false"
+      *ngFor="let entry of subscriptions"
+      [heading]="entry.title"
+      [list]="entry.usps"
+      [price]="entry.price"
+      [discount]="entry.discount"
+      price-trailing-text="/ mnd"
+      [meta]="entry.meta"
+      [routerLink]="'/abonnementen/' + entry.id"
+    >
+      <div
+        slot="sticker"
+        *ngIf="entry.sticker"
+      >
+        <nes-sticker
+          filled
+          compact
+        >{{ entry.sticker }}</nes-sticker>
+      </div>
+      <div slot="footer">
+        <nes-button
+          compact
+          variant="brand"
+          width-auto
+        >
+          Bekijk abonnement
+        </nes-button>
+      </div>
+    </nes-tile-product>
+  </div>
+</div>

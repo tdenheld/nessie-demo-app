@@ -15,6 +15,9 @@ export class ProductTableComponent implements OnInit {
     ["OV-fietsabonnement inbegrepen", "check-icon",],
     ["Na inchecken naar 1e klas wisselen", "check-icon",],
     ["Correctie na vergeten incheck", "check-icon",],
+    ["40% korting in de daluren", "check-icon",],
+    ["40% korting in het weekend + feestdagen", "check-icon",],
+    ["40% Samenreiskorting in de daluren voor 3 medereizigers", "check-icon",],
   ];
 
   constructor() { }

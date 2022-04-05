@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.component';
 import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
 import { ProductTableComponent } from './product-table/product-table.component';
+import { ProductPreviewComponent } from './product-preview/product-preview.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
     FooterComponent,
     PageAbonnementenDetailComponent,
     ProductTableComponent,
+    ProductPreviewComponent,
   ],
   imports: [
     BrowserModule,
