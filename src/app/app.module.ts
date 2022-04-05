@@ -13,6 +13,7 @@ import { PageCampaignComponent } from './pages/campaign/campaign.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.component';
 import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
+import { ProductTableComponent } from './product-table/product-table.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
     LogoComponent,
     FooterComponent,
     PageAbonnementenDetailComponent,
+    ProductTableComponent,
   ],
   imports: [
     BrowserModule,

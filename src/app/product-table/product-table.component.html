@@ -1,0 +1,43 @@
+<div
+  role="table"
+  class="nes-mt-6 nes-max-w-2xl"
+>
+  <div
+    class="
+      nes-grid nes-grid-cols-2 md:nes-grid-cols-3-2
+      nes-group nes-leading-tight
+      nes-text-sm
+      sm:nes-text-base"
+    *ngFor="let entry of features"
+  >
+    <div class="
+          nes-pr-5 nes-py-2 
+          nes-grid nes-items-center
+          nes-text-default
+          group-first:nes-pt-5
+          group-first:nes-rounded-t
+          group-last:nes-pb-5
+          group-last:nes-rounded-b">
+      {{ entry[0] }}
+    </div>
+    <div class="
+          nes-px-5 nes-py-2
+          nes-bg-tint-primary
+          nes-grid nes-place-content-center
+          nes-text-center
+          group-first:nes-pt-5
+          group-first:nes-rounded-t
+          group-last:nes-pb-5
+          group-last:nes-rounded-b">
+
+      {{ entry[1] !== 'check-icon' ? entry[1] : '' }}
+
+      <nes-icon
+        *ngIf="entry[1] === 'check-icon'"
+        name="check-thick"
+        color="text-success"
+        resize="18px"
+      ></nes-icon>
+    </div>
+  </div>
+</div>
