@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "@nessie/webcomponents": {
-      "signature": "1fa349c13c5c28e48fbf5c239a648f62",
-      "file": true
-    }
-  }
-}
