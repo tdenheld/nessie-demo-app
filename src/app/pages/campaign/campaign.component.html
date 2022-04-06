@@ -123,38 +123,7 @@
 
 <nes-section [spacing]="{xl: {top: 32, bottom: 32}}">
   <nes-container>
-    <nes-heading tag="h2">
-      Doe meer met NS Flex
-    </nes-heading>
-    <ul class="nes-mt-8 nes-grid md:nes-grid-cols-3 nes-gap-12 md:nes-gap-16 nes-max-w-5xl">
-      <li
-        *ngFor="let entry of more"
-        class="nes-space-y-4"
-      >
-        <div class="
-            nes-w-24
-            nes-h-24
-            nes-rounded-full            
-            nes-border
-            nes-flex nes-items-center nes-justify-center">
-          <nes-icon
-            [name]="entry.icon"
-            color="text-brand-primary"
-            class="nes-scale-[2]"
-          >
-          </nes-icon>
-        </div>
-        <nes-heading
-          tag="h3"
-          [size]="{xs:'xl', md:'2xl'}"
-        >
-          {{ entry.title }}
-        </nes-heading>
-        <nes-text color="text-subtle">
-          {{ entry.description }}
-        </nes-text>
-      </li>
-    </ul>
+    <app-more-flex></app-more-flex>
   </nes-container>
 </nes-section>
 

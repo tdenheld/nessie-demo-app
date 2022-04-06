@@ -15,6 +15,7 @@ import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.com
 import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
+import { MoreFlexComponent } from './more-flex/more-flex.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
     PageAbonnementenDetailComponent,
     ProductTableComponent,
     ProductPreviewComponent,
+    MoreFlexComponent,
   ],
   imports: [
     BrowserModule,

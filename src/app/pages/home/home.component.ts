@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHomeComponent implements OnInit {
   routes = [
-    { name: 'Form', subtext: 'Geld terug bij vertraging', url: '/form' },
     { name: 'Campaign', subtext: 'NS Flex abonnementen', url: '/campaign' },
     { name: 'Abonnementen', subtext: 'Overzichtspagina', url: '/abonnementen' },
     { name: 'Product', subtext: 'Dal Voordeel', url: '/abonnementen/dal-voordeel' },
+    { name: 'Form', subtext: 'Geld terug bij vertraging', url: '/form' },
   ];
   constructor() { }
   ngOnInit(): void { }
