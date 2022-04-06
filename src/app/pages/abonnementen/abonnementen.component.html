@@ -44,56 +44,57 @@
       weight="normal"
     >{{ group.heading }}</nes-heading>
     <div class="nes-mt-6 md:nes-mt-8 nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gutter">
-      <nes-tile-product
-        *ngFor="let entry of group.products"
-        [heading]="entry.title"
-        [list]="entry.usps"
-        [price]="entry.price"
-        [discount]="entry.discount"
-        price-trailing-text="/ mnd"
-        [meta]="entry.meta"
-        [iconDetail]="entry.icon"
-        [routerLink]="entry.id"
-      >
-        <div
-          slot="sticker"
-          *ngIf="entry.sticker"
+      <div *ngFor="let entry of group.products">
+        <nes-tile-product
+          [heading]="entry.title"
+          [list]="entry.usps"
+          [price]="entry.price"
+          [discount]="entry.discount"
+          price-trailing-text="/ mnd"
+          [meta]="entry.meta"
+          [iconDetail]="entry.icon"
         >
-          <nes-sticker
-            filled
-            compact
-          >{{ entry.sticker }}</nes-sticker>
-        </div>
-        <div
-          *ngIf="entry.body"
-          slot="content"
-        >
-          <nes-text>
-            {{ entry.body }}
-          </nes-text>
-        </div>
-        <div
-          slot="footer"
-          class="
-            nes-flex
-            nes-gap-4
-            nes-items-center
-            nes-justify-between
-            nes-h-[42px]"
-        >
-          <nes-button
-            compact
-            [variant]="getOddSubs(entry.type) ? 'secondary' : 'brand'"
-            width-auto
+          <div
+            slot="sticker"
+            *ngIf="entry.sticker"
           >
-            Bekijk meer
-          </nes-button>
-          <nes-checkbox
-            *ngIf="!getOddSubs(entry.type)"
-            label="Vergelijk"
-          ></nes-checkbox>
-        </div>
-      </nes-tile-product>
+            <nes-sticker
+              filled
+              compact
+            >{{ entry.sticker }}</nes-sticker>
+          </div>
+          <div
+            *ngIf="entry.body"
+            slot="content"
+          >
+            <nes-text>
+              {{ entry.body }}
+            </nes-text>
+          </div>
+          <div
+            slot="footer"
+            class="
+              nes-flex
+              nes-gap-4
+              nes-items-center
+              nes-justify-between
+              nes-h-[42px]"
+          >
+            <nes-button
+              compact
+              [variant]="getOddSubs(entry.type) ? 'secondary' : 'brand'"
+              width-auto
+              [routerLink]="entry.id"
+            >
+              Bekijk meer
+            </nes-button>
+            <nes-checkbox
+              *ngIf="!getOddSubs(entry.type)"
+              label="Vergelijk"
+            ></nes-checkbox>
+          </div>
+        </nes-tile-product>
+      </div>
     </div>
 
   </nes-container>
