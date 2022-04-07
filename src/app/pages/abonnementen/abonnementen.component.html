@@ -9,7 +9,7 @@
           NS Flex beweegt met je mee
         </p>
         <a
-          routerLink="/keuzehulp"
+          (click)="showMessageToast = true"
           class="nes-mt-6 sm:nes-max-w-[280px] nes-block nes-rounded focus:nes-ring nes-transition"
         >
           <nes-tile-container
@@ -29,6 +29,12 @@
             ></nes-list-item>
           </nes-tile-container>
         </a>
+        <nes-message-toast
+          *ngIf="showMessageToast"
+          label="Keuzehulp is kapot"
+          action="E-mail Maarten"
+          (nesOnHideComplete)="showMessageToast = false"
+        ></nes-message-toast>
       </header>
       <div class="nes-max-w-xl md:nes-col-span-3 nes-self-end">
         <svg-icon src="./assets/img/hero-1.svg"></svg-icon>

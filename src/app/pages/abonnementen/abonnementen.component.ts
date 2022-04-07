@@ -7,6 +7,8 @@ import subscriptions from '../../../data/subscriptions.json';
   styleUrls: ['./abonnementen.component.css']
 })
 export class PageAbonnementenComponent implements OnInit {
+  showMessageToast = false;
+  
   subscriptions = [{
     heading: 'Gratis basisabonnement',
     products: subscriptions.filter(subs => subs.type === 'gratis')
@@ -32,6 +34,8 @@ export class PageAbonnementenComponent implements OnInit {
   }
 
   constructor() { }
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.showMessageToast;
+  }
 
 }
