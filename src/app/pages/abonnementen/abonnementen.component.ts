@@ -8,10 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./abonnementen.component.css']
 })
 export class PageAbonnementenComponent implements OnInit {
-  public showMessageToast = false;
+  showMessageToast = false;
+
   goto = (route: string) => {
     this.router.navigate([`/abonnementen/${route}`]);
   };
+
+  getOddSubs(type: string) {
+    return type === 'overig' || type === 'extra';
+  }
 
   subscriptions = [{
     heading: 'Gratis basisabonnement',
@@ -32,10 +37,6 @@ export class PageAbonnementenComponent implements OnInit {
     heading: 'Extra mogelijkheden',
     products: subscriptions.filter(subs => subs.type === 'extra')
   }];
-
-  getOddSubs(type: string) {
-    return type === 'overig' || type === 'extra';
-  }
 
   constructor(private router: Router) { }
   ngOnInit(): void { }
