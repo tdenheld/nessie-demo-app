@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin');
-
 module.exports = {
   presets: [require("@nessie/web-fundamentals/build/web/tailwind.config")],
   content: [
@@ -27,22 +25,4 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    plugin(({
-      addUtilities
-    }) => {
-      let ani = {};
-      for (let i = 0; i < 32; i++) {
-        ani = {
-          [`.a-dur-${i * 100}`]: {
-            animationDuration: `${i * 100}ms`,
-          },
-          [`.a-del-${i * 100}`]: {
-            animationDelay: `${i * 100}ms`,
-          },
-        };
-      }
-      addUtilities(ani);
-    })
-  ]
 }

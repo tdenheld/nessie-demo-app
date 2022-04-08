@@ -1,4 +1,4 @@
-<nes-section class="nes-bg-tint-secondary">
+<nes-section class="nes-bg-tint-secondary nes-animate-fade-in">
   <nes-container>
     <div class="nes-grid md:nes-grid-cols-7 nes-gap-16 nes-items-center">
       <header class="md:nes-col-span-4">
@@ -43,7 +43,10 @@
 <nes-section>
   <nes-container>
     <div class="nes-grid nes-gap-12 xl:nes-gap-24 md:nes-grid-cols-2 xl:nes-grid-cols-1-m">
-      <aside class="md:nes-order-last xl:nes-w-[480px]">
+      <aside
+        class="md:nes-order-last xl:nes-w-[480px] nes-animate-fade-in"
+        style="animation-delay: 400ms"
+      >
         <div class="nes-border nes-rounded-lg nes-p-5 nes-space-y-5 nes-sticky nes-top-12">
           <nes-heading
             tag="h3"
@@ -90,7 +93,7 @@
           </nes-button>
         </div>
       </aside>
-      <main>
+      <main class="nes-animate-fade-in" style="animation-delay: 200ms">
         <div class="nes-section nes-pt-0">
           <nes-heading
             tag="h2"
@@ -127,6 +130,8 @@
 <nes-section
   background-color="bg-tint-primary"
   [spacing]="{xl: {top: 32, bottom: 32}}"
+  class="nes-animate-fade-in"
+  style="animation-delay: 500ms"
 >
   <nes-container>
     <app-product-preview
@@ -136,10 +141,17 @@
   </nes-container>
 </nes-section>
 
-<nes-section [spacing]="{xl: {top: 32, bottom: 32}}">
+<nes-section
+  [spacing]="{xl: {top: 32, bottom: 32}}"
+  class="nes-animate-fade-in"
+  style="animation-delay: 600ms"
+>
   <nes-container>
     <app-more-flex></app-more-flex>
   </nes-container>
 </nes-section>
 
-<app-footer></app-footer>
+<app-footer
+  class="nes-animate-fade-in"
+  style="animation-delay: 800ms"
+></app-footer>
