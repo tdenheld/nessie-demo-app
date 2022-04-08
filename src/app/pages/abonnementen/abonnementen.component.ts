@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import subscriptions from '../../../data/subscriptions.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-abonnementen',
@@ -7,8 +8,11 @@ import subscriptions from '../../../data/subscriptions.json';
   styleUrls: ['./abonnementen.component.css']
 })
 export class PageAbonnementenComponent implements OnInit {
-  showMessageToast = false;
-  
+  public showMessageToast = false;
+  goto = (route: string) => {
+    this.router.navigate([`/abonnementen/${route}`]);
+  };
+
   subscriptions = [{
     heading: 'Gratis basisabonnement',
     products: subscriptions.filter(subs => subs.type === 'gratis')
@@ -33,9 +37,7 @@ export class PageAbonnementenComponent implements OnInit {
     return type === 'overig' || type === 'extra';
   }
 
-  constructor() { }
-  ngOnInit(): void { 
-    this.showMessageToast;
-  }
+  constructor(private router: Router) { }
+  ngOnInit(): void { }
 
 }

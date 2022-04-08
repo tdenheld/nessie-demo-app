@@ -34,6 +34,7 @@
           label="Keuzehulp is kapot"
           action="E-mail Maarten"
           (nesOnHideComplete)="showMessageToast = false"
+          auto-hide
         ></nes-message-toast>
       </header>
       <div class="nes-max-w-xl md:nes-col-span-3 nes-self-end">
@@ -65,6 +66,7 @@
         price-trailing-text="/ mnd"
         [meta]="entry.meta"
         [iconDetail]="entry.icon"
+        (nesOnClick)="goto(entry.id)"
       >
         <div
           slot="sticker"
