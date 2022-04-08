@@ -13,7 +13,7 @@ module.exports = {
         '3-2': '3fr 2fr',
       },
       animation: {
-        'fade-in': 'fade-in 700ms var(--nes-motion-ease-out) both',
+        'fade-in': 'fade-in 1000ms var(--nes-motion-ease-out) both',
       },
       keyframes: {
         'fade-in': {
@@ -31,15 +31,18 @@ module.exports = {
     plugin(({
       addUtilities
     }) => {
-      let aDur = {};
+      let ani = {};
       for (let i = 0; i < 32; i++) {
-        aDur = {
+        ani = {
           [`.a-dur-${i * 100}`]: {
             animationDuration: `${i * 100}ms`,
-          }
+          },
+          [`.a-del-${i * 100}`]: {
+            animationDelay: `${i * 100}ms`,
+          },
         };
       }
-      addUtilities(aDur);
+      addUtilities(ani);
     })
   ]
 }
