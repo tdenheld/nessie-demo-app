@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class PageAbonnementenComponent implements OnInit {
   showMessageToast = false;
 
-  goto = (route: string) => {
+  goto(route: string) {
     this.router.navigate([`/abonnementen/${route}`]);
   };
 
@@ -39,6 +39,8 @@ export class PageAbonnementenComponent implements OnInit {
   }];
 
   constructor(private router: Router) { }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.showMessageToast;
+  }
 
 }
