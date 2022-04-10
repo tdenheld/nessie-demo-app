@@ -1,4 +1,4 @@
-<section class="nes-bg-tint-secondary nes-animate-fade-in">
+<section class="nes-bg-tint-secondary">
   <nes-container>
     <div class="nes-grid md:nes-grid-cols-7 md:nes-gap-16 nes-items-center">
       <header class="nes-py-8 sm:nes-py-16 md:nes-col-span-4">
@@ -45,11 +45,7 @@
   auto-hide
 ></nes-message-toast>
 
-<nes-section
-  *ngFor="let group of subscriptions; let i = index;"
-  class="nes-animate-fade-in"
-  [ngStyle]="{animationDelay: i * 200 + 'ms'}"
->
+<nes-section *ngFor="let group of subscriptions; let i = index;">
   <nes-container>
     <nes-heading
       tag="h2"
@@ -72,8 +68,6 @@
         [meta]="entry.meta"
         [iconDetail]="entry.icon"
         (nesOnClick)="goto(entry.id)"
-        class="nes-animate-fade-in"
-        [ngStyle]="{animationDelay: j * 200 + 'ms'}"
       >
         <div
           slot="sticker"
