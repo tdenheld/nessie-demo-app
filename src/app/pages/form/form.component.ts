@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class PageFormComponent implements OnInit {
+
   mockGroupedAPI = [{
     heading: "Favorieten",
     items: [{
