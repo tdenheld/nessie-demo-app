@@ -41,7 +41,7 @@
 }
 
 html {
-  @apply nes-bg-elevated nes-transition;
+  @apply nes-bg-default nes-transition;
 }
 
 html.is-dark {
