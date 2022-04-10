@@ -8,12 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
   isDark: boolean = false;
 
-  toggleDarkMode() {
+  setTheme() {
     const root = document.querySelector("html");
-    !this.isDark ? root?.classList.add("is-dark") : root?.classList.remove("is-dark");
-    this.isDark = !this.isDark;
+    localStorage.getItem("theme") === "dark" ?
+      root?.classList.add("is-dark") :
+      root?.classList.remove("is-dark");
+  }
+
+  toggleDarkMode() {
+    if (localStorage.getItem("theme") === "dark") {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
+
+    this.setTheme();
   }
 
   constructor() { }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.setTheme();
+  }
 }

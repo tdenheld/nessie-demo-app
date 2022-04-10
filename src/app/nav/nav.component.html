@@ -15,12 +15,21 @@
         </div>
       </div>
     </a>
-    <nes-button
-      variant="tertiary"
-      icon-only
-      icon-leading="settings"
+    <button
+      class="
+        nes-transition
+        focus:nes-ring
+        nes-w-8
+        nes-h-8
+        nes-grid
+        nes-place-content-center
+        nes-text-default
+        nes-fill-current
+        nes-rounded"
       aria-label="Schakel naar donkere modus"
       (click)="toggleDarkMode()"
-    ></nes-button>
+    >
+      <svg-icon src="./assets/img/moon.svg"></svg-icon>
+    </button>
   </div>
 </nav>
