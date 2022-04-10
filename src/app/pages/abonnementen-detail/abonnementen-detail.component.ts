@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { tick } from '@angular/core/testing';
 import { ActivatedRoute, Params } from '@angular/router';
 import subscriptions from '../../../data/subscriptions.json';
 
