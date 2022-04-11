@@ -20,7 +20,12 @@
           class="nes-mt-6"
           color="text-default"
         >
-          <nes-text-list-item *ngFor="let entry of product.usps">
+          <nes-text-list-item
+            list-type="checked"
+            size="lg"
+            color="text-default"
+            *ngFor="let entry of product.usps"
+          >
             {{ entry }}
           </nes-text-list-item>
         </nes-text-list>
