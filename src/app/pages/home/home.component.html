@@ -1,6 +1,11 @@
 <nes-section>
   <nes-container>
-    <div class="nes-grid md:nes-grid-cols-2 nes-gap-6 md:nes-gap-16 nes-items-center">
+    <div class="
+          nes-grid
+          md:nes-grid-cols-2
+          nes-gap-6
+          md:nes-gap-16
+          nes-items-center">
       <div>
         <nes-heading [size]="{xs: '6xl', md: '8xl', lg: '9xl', xl: '10xl'}">Pages</nes-heading>
         <ul class="
@@ -12,11 +17,17 @@
               md:nes-border
               md:nes-border-subtle
               md:nes-rounded-lg
-              md:nes-p-2">
+              md:nes-p-2"
+        >
           <li *ngFor="let entry of routes">
             <a
               [routerLink]="entry.url"
-              class="nes-block nes-rounded focus:nes-ring-center md:nes-px-3 nes-transition"
+              class="
+                  nes-block
+                  nes-rounded
+                  focus:nes-ring-center
+                  md:nes-px-3
+                  nes-transition"
             >
               <nes-list-item
                 [subtext]="entry.subtext"
@@ -32,7 +43,13 @@
           </li>
         </ul>
       </div>
-      <div class="nes-max-w-lg nes-justify-self-center nes-w-full">
+      <div class="
+            nes-max-w-lg 
+            nes-justify-self-center 
+            nes-w-full 
+            md:nes-relative 
+            md:nes-top-14"
+      >
         <svg-icon src="./assets/img/nessie.svg"></svg-icon>
       </div>
     </div>
