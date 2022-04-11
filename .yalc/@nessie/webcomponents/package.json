@@ -41,5 +41,5 @@
   "publishConfig": {
     "registry": "https://nexus.topaas.ns.nl/repository/NS_DSM_NPM/"
   },
-  "yalcSig": "a76b441d0dec29c3fe9e4aa19ad8e55f"
+  "yalcSig": "0f10c1fc8cf6a86c04312c52d8e59440"
 }
