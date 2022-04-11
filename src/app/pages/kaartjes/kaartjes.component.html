@@ -10,6 +10,7 @@
           nes-bg-form-bg
           nes-rounded
           nes-transition">
+
         <nes-autosuggest
           border="false"
           label="van"
@@ -24,6 +25,7 @@
           class="nes-relative"
           [ngClass]="{'nes-z-10': fromActive}"
         ></nes-autosuggest>
+
         <nes-autosuggest
           border="false"
           label="naar"
@@ -38,6 +40,7 @@
           class="nes-relative"
           [ngClass]="{'nes-z-10': toActive}"
         ></nes-autosuggest>
+
         <nes-divider class="
           nes-absolute 
           nes-w-full 
@@ -45,6 +48,7 @@
           nes-px-4
           md:nes-px-5">
         </nes-divider>
+
         <div
           class="
             nes-absolute
@@ -59,6 +63,56 @@
   </nes-container>
 </section>
 
-<section class="nes-h-screen">
+<nes-section>
+  <nes-container>
+    <nes-heading
+      tag="h2"
+      weight="normal"
+    >Meest gekocht</nes-heading>
+    <div class="
+          nes-mt-6
+          md:nes-mt-8
+          nes-grid
+          md:nes-grid-cols-2
+          xl:nes-grid-cols-3
+          nes-gutter">
+      <nes-tile-product
+        *ngFor="let entry of tickets"
+        [heading]="entry.title"
+        [iconDetail]="entry.icon"
+      >
+        <div
+          *ngIf="entry.body"
+          slot="content"
+        >
+          <nes-text>
+            {{ entry.body }}
+          </nes-text>
+        </div>
+        <nes-button-group
+          slot="footer"
+          orientation="row"
+        >
+          <nes-button
+            compact
+            variant="brand"
+            width-auto
+          >
+            Direct bestellen
+          </nes-button>
+          <nes-button
+            variant="tertiary"
+            compact
+          >Lees meer</nes-button>
+        </nes-button-group>
+      </nes-tile-product>
+    </div>
+
+  </nes-container>
+</nes-section>
+
+<section class="nes-section nes-pb-0">
   <nes-container></nes-container>
 </section>
+
+<app-footer></app-footer>

@@ -9,6 +9,24 @@ export class PageKaartjesComponent implements OnInit {
   fromActive = false;
   toActive = false;
 
+  tickets = [
+    {
+      title: 'Dagretour',
+      icon: 'round-trip',
+      body: 'Heen en weer op hetzelfde traject, op je mobiel of printen.'
+    },
+    {
+      title: 'Enkele reis',
+      icon: 'one-way',
+      body: 'Een enkele reis naar je bestemming, op je mobiel of printen.'
+    },
+    {
+      title: 'Railrunner',
+      icon: 'children',
+      body: 'Voordelig reizen voor kinderen, op je mobiel of printen.'
+    }
+  ];
+
   mockGroupedAPI = [
     {
       heading: "Favorieten",
