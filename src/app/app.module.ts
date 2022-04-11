@@ -13,6 +13,7 @@ import { PageCampaignComponent } from './pages/campaign/campaign.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.component';
 import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
+import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { MoreFlexComponent } from './more-flex/more-flex.component';
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'campaign', component: PageCampaignComponent },
   { path: 'abonnementen', component: PageAbonnementenComponent },
   { path: 'abonnementen/:id', component: PageAbonnementenDetailComponent },
+  { path: 'kaartjes', component: PageKaartjesComponent },
 ];
 
 @NgModule({
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
     ProductTableComponent,
     ProductPreviewComponent,
     MoreFlexComponent,
+    PageKaartjesComponent,
   ],
   imports: [
     BrowserModule,

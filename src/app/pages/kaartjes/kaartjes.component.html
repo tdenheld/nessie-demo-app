@@ -1,0 +1,36 @@
+<section class="nes-section nes-bg-brand-primary">
+  <nes-container>
+    <nes-heading>Koop je treinkaartjes online</nes-heading>
+    <form
+      action="#"
+      class="nes-max-w-lg nes-mt-8"
+    >
+      <div class="nes-space-y-3">
+        <nes-autosuggest
+          border="false"
+          label="van"
+          nes-id="van"
+          name="van"
+          [itemGroups]="mockGroupedAPI"
+          placeholder="station"
+          full-screen
+          fixed-label-width="42px"
+        ></nes-autosuggest>
+        <nes-autosuggest
+          border="false"
+          label="naar"
+          nes-id="naar"
+          name="naar"
+          [itemGroups]="mockGroupedAPI"
+          placeholder="station"
+          full-screen
+          fixed-label-width="42px"
+        ></nes-autosuggest>
+      </div>
+    </form>
+  </nes-container>
+</section>
+
+<section class="nes-section">
+  <nes-container></nes-container>
+</section>
