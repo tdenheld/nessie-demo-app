@@ -2,8 +2,9 @@
   "version": "v1",
   "packages": {
     "@nessie/webcomponents": {
-      "signature": "f46b2ce53fcd1903a5a58560c061d8ec",
-      "file": true
+      "signature": "43cb50c6d2ad3c758c16f63ab2ba89e4",
+      "file": true,
+      "replaced": "^1.3.0"
     }
   }
 }
