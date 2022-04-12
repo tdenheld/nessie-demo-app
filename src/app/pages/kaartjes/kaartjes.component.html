@@ -58,7 +58,9 @@
           [ngClass]="{'nes-opacity-0': !fromActive}"
         ></div>
       </div>
+
       <nes-button class="nes-mt-6 nes-mb-2">Bekijk ticketprijs</nes-button>
+
     </form>
   </nes-container>
 </section>
@@ -88,6 +90,31 @@
           <nes-text>
             {{ entry.body }}
           </nes-text>
+          <nes-price
+            *ngIf="entry.price"
+            [price]="entry.price"
+            [leadingText]="entry.priceLeading"
+            [trailingText]="entry.priceTrailing"
+            size="3xl"
+            class="nes-mt-2"
+          ></nes-price>
+          <div
+            *ngIf="entry.discount"
+            class="
+            nes-mt-2
+            nes-flex
+            nes-gap-2
+            nes-items-center
+            nes-text-default
+            nes-leading-tight"
+          >
+            <p class="nes-text-3xl nes-font-bold nes-tracking-tight">
+              {{ entry.discount }}
+            </p>
+            <p class="nes-text-sm">
+              {{ entry.discountTrailing }}
+            </p>
+          </div>
         </div>
         <nes-button-group
           slot="footer"

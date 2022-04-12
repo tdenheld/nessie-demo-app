@@ -55,7 +55,7 @@ html.is-dark {
   --nes-color-bg-brand-secondary: var(--nes-color-gray-800);
   --nes-color-bg-tint-primary: var(--nes-color-gray-700);
   --nes-color-bg-tint-primary-medium: var(--nes-color-gray-700);
-  --nes-color-bg-tint-secondary: var(--nes-color-blue-900);
+  --nes-color-bg-tint-secondary: #071D41;
   --nes-color-text-default: var(--nes-color-gray-100);
   --nes-color-text-heading: var(--nes-color-gray-100);
   --nes-color-text-body: var(--nes-color-gray-300);
@@ -63,6 +63,7 @@ html.is-dark {
   --nes-color-text-cta-default: var(--nes-color-light-blue-400);
   --nes-color-text-cta-pressed: var(--nes-color-light-blue-50);
   --nes-color-text-info: var(--nes-color-gray-100);
+  --nes-color-text-brand-secondary: var(--nes-color-yellow);
   --nes-color-border-info: var(--nes-color-light-blue-400);
   --nes-color-bg-info: var(--nes-color-light-blue-400);
   --nes-color-border-default: var(--nes-alpha-white-100);
