@@ -106,6 +106,7 @@ html.is-dark {
   --nes-color-badge-alert-bg: var(--nes-color-red-600);
   --nes-color-tooltip-bg: var(--nes-color-blue-600);
   --nes-color-tooltip-text: var(--nes-color-gray-100);
+  --nes-color-message-toast-bg: var(--nes-color-blue-600);
 
   --nes-color-sticker-subtle-filled-bg: var(--nes-alpha-white-100);
   --nes-color-sticker-subtle-filled-text: var(--nes-color-gray-100);
