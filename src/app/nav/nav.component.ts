@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnalyticsService } from '../services/analytics.service';
 
 @Component({
   selector: 'app-nav',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  constructor() { }
+  constructor(private as: AnalyticsService) { }
   ngOnInit(): void { }
+  
+  onOpen(): void{
+    this.as.openDebugWindow();
+  }
 }

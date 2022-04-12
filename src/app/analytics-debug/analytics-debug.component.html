@@ -1,0 +1,16 @@
+<div [ngClass]="{'md:nes-w-3/12 nes-w-full': open, 'nes-w-0': !open}" class="nes-bg-white nes-fixed nes-right-0 nes-top-0 nes-bottom-0 nes-h-full nes-z-50 nes-shadow-md nes-border-l nes-border-gray-100 nes-transition-all nes-duration-100 nes-ease-in-out nes-overflow-hidden ">
+    <div class="nes-p-4 nes-bg-light-blue nes-flex nes-justify-between nes-items-center">
+        <nes-heading color="white" [size]="{xs: '3xl'}">Analytics debug</nes-heading>
+        <nes-icon (click)="close()" color="white" name="close"></nes-icon>
+    </div>  
+    <div class="nes-p-4">
+        <nes-expandable *ngFor="let event of (events | async)" border-top border-bottom>
+            <div slot="header">{{event.event.event_type}}</div>
+            <div class="nes-p-4 nes-bg-gray-200 nes-overflow-x-scroll nes-mt-4">
+                <code>
+                    {{JSON.stringify(event.event)}}
+                </code>
+            </div>
+        </nes-expandable>
+    </div>  
+</div>

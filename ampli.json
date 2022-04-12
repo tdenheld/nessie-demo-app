@@ -1,0 +1,9 @@
+{
+  "OrgId": "168667",
+  "WorkspaceId": "c67b2b69-8b33-48b0-a94e-4916238a962f",
+  "SourceId": "0f4838c3-28d9-4546-a058-8496cc379d67",
+  "Runtime": "browser:typescript-ampli",
+  "Path": "./src/ampli",
+  "Branch": "main",
+  "Version": "6.0.0"
+}

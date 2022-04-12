@@ -16,6 +16,8 @@ import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abo
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { MoreFlexComponent } from './more-flex/more-flex.component';
+import { AnalyticsService } from './services/analytics.service';
+import { AnalyticsDebugComponent } from './analytics-debug/analytics-debug.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
     ProductTableComponent,
     ProductPreviewComponent,
     MoreFlexComponent,
+    AnalyticsDebugComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     AngularSvgIconModule.forRoot(),
   ],
-  providers: [],
+  providers: [AnalyticsService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
