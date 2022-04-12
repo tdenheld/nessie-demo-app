@@ -31,7 +31,8 @@
     "before-build": "node ./scripts/list-components-scss.js && node ./scripts/copy-icons.js"
   },
   "dependencies": {
-    "@stencil/core": "2.12.0"
+    "@stencil/core": "2.12.0",
+    "hammerjs": "^2.0.8"
   },
   "license": "MIT",
   "optionalDependencies": {
@@ -41,5 +42,5 @@
   "publishConfig": {
     "registry": "https://nexus.topaas.ns.nl/repository/NS_DSM_NPM/"
   },
-  "yalcSig": "43cb50c6d2ad3c758c16f63ab2ba89e4"
+  "yalcSig": "115eb81ad415faa06febc7bb624828ac"
 }
