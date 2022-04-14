@@ -17,6 +17,7 @@ import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { MoreFlexComponent } from './more-flex/more-flex.component';
+import { FromtoComponent } from './fromto/fromto.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     ProductPreviewComponent,
     MoreFlexComponent,
     PageKaartjesComponent,
+    FromtoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,58 @@
+<div class="
+  nes-relative
+  nes-bg-form-bg
+  nes-rounded
+  nes-transition">
+
+  <nes-autosuggest
+    border="false"
+    label="van"
+    nes-id="van"
+    name="van"
+    [itemGroups]="mockGroupedAPI"
+    placeholder="station"
+    full-screen
+    fixed-label-width="20px"
+    (nesOnActive)="fromActive = true; toActive = false"
+    (nesOnHide)="fromActive = false"
+    class="nes-relative"
+    [ngClass]="{'nes-z-10': !toActive}"
+    hidden-label-icon
+    hidden-clear-input
+  ></nes-autosuggest>
+
+  <nes-autosuggest
+    border="false"
+    label="naar"
+    nes-id="naar"
+    name="naar"
+    [itemGroups]="mockGroupedAPI"
+    placeholder="station"
+    full-screen
+    fixed-label-width="20px"
+    (nesOnActive)="toActive = true"
+    (nesOnHide)="toActive = false"
+    (nesOnEnter)="toActive = true"
+    class="nes-relative"
+    [ngClass]="{'nes-z-10': toActive}"
+    hidden-label-icon
+    hidden-clear-input
+  ></nes-autosuggest>
+
+  <nes-divider class="
+    nes-absolute 
+    nes-w-full 
+    nes-top-1/2 
+    nes-px-4
+    md:nes-px-5">
+  </nes-divider>
+
+  <div
+    class="
+      nes-absolute
+      nes-inset-0
+      nes-bg-brand-primary
+      nes-pointer-events-none"
+    [ngClass]="{'nes-opacity-0': !fromActive}"
+  ></div>
+</div>

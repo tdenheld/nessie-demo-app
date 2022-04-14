@@ -10,9 +10,13 @@ export class NavComponent implements OnInit {
 
   setTheme() {
     const root = document.querySelector('html');
-    localStorage.getItem('theme') === 'dark' ?
-      root?.classList.add('is-dark') :
+    if (localStorage.getItem('theme') === 'dark') {
+      root?.classList.add('is-dark');
+      this.isDark = true;
+    } else {
       root?.classList.remove('is-dark');
+      this.isDark = false;
+    }
   }
 
   toggleDarkMode() {
