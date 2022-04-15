@@ -34,7 +34,7 @@
     placeholder="station"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
-    (nesOnActive)="station = false"
+    (nesOnActive)="station = false;"
     (nesOnFocus)="toFocus = true"
     (nesOnBlur)="toFocus = false"
     class="nes-relative"
@@ -111,7 +111,7 @@
       icon-only
       variant="tertiary"
       color="text-info"
-      (nesOnClick)="swap = !swap"
+      (nesOnClick)="setSwap()"
       class="nes-transition"
       [ngClass]="{'nes-rotate-180' : swap}"
     ></nes-button>

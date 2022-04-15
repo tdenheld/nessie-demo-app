@@ -15,6 +15,45 @@ export class FromtoComponent implements OnInit {
   stations = [{}];
   station = false;
 
+  mockGroupedAPI = [
+    {
+      heading: 'Favorieten',
+      items: [{
+        label: 'Utrecht Centraal',
+        subtext: 'Thuis',
+        icon: 'station',
+      },],
+    },
+    {
+      heading: 'Eerder gekozen',
+      items: [{
+        label: 'Deventer',
+        subtext: 'Treinstation',
+        icon: 'station',
+      },
+      {
+        label: 'Rotterdam Alexander',
+        subtext: 'Treinstation',
+        icon: 'station',
+      },
+      {
+        label: 'Leeuwarden Camminghaburen',
+        subtext: 'Treinstation',
+        icon: 'station',
+      },
+      {
+        label: 'Bunnik',
+        subtext: 'Treinstation',
+        icon: 'station',
+      },
+      ],
+    },
+  ];
+
+  setSwap() {
+    this.swap = !this.swap;
+  }
+
   getMobile() {
     requestAnimationFrame(() => {
       this.mobile = innerWidth < 740 || false;
@@ -54,41 +93,6 @@ export class FromtoComponent implements OnInit {
       this.stations = [];
     }
   }
-
-  mockGroupedAPI = [
-    {
-      heading: 'Favorieten',
-      items: [{
-        label: 'Utrecht Centraal',
-        subtext: 'Thuis',
-        icon: 'station',
-      },],
-    },
-    {
-      heading: 'Eerder gekozen',
-      items: [{
-        label: 'Deventer',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      {
-        label: 'Rotterdam Alexander',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      {
-        label: 'Leeuwarden Camminghaburen',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      {
-        label: 'Bunnik',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      ],
-    },
-  ];
 
   constructor() { }
   ngOnInit(): void {
