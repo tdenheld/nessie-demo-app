@@ -12,12 +12,14 @@
     [itemGroups]="mockGroupedAPI"
     placeholder="station"
     full-screen
-    fixed-label-width="20px"
-    (nesOnActive)="fromActive = true; toActive = false"
+    [fixedLabelWidth]="!mobile ? '44px' : '28px'"
+    (nesOnActive)="fromActive = true"
     (nesOnHide)="fromActive = false"
+    (nesOnFocus)="fromFocus = true"
+    (nesOnBlur)="fromFocus = false"
     class="nes-relative"
-    [ngClass]="{'nes-z-10': !toActive}"
-    hidden-label-icon
+    [ngClass]="{'nees-z-[1]': !toFocus}"
+    [hiddenLabelIcon]="mobile"
     hidden-clear-input
   ></nes-autosuggest>
 
@@ -29,23 +31,87 @@
     [itemGroups]="mockGroupedAPI"
     placeholder="station"
     full-screen
-    fixed-label-width="20px"
-    (nesOnActive)="toActive = true"
-    (nesOnHide)="toActive = false"
+    [fixedLabelWidth]="!mobile ? '44px' : '28px'"
+    (nesOnFocus)="toFocus = true"
+    (nesOnBlur)="toFocus = false"
     class="nes-relative"
-    [ngClass]="{'nes-z-10': toActive}"
-    hidden-label-icon
+    [ngClass]="{'nees-z-[1]': toFocus}"
+    [hiddenLabelIcon]="mobile"
     hidden-clear-input
   ></nes-autosuggest>
 
+  <!-- Divider -->
   <nes-divider class="
     nes-absolute 
     nes-w-full 
     nes-top-1/2 
-    nes-px-4
+    nes-pl-[42px]
+    nes-pr-5
     md:nes-px-5">
   </nes-divider>
 
+  <!-- Route dots -->
+  <div
+    class="
+    nes-absolute
+    nes-top-[19px]
+    nes-grid
+    md:nes-hidden
+    nes-justify-items-center
+    nes-left-4"
+    [ngClass]="{'nees-z-[1]': !toFocus && !fromFocus}"
+  >
+    <div class="
+      nes-w-3
+      nes-h-3
+      nes-border-2
+      nes-border-info
+      nes-rounded-full
+      nes-bg-form-bg
+      nes-transition">
+    </div>
+    <div class="
+      nes-border-l-2
+      nes-border-info
+      nes-h-[36px]">
+    </div>
+    <div class="
+      nes-w-3
+      nes-h-3
+      nes-border-2
+      nes-border-info
+      nes-rounded-full
+      nes-bg-form-bg
+      nes-transition">
+    </div>
+  </div>
+
+  <!-- Swap button -->
+  <div class="
+    nes-absolute
+    nes-inset-y-4
+    nes-right-0
+    nes-w-16
+    nes-grid
+    nes-place-content-center
+    nes-bg-form-bg
+    nees-z-[1]
+    nes-transition
+    nes-opacity-0"
+    [ngClass]="{'nes-opacity-100': !toFocus && !fromFocus}"
+  >
+    <nes-button
+      icon-leading="swap-vertical"
+      icon-only
+      variant="tertiary"
+      color="text-info"
+      (nesOnClick)="swap = !swap"
+      class="nes-transition"
+      [ngClass]="{'nes-rotate-180' : swap}"
+    ></nes-button>
+  </div>
+
+  <!-- Yellow background to create gap below first search input -->
   <div
     class="
       nes-absolute
