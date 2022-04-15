@@ -37,9 +37,6 @@ export class FromtoComponent implements OnInit {
 
   getStations(event: any) {
     const show = event.detail.value ? event.detail.value.length > 1 : false;
-
-    console.log(show);
-
     if (show) {
       this.getResponse(event.detail.value).then((arr) => {
         this.stations = [];

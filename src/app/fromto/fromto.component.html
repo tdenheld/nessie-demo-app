@@ -13,7 +13,7 @@
     placeholder="station"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
-    (nesOnActive)="fromActive = true"
+    (nesOnActive)="fromActive = true; station = false"
     (nesOnHide)="fromActive = false"
     (nesOnFocus)="fromFocus = true"
     (nesOnBlur)="fromFocus = false"
@@ -34,12 +34,15 @@
     placeholder="station"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
+    (nesOnActive)="station = false"
     (nesOnFocus)="toFocus = true"
     (nesOnBlur)="toFocus = false"
     class="nes-relative"
     [ngClass]="{'nes-z-10': toFocus}"
     [hiddenLabelIcon]="mobile"
     hidden-clear-input
+    (nesOnChange)="getStations($event)"
+    [items]="station && stations"
   ></nes-autosuggest>
 
   <!-- Divider -->
