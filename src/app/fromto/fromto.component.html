@@ -18,9 +18,11 @@
     (nesOnFocus)="fromFocus = true"
     (nesOnBlur)="fromFocus = false"
     class="nes-relative"
-    [ngClass]="{'nees-z-[1]': !toFocus}"
+    [ngClass]="{'nes-z-10': !toFocus}"
     [hiddenLabelIcon]="mobile"
     hidden-clear-input
+    (nesOnChange)="getStations($event)"
+    [items]="station && stations"
   ></nes-autosuggest>
 
   <nes-autosuggest
@@ -35,7 +37,7 @@
     (nesOnFocus)="toFocus = true"
     (nesOnBlur)="toFocus = false"
     class="nes-relative"
-    [ngClass]="{'nees-z-[1]': toFocus}"
+    [ngClass]="{'nes-z-10': toFocus}"
     [hiddenLabelIcon]="mobile"
     hidden-clear-input
   ></nes-autosuggest>
@@ -58,8 +60,9 @@
     nes-grid
     md:nes-hidden
     nes-justify-items-center
-    nes-left-4"
-    [ngClass]="{'nees-z-[1]': !toFocus && !fromFocus}"
+    nes-left-4
+    nes-z-10"
+    [ngClass]="{'nes-invisible': toFocus || fromActive}"
   >
     <div class="
       nes-w-3
@@ -87,7 +90,8 @@
   </div>
 
   <!-- Swap button -->
-  <div class="
+  <div
+    class="
     nes-absolute
     nes-inset-y-4
     nes-right-0
@@ -95,10 +99,9 @@
     nes-grid
     nes-place-content-center
     nes-bg-form-bg
-    nees-z-[1]
-    nes-transition
-    nes-opacity-0"
-    [ngClass]="{'nes-opacity-100': !toFocus && !fromFocus}"
+    nes-z-10
+    nes-transition"
+    [ngClass]="{'nes-invisible': toFocus || fromFocus || fromActive}"
   >
     <nes-button
       icon-leading="swap-vertical"
