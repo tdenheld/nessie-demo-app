@@ -10,7 +10,7 @@
     nes-id="van"
     name="van"
     [itemGroups]="mockGroupedAPI"
-    placeholder="station"
+    [placeholder]="!fromActive && mobile ? 'Waar vandaan?' : 'station'"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
     (nesOnActive)="fromActive = true; station = false"
@@ -31,7 +31,7 @@
     nes-id="naar"
     name="naar"
     [itemGroups]="mockGroupedAPI"
-    placeholder="station"
+    [placeholder]="!fromActive && mobile ? 'Waar wil je heen?' : 'station'"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
     (nesOnActive)="station = false;"
