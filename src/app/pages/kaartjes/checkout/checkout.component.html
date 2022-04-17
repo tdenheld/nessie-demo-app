@@ -1,1 +1,78 @@
-<p>checkout works!</p>
+<div class="nes-fixed nes-inset-0 nes-bg-elevated"></div>
+
+<nes-container
+  variant="narrow"
+  class="nes-relative"
+>
+  <h1 class="nes-sr-only">
+    Vul je gegevens in om een treinkaartje te kopen
+  </h1>
+
+  <div class="nes-grid md:nes-grid-cols-3-2 nes-gutter">
+    <form
+      action=""
+      class="nes-max-w-lg"
+    >
+      <nes-section>
+        <nes-heading tag="h2">
+          Gegevens
+        </nes-heading>
+        <div class="nes-mt-8 nes-space-y-8">
+          <nes-input
+            label="Reisdatum"
+            nes-id="travel-date"
+            required
+            type="date"
+          ></nes-input>
+          <nes-stepper
+            label="Volwassene"
+            value="1"
+            help-text="12+ jaar"
+            min="1"
+          ></nes-stepper>
+          <nes-stepper
+            label="Kind"
+            value="0"
+            help-text="4 - 11 jaar"
+            min="0"
+          ></nes-stepper>
+          <nes-radio-panel
+            label="Type reis"
+            required
+            name="radio-panel-b"
+            nes-id="radio-panel-b"
+            [options]="[
+                {label: 'Enkele reis', checked: true},
+                {label: 'Retour'}]"
+          >
+          </nes-radio-panel>
+          <nes-radio-panel
+            label="Klasse"
+            required
+            name="radio-panel-b"
+            nes-id="radio-panel-b"
+            [options]="[
+              {label: '2e klas', checked: true},
+              {label: '1e klas'}]"
+          >
+          </nes-radio-panel>
+        </div>
+      </nes-section>
+    </form>
+    <aside>
+      <div class="nes-section">
+        <div class="nes-border nes-rounded-lg nes-p-5">
+          <nes-route
+            location="Utrecht Centraal"
+            time="10:53"
+          ></nes-route>
+          <nes-route
+            location="Rotterdam Alexander"
+            time="10:53"
+            arrival
+          ></nes-route>
+        </div>
+      </div>
+    </aside>
+  </div>
+</nes-container>
