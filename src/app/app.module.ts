@@ -18,6 +18,7 @@ import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { MoreFlexComponent } from './more-flex/more-flex.component';
 import { FromtoComponent } from './fromto/fromto.component';
+import { PageCheckoutComponent } from './pages/kaartjes/checkout/checkout.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'abonnementen', component: PageAbonnementenComponent },
   { path: 'abonnementen/:id', component: PageAbonnementenDetailComponent },
   { path: 'kaartjes', component: PageKaartjesComponent },
+  { path: 'kaartjes/checkout', component: PageCheckoutComponent },
 ];
 
 @NgModule({
@@ -44,6 +46,7 @@ const appRoutes: Routes = [
     MoreFlexComponent,
     PageKaartjesComponent,
     FromtoComponent,
+    PageCheckoutComponent,
   ],
   imports: [
     BrowserModule,
