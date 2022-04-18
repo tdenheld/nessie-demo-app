@@ -27,7 +27,9 @@
             required
             type="date"
             value="2022-04-28"
+            max-width="240px"
           ></nes-input>
+          <nes-divider></nes-divider>
           <nes-stepper
             label="Volwassene"
             value="1"
@@ -64,7 +66,8 @@
           </nes-radio-panel>
           <nes-radio-panel
             label="Reizen met korting"
-            tooltip="Samenreisticket is geldig buiten de spits."
+            tooltip="Samenreisticket is geldig buiten de spits. Doordeweeks tot 6.30 uur, van 9.00 tot 16.00 uur en na 18.30 uur.
+            Weekend- en feestdagen de hele dag (m.u.v. Koningsdag)."
             required
             name="radio-panel-b"
             nes-id="radio-panel-b"
@@ -75,58 +78,69 @@
           </nes-radio-panel>
         </div>
       </nes-section>
+      <nes-section class="nes-space-y-8">
+        <nes-heading tag="h2">Persoonsgegevens</nes-heading>
+        <nes-input
+          label="Volledige naam"
+          nes-id="full-name"
+          max-width="320px"
+          required
+        ></nes-input>
+        <nes-input
+          label="E-mailadres"
+          nes-id="email"
+          required
+          type="email"
+        ></nes-input>
+      </nes-section>
     </form>
 
     <aside class="nes-section nes-pb-0">
-      <nes-heading
-        tag="h2"
-        class="nes-sr-only"
-      >
-        Overzicht
-      </nes-heading>
-      <div class="
-          nes-border 
-          nes-rounded-lg 
-          nes-p-5 
-          nes-space-y-4
-          nes-text-default">
-
-        <div>
-          <nes-route location="Utrecht Centraal"></nes-route>
-          <nes-route
-            location="Rotterdam Alexander"
-            arrival
-          ></nes-route>
-        </div>
-
-        <div class="nes-flex nes-items-center nes-gap-2 nes-text-default">
-          <nes-icon
-            name="calendar"
-            class="nes-relative nes--top-px"
-          ></nes-icon>
-          donderdag 28 april 2022
-        </div>
-
-        <nes-divider></nes-divider>
-
-        <div class="nes-space-y-1">
-          <p class="nes-font-bold">
-            1 volwassene
-          </p>
-          <div class="nes-flex nes-justify-between">
-            <p>1× Enkele reis, 2e klas</p>
-            <p>€ 15,80</p>
+      <div class="nes-sticky nes-top-12">
+        <nes-heading
+          tag="h2"
+          class="nes-sr-only"
+        >
+          Overzicht
+        </nes-heading>
+        <div class="
+            nes-border
+            nes-rounded-lg
+            nes-p-5
+            nes-space-y-4
+            nes-text-default">
+          <div>
+            <nes-route location="Utrecht Centraal"></nes-route>
+            <nes-route
+              location="Rotterdam Alexander"
+              arrival
+            ></nes-route>
           </div>
-        </div>
-
-        <nes-divider></nes-divider>
-
-        <div class="nes-flex nes-justify-between nes-items-center">
-          <p>Totaal</p>
-          <nes-price
-            price="15.8"
-            size="2xl"
-          ></nes-price>
+          <div class="nes-flex nes-items-center nes-gap-2 nes-text-default">
+            <nes-icon
+              name="calendar"
+              class="nes-relative nes--top-px"
+            ></nes-icon>
+            donderdag 28 april 2022
+          </div>
+          <nes-divider></nes-divider>
+          <div class="nes-space-y-1">
+            <p class="nes-font-bold">
+              1 volwassene
+            </p>
+            <div class="nes-flex nes-justify-between">
+              <p>1× Enkele reis, 2e klas</p>
+              <p>€ 15,80</p>
+            </div>
+          </div>
+          <nes-divider></nes-divider>
+          <div class="nes-flex nes-justify-between nes-items-center">
+            <p>Totaal</p>
+            <nes-price
+              price="15.8"
+              size="2xl"
+            ></nes-price>
+          </div>
         </div>
       </div>
     </aside>
@@ -134,3 +148,5 @@
 </nes-container>
 
 <div class="nes-section nes-pb-0"></div>
+
+<app-footer class="nes-relative"></app-footer>
