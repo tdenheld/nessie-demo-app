@@ -16,7 +16,7 @@
       <nes-section>
         <nes-heading
           tag="h2"
-          class="nes-mb-6 md:nes-mb-8"
+          class="nes-mb-8"
         >
           Reisgegevens
         </nes-heading>
@@ -29,7 +29,6 @@
             value="2022-04-28"
             max-width="240px"
           ></nes-input>
-          <nes-divider></nes-divider>
           <nes-stepper
             label="Volwassene"
             value="1"
@@ -46,11 +45,12 @@
             label="Type reis"
             hidden-label
             required
-            name="radio-panel-b"
-            nes-id="radio-panel-b"
+            name="radio-panel-a"
+            nes-id="radio-panel-a"
             [options]="[
-                {label: 'Enkele reis', checked: true},
-                {label: 'Retour'}]"
+              {label: 'Enkele reis', checked: true},
+              {label: 'Retour'}
+            ]"
           >
           </nes-radio-panel>
           <nes-radio-panel
@@ -69,15 +69,17 @@
             tooltip="Samenreisticket is geldig buiten de spits. Doordeweeks tot 6.30 uur, van 9.00 tot 16.00 uur en na 18.30 uur.
             Weekend- en feestdagen de hele dag (m.u.v. Koningsdag)."
             required
-            name="radio-panel-b"
-            nes-id="radio-panel-b"
+            name="radio-panel-c"
+            nes-id="radio-panel-c"
             [options]="[
-            {label: 'Vol tarief', checked: true},
-            {label: 'Samenreisticket'}]"
+              {label: 'Vol tarief', checked: true},
+              {label: 'Samenreisticket'}
+            ]"
           >
           </nes-radio-panel>
         </div>
       </nes-section>
+
       <nes-section class="nes-space-y-8">
         <nes-heading tag="h2">Persoonsgegevens</nes-heading>
         <nes-input
@@ -91,11 +93,73 @@
           nes-id="email"
           required
           type="email"
+          tooltip="Na betaling kun je de e-tickets downloaden en ontvang je deze in je mail."
         ></nes-input>
-        <nes-button variant="brand">Betaling bevestigen</nes-button>
       </nes-section>
+
+      <nes-section class="nes-space-y-8">
+        <nes-heading tag="h2">Betaling</nes-heading>
+        <nes-radio-panel
+          label="Betaalmiddel"
+          required
+          name="radio-panel-d"
+          nes-id="radio-panel-d"
+          [options]="[
+            {label: 'iDeal', checked: true},
+            {label: 'Creditcard'}
+          ]"
+        >
+        </nes-radio-panel>
+        <nes-select
+          label="Kies je bank"
+          hidden-label
+          required
+          [options]="[
+            {label:'Kies je bank', disabled: true, selected: true},
+            {label:'Rabobank'},
+            {label:'ING'},
+            {label:'ASN Bank'},
+            {label:'Triodos'},
+            {label:'bunq'},
+            {label:'ABN AMRO'},
+            {label:'Handelsbanken'},
+            {label:'SNS Bank'}
+          ]"
+        ></nes-select>
+      </nes-section>
+
+      <nes-section class="nes-space-y-8">
+        <nes-heading tag="h2">Voorwaarden</nes-heading>
+        <div>
+          <nes-checkbox
+            label="Ik blijf graag periodiek op de hoogte van (persoonlijke) aanbiedingen, acties en laatste nieuws van NS."
+            nes-id="conditions"
+            name="conditions"
+            selected
+          ></nes-checkbox>
+          <nes-checkbox
+            label="Ik ga akkoord met:"
+            nes-id="news"
+            name="news"
+          ></nes-checkbox>
+          <p class="nes-pl-10 nes--mt-2 nes-text-xs nes-text-subtle">
+            De vervoervoorwaarden van NS (AVR-NS), de Algemene Voorwaarden Stads- en Streekvervoer (Als u reist met een
+            andere vervoerder), het Privacybeleid NS en de Voorwaarden E-ticket en Mobiel ticket
+          </p>
+        </div>
+      </nes-section>
+
+      <!-- ---------------------------------------------- -->
+      <!-- CTA -->
+      <!-- ---------------------------------------------- -->
+      <nes-button variant="brand">
+        Betaal € 15,80
+      </nes-button>
     </form>
 
+    <!-- ---------------------------------------------- -->
+    <!-- Side bar receipt -->
+    <!-- ---------------------------------------------- -->
     <aside class="nes-section nes-pb-0">
       <div class="nes-sticky nes-top-12">
         <nes-heading
