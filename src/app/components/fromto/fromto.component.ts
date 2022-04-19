@@ -102,7 +102,7 @@ export class FromtoComponent implements OnInit {
   }
 
   storeStation(event: any) {
-    if (event.detail.value) {
+    if (event.detail.value !== undefined) {
       localStorage.setItem(event.detail.name, event.detail.value);
     }
   }
