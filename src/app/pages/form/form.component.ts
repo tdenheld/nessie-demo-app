@@ -99,5 +99,11 @@ export class PageFormComponent implements OnInit {
   ];
 
   constructor() { }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    document.querySelector("html")?.classList.add("nes-bg-elevated");
+  }
+
+  ngOnDestroy() {
+    document.querySelector("html")?.classList.remove("nes-bg-elevated");
+  }
 }
