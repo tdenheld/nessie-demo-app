@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import subscriptions from '../../../data/subscriptions.json';
+import subscriptions from 'src/data/subscriptions.json';
 import { Router } from '@angular/router';
 
 @Component({

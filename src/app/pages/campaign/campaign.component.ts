@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import subscriptions from '../../../data/subscriptions.json';
 
 @Component({
   selector: 'app-campaign',

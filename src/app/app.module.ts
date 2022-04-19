@@ -4,21 +4,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
-import { LogoComponent } from './logo/logo.component';
+
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductTableComponent } from './components/product-table/product-table.component';
+import { ProductPreviewComponent } from './components/product-preview/product-preview.component';
+import { MoreFlexComponent } from './components/more-flex/more-flex.component';
+import { FromtoComponent } from './components/fromto/fromto.component';
+
 import { PageFormComponent } from './pages/form/form.component';
 import { PageHomeComponent } from './pages/home/home.component';
 import { PageCampaignComponent } from './pages/campaign/campaign.component';
-import { FooterComponent } from './footer/footer.component';
 import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.component';
 import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
-import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
-import { ProductTableComponent } from './product-table/product-table.component';
-import { ProductPreviewComponent } from './product-preview/product-preview.component';
-import { MoreFlexComponent } from './more-flex/more-flex.component';
-import { FromtoComponent } from './fromto/fromto.component';
 import { PageCheckoutComponent } from './pages/kaartjes/checkout/checkout.component';
+import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageHomeComponent },

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import subscriptions from '../../../data/subscriptions.json';
+import subscriptions from 'src/data/subscriptions.json';
 
 @Component({
   selector: 'app-abonnementen-detail',

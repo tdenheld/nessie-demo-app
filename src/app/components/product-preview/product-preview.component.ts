@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import subscriptions from '../../data/subscriptions.json';
+import subscriptions from 'src/data/subscriptions.json';
 
 @Component({
   selector: 'app-product-preview',
