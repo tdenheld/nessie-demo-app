@@ -174,9 +174,9 @@
             nes-space-y-4
             nes-text-default">
           <div>
-            <nes-route location="Utrecht Centraal"></nes-route>
+            <nes-route [location]="getStoredStation('locationFrom') || 'Utrecht Centraal'"></nes-route>
             <nes-route
-              location="Rotterdam Alexander"
+              [location]="getStoredStation('locationTo') || 'Rotterdam Alexander'"
               arrival
             ></nes-route>
           </div>

@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.css']
 })
 export class PageCheckoutComponent implements OnInit {
+  getStoredStation(location: string) {
+    return localStorage.getItem(location);
+  }
 
   constructor() { }
   ngOnInit(): void { }

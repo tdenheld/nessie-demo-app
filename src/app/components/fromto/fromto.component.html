@@ -7,42 +7,45 @@
   <nes-autosuggest
     border="false"
     label="van"
-    nes-id="van"
-    name="van"
+    nes-id="locationFrom"
+    name="locationFrom"
     [itemGroups]="mockGroupedAPI"
     [placeholder]="!fromActive && mobile ? 'Waar vandaan?' : 'station'"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
     (nesOnActive)="fromActive = true; station = false"
-    (nesOnHide)="fromActive = false"
+    (nesOnHide)="fromActive = false; storeStation($event)"
     (nesOnFocus)="fromFocus = true"
     (nesOnBlur)="fromFocus = false"
     class="nes-relative"
     [ngClass]="{'nes-z-10': !toFocus}"
     [hiddenLabelIcon]="mobile"
     hidden-clear-input
-    (nesOnChange)="getStations($event)"
+    (nesOnChange)="getStations($event); storeStation($event);"
     [items]="station && stations"
+    [value]="getStoredStation('locationFrom')"
   ></nes-autosuggest>
 
   <nes-autosuggest
     border="false"
     label="naar"
-    nes-id="naar"
-    name="naar"
+    nes-id="locationTo"
+    name="locationTo"
     [itemGroups]="mockGroupedAPI"
     [placeholder]="!fromActive && mobile ? 'Waar wil je heen?' : 'station'"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
     (nesOnActive)="station = false;"
+    (nesOnHide)="storeStation($event)"
     (nesOnFocus)="toFocus = true"
     (nesOnBlur)="toFocus = false"
     class="nes-relative"
     [ngClass]="{'nes-z-10': toFocus}"
     [hiddenLabelIcon]="mobile"
     hidden-clear-input
-    (nesOnChange)="getStations($event)"
+    (nesOnChange)="getStations($event); storeStation($event);"
     [items]="station && stations"
+    [value]="getStoredStation('locationTo')"
   ></nes-autosuggest>
 
   <!-- Divider -->
@@ -108,7 +111,7 @@
     nes-bg-form-bg
     nes-z-10
     nes-transition"
-    [ngClass]="{'nes-invisible': toFocus || fromFocus || fromActive}"
+    [ngClass]="{'nes-opacity-0': toFocus || fromFocus || fromActive}"
   >
     <nes-button
       icon-leading="swap-vertical"

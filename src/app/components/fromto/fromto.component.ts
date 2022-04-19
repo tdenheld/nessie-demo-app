@@ -51,6 +51,12 @@ export class FromtoComponent implements OnInit {
   ];
 
   setSwap() {
+    const from = this.getStoredStation('locationFrom') || '';
+    const to = this.getStoredStation('locationTo') || '';
+
+    localStorage.setItem('locationFrom', to);
+    localStorage.setItem('locationTo', from);
+
     this.swap = !this.swap;
   }
 
@@ -76,6 +82,7 @@ export class FromtoComponent implements OnInit {
 
   getStations(event: any) {
     const show = event.detail.value ? event.detail.value.length > 1 : false;
+
     if (show) {
       this.getResponse(event.detail.value).then((arr) => {
         this.stations = [];
@@ -92,6 +99,16 @@ export class FromtoComponent implements OnInit {
       this.station = false;
       this.stations = [];
     }
+  }
+
+  storeStation(event: any) {
+    if (event.detail.value) {
+      localStorage.setItem(event.detail.name, event.detail.value);
+    }
+  }
+
+  getStoredStation(location: string) {
+    return localStorage.getItem(location);
   }
 
   constructor() { }
