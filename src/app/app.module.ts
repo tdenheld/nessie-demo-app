@@ -21,9 +21,11 @@ import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.com
 import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
 import { PageCheckoutComponent } from './pages/kaartjes/checkout/checkout.component';
 import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
+import { PageHomeComponent } from './pages/home/home.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
+  { path: 'home', component: PageHomeComponent },
   { path: 'form', component: PageFormComponent },
   { path: 'campaign', component: PageCampaignComponent },
   { path: 'abonnementen', component: PageAbonnementenComponent },
@@ -49,6 +51,7 @@ const appRoutes: Routes = [
     PageKaartjesComponent,
     FromtoComponent,
     PageCheckoutComponent,
+    PageHomeComponent,
   ],
   imports: [
     BrowserModule,
