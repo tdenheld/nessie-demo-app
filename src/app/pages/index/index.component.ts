@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.css']
 })
-export class PageHomeComponent implements OnInit {
+export class PageIndexComponent implements OnInit {
   routes = [
     { name: 'Campaign', subtext: 'NS Flex abonnementen', url: '/campaign' },
     { name: 'Abonnementen', subtext: 'Overzichtspagina', url: '/abonnementen' },

@@ -15,7 +15,7 @@ import { MoreFlexComponent } from './components/more-flex/more-flex.component';
 import { FromtoComponent } from './components/fromto/fromto.component';
 
 import { PageFormComponent } from './pages/form/form.component';
-import { PageHomeComponent } from './pages/home/home.component';
+import { PageIndexComponent } from './pages/index/index.component';
 import { PageCampaignComponent } from './pages/campaign/campaign.component';
 import { PageAbonnementenComponent } from './pages/abonnementen/abonnementen.component';
 import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abonnementen-detail.component';
@@ -23,7 +23,7 @@ import { PageCheckoutComponent } from './pages/kaartjes/checkout/checkout.compon
 import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 
 const appRoutes: Routes = [
-  { path: '', component: PageHomeComponent },
+  { path: '', component: PageIndexComponent },
   { path: 'form', component: PageFormComponent },
   { path: 'campaign', component: PageCampaignComponent },
   { path: 'abonnementen', component: PageAbonnementenComponent },
@@ -37,7 +37,7 @@ const appRoutes: Routes = [
     AppComponent,
     NavComponent,
     PageFormComponent,
-    PageHomeComponent,
+    PageIndexComponent,
     PageCampaignComponent,
     PageAbonnementenComponent,
     LogoComponent,
