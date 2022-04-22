@@ -1,6 +1,9 @@
 <section class="nes-py-12 md:nes-py-20 xl:nes-py-24 nes-bg-brand-primary">
   <nes-container>
-    <nes-heading [size]="{md: '6xl', xl: '8xl'}" class="nes-sr-only md:nes-not-sr-only">
+    <nes-heading
+      [size]="{md: '6xl', xl: '8xl'}"
+      class="nes-sr-only md:nes-not-sr-only"
+    >
       Waar ga jij naar toe?
     </nes-heading>
     <form
@@ -44,4 +47,68 @@
   </nes-hero>
 </div>
 
-<nes-section></nes-section>
+<nes-section>
+  <div class="nes-container nes-mt-8 md:nes-mt-16">
+    <nes-heading tag="h2">
+      Ga er gezellig op uit
+    </nes-heading>
+    <nes-text
+      class="nes-mt-3 nes-max-w-prose"
+      size="lg"
+    >
+      Van een stedentrip met overnachting tot een dagje uit naar de dierentuin of de Efteling: voor ieder wat wils.
+    </nes-text>
+    <nes-button variant="secondary" class="nes-mt-5">
+      Bekijk meer
+    </nes-button>
+    <div class="
+      nes-mt-12
+      nes-grid 
+      md:nes-grid-cols-2 
+      xl:nes-grid-cols-3 
+      nes-gutter 
+      nes-gap-y-12 
+      md:nes-gap-y-16">
+      <nes-tile
+        heading="Dagje Alkmaar"
+        alt="img"
+        src="https://source.unsplash.com/1600x900/?alkmaar"
+        description="Dagretour + koffie"
+      >
+        <div slot="sticker">
+          <nes-sticker
+            compact
+            type="brand"
+            filled
+          >Vanaf <b>€ 25</b></nes-sticker>
+        </div>
+        <div slot="footer">
+          <nes-link stand-alone>Bekijk meer</nes-link>
+        </div>
+      </nes-tile>
+      <nes-tile
+        heading="NS Wandeling"
+        alt="img"
+        src="https://source.unsplash.com/1200x700/?train"
+        meta="3 tot 5 km"
+        description="Wandeling van Den Bosch naar Buikersloot"
+      >
+        <div slot="footer">
+          <nes-link stand-alone>Bekijk meer</nes-link>
+        </div>
+      </nes-tile>
+      <nes-tile
+        heading="Ja, ik wil NS Flex"
+        alt="img"
+        src="https://source.unsplash.com/1200x700/?stretch"
+        description="Pas elke maand je abonnement aan"
+      >
+        <div slot="footer">
+          <nes-link stand-alone>Bekijk meer</nes-link>
+        </div>
+      </nes-tile>
+    </div>
+  </div>
+</nes-section>
+
+<app-footer></app-footer>
