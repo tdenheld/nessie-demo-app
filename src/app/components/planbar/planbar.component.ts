@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-planbar',
@@ -16,6 +16,8 @@ export class PlanbarComponent implements OnInit {
   stations = [{}];
   station = false;
 
+  @ViewChild('locationTo') locationTo: any;
+
   mockGroupedAPI = [
     {
       heading: 'Favorieten',
@@ -23,6 +25,10 @@ export class PlanbarComponent implements OnInit {
         label: 'Utrecht Centraal',
         subtext: 'Thuis',
         icon: 'station',
+        button: {
+          ariaLabel: "Menu",
+          icon: "menu-dots",
+        },
       },],
     },
     {
@@ -31,25 +37,46 @@ export class PlanbarComponent implements OnInit {
         label: 'Deventer',
         subtext: 'Treinstation',
         icon: 'station',
+        button: {
+          ariaLabel: "Favorite",
+          icon: "heart",
+        },
       },
       {
         label: 'Rotterdam Alexander',
         subtext: 'Treinstation',
         icon: 'station',
+        button: {
+          ariaLabel: "Favorite",
+          icon: "heart",
+        },
       },
       {
         label: 'Leeuwarden Camminghaburen',
         subtext: 'Treinstation',
         icon: 'station',
+        button: {
+          ariaLabel: "Favorite",
+          icon: "heart",
+        },
       },
       {
         label: 'Bunnik',
         subtext: 'Treinstation',
         icon: 'station',
+        button: {
+          ariaLabel: "Favorite",
+          icon: "heart",
+        },
       },
       ],
     },
   ];
+
+  focus() {
+    const input = this.locationTo.nativeElement.shadowRoot.querySelector('nes-search-input').shadowRoot.querySelector('input');
+    input.focus();
+  }
 
   setSwap() {
     const from = this.getStoredStation('locationFrom') || '';
@@ -59,12 +86,6 @@ export class PlanbarComponent implements OnInit {
     localStorage.setItem('locationTo', from);
 
     this.swap = !this.swap;
-  }
-
-  getMobile() {
-    requestAnimationFrame(() => {
-      this.mobile = innerWidth < 740 || false;
-    });
   }
 
   async getResponse(value: string) {
@@ -88,7 +109,11 @@ export class PlanbarComponent implements OnInit {
           this.stations.push({
             label: val.naam,
             subtext: 'Treinstation',
-            icon: 'station'
+            icon: 'station',
+            button: {
+              ariaLabel: "Favorite",
+              icon: "heart",
+            },
           });
         });
       });

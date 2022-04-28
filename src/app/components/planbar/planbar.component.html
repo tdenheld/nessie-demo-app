@@ -24,6 +24,7 @@
       (nesOnChange)="getStations($event); storeStation($event);"
       [items]="station && stations"
       [value]="getStoredStation('locationFrom')"
+      (nesOnItemClick)="focus()"
     ></nes-autosuggest>
 
     <!-- Swap button -->
@@ -59,6 +60,7 @@
       (nesOnChange)="getStations($event); storeStation($event);"
       [items]="station && stations"
       [value]="getStoredStation('locationTo')"
+      #locationTo
     ></nes-autosuggest>
 
     <div class="nes-px-4 nes-flex nes-items-center nes-gap-3">
