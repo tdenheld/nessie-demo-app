@@ -73,7 +73,7 @@ export class PlanbarComponent implements OnInit {
     },
   ];
 
-  focus() {
+  focusTo() {
     this.locationTo.nativeElement.nesFocus();
   }
 

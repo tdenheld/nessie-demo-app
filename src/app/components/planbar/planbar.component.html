@@ -10,7 +10,7 @@
 
     <nes-autosuggest
       border="false"
-      label="Start&nbsp;locatie"
+      label="Start locatie"
       [hiddenLabelIcon]="fromFocus"
       [placeholder]="fromFocus ? 'Adres, station, postcode': ''"
       nes-id="locationFrom"
@@ -24,7 +24,8 @@
       (nesOnChange)="getStations($event); storeStation($event);"
       [items]="station && stations"
       [value]="getStoredStation('locationFrom')"
-      (nesOnItemClick)="focus()"
+      (nesOnItemClick)="focusTo()"
+      (nesOnEnter)="focusTo()"
       box-width="150%"
     ></nes-autosuggest>
 
@@ -44,19 +45,17 @@
 
     <nes-autosuggest
       border="false"
-      label="Waar&nbsp;wil&nbsp;je&nbsp;naartoe?"
+      label="Waar ga je naar toe?"
       [hiddenLabelIcon]="toFocus"
       [placeholder]="toFocus ? 'Adres, station, postcode': ''"
       nes-id="locationTo"
       name="locationTo"
       [itemGroups]="mockGroupedAPI"
-      placeholder="Waar wil je naartoe?"
       (nesOnActive)="toActive = true; station = false;"
       (nesOnHide)="toActive = false; storeStation($event)"
       (nesOnFocus)="toFocus = true"
       (nesOnBlur)="toFocus = false"
       class="nes-relative"
-      [ngClass]="{'nes-z-10': toFocus}"
       hidden-clear-input
       (nesOnChange)="getStations($event); storeStation($event);"
       [items]="station && stations"
