@@ -74,8 +74,7 @@ export class PlanbarComponent implements OnInit {
   ];
 
   focus() {
-    const input = this.locationTo.nativeElement.shadowRoot.querySelector('nes-search-input').shadowRoot.querySelector('input');
-    input.focus();
+    this.locationTo.nativeElement.nesFocus();
   }
 
   setSwap() {
