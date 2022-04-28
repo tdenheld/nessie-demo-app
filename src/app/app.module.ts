@@ -13,6 +13,7 @@ import { ProductTableComponent } from './components/product-table/product-table.
 import { ProductPreviewComponent } from './components/product-preview/product-preview.component';
 import { MoreFlexComponent } from './components/more-flex/more-flex.component';
 import { FromtoComponent } from './components/fromto/fromto.component';
+import { PlanbarComponent } from './components/planbar/planbar.component';
 
 import { PageFormComponent } from './pages/form/form.component';
 import { PageIndexComponent } from './pages/index/index.component';
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     FromtoComponent,
     PageCheckoutComponent,
     PageHomeComponent,
+    PlanbarComponent,
   ],
   imports: [
     BrowserModule,

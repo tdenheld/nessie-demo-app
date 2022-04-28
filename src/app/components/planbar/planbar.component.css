@@ -1,0 +1,10 @@
+.btn {
+  @apply nes-text-default
+  nes-inline-grid
+  nes-items-center
+  nes-h-10
+  nes-transition
+  nes-rounded
+  nes-px-2
+  focus:nes-ring;
+}

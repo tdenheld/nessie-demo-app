@@ -8,6 +8,8 @@ module.exports = {
       gridTemplateColumns: {
         // Complex site-specific column configuration
         '1-m': '1fr max-content',
+        '1-m-1': '1fr max-content 1fr',
+        '1-m-1-m': '1fr max-content 1fr max-content',
         '3-2': '3fr 2fr',
       },
       animation: {

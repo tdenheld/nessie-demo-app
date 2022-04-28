@@ -1,23 +1,32 @@
-<section class="nes-py-12 md:nes-py-20 xl:nes-py-24 nes-bg-brand-primary">
+<section class="nes-py-12 md:nes-py-24 xl:nes-py-32 nes-bg-brand-primary">
   <nes-container>
-    <nes-heading
-      [size]="{md: '6xl', xl: '8xl'}"
-      class="nes-sr-only md:nes-not-sr-only"
-    >
-      Waar ga jij naar toe?
-    </nes-heading>
-    <form
-      action="#"
-      class="nes-max-w-xl nes-pb-32 md:nes-mt-8"
-    >
-      <app-fromto></app-fromto>
-      <nes-button
-        class="nes-mt-6"
-        routerLink="/planner"
+    <div class="nes-max-w-5xl nes-mx-auto nes-relative lg:nes--top-1 xl:nes--top-2">
+      <div class="md:nes-pb-8">
+        <nes-heading
+          [size]="{md: '7xl', xl: '8xl'}"
+          class="nes-sr-only md:nes-not-sr-only"
+        >
+          Waar ga jij naar toe?
+        </nes-heading>
+      </div>
+
+      <form
+        action="#"
+        class="nes-pb-32 lg:nes-hidden"
       >
-        Plan je reis
-      </nes-button>
-    </form>
+        <app-fromto></app-fromto>
+        <nes-button
+          class="nes-mt-6"
+          routerLink="/planner"
+        >
+          Plan je reis
+        </nes-button>
+      </form>
+
+      <div class="nes-hidden lg:nes-block nes-pb-32">
+        <app-planbar></app-planbar>
+      </div>
+    </div>
 
   </nes-container>
 </section>
