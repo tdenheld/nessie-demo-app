@@ -10,7 +10,7 @@
     nes-id="locationFrom"
     name="locationFrom"
     [itemGroups]="mockGroupedAPI"
-    [placeholder]="!fromActive && mobile ? 'Waar vandaan?' : 'station'"
+    [placeholder]="!fromActive && mobile ? 'Waar vandaan?' : 'station, adres postcode'"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
     (nesOnActive)="fromActive = true; station = false"
@@ -32,11 +32,11 @@
     nes-id="locationTo"
     name="locationTo"
     [itemGroups]="mockGroupedAPI"
-    [placeholder]="!fromActive && mobile ? 'Waar wil je heen?' : 'station'"
+    [placeholder]="!toActive && mobile ? 'Waar wil je heen?' : 'station, adres postcode'"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
-    (nesOnActive)="station = false;"
-    (nesOnHide)="storeStation($event)"
+    (nesOnActive)="toActive = true; station = false;"
+    (nesOnHide)="toActive = false; storeStation($event)"
     (nesOnFocus)="toFocus = true"
     (nesOnBlur)="toFocus = false"
     class="nes-relative"

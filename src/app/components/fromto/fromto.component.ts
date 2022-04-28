@@ -7,6 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class FromtoComponent implements OnInit {
   fromActive = false;
+  toActive = false;
   fromFocus = false;
   toFocus = false;
   swap = false;
@@ -87,6 +88,7 @@ export class FromtoComponent implements OnInit {
       this.getResponse(event.detail.value).then((arr) => {
         this.stations = [];
         this.station = arr.length > 0 || false;
+
         arr.forEach((val: any) => {
           this.stations.push({
             label: val.naam,
@@ -108,7 +110,7 @@ export class FromtoComponent implements OnInit {
   }
 
   getStoredStation(location: string) {
-    return localStorage.getItem(location);
+    return localStorage.getItem(location) || '';
   }
 
   constructor() { }
