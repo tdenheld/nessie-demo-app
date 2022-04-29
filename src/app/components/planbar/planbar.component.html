@@ -26,7 +26,8 @@
       [value]="getStoredStation('locationFrom')"
       (nesOnItemClick)="focusTo()"
       (nesOnEnter)="focusTo()"
-      box-width="150%"
+      box-width="175%"
+      box-max-height="310px"
     ></nes-autosuggest>
 
     <!-- Swap button -->
@@ -60,7 +61,8 @@
       (nesOnChange)="getStations($event); storeStation($event);"
       [items]="station && stations"
       [value]="getStoredStation('locationTo')"
-      box-width="150%"
+      box-width="175%"
+      box-max-height="310px"
       #locationTo
     ></nes-autosuggest>
 
@@ -68,14 +70,14 @@
       <div class="nes-border-l nes-h-6"></div>
       <button
         (click)="$event.preventDefault()"
-        class="btn"
+        class="s-btn"
       >
         <div><b>Vertrek:</b> nu</div>
       </button>
       <div class="nes-border-l nes-h-6"></div>
       <button
         (click)="$event.preventDefault()"
-        class="btn"
+        class="s-btn"
       >
         <div><b>Reisvoorkeuren</b></div>
       </button>

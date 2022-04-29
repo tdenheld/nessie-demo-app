@@ -1,5 +1,6 @@
-.btn {
+.s-btn {
   @apply nes-text-default
+  nes-text-base
   nes-inline-grid
   nes-items-center
   nes-h-8
