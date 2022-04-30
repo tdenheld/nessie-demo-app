@@ -1,0 +1,79 @@
+<div #calendar>
+  <button
+    class="c-planner-btn"
+    (click)="$event.preventDefault(); toggleModal()"
+  >
+    <div>
+      <b>Vertrek:</b> nu
+    </div>
+  </button>
+  <div
+    *ngIf="show"
+    class="s-modal"
+    [ngClass]="{'s-fade-out': !active}"
+  >
+    <div class="nes-flex nes-gap-6">
+      <img
+        src="./assets/img/calendar.svg"
+        alt="calendar"
+      >
+      <div class="nes-space-y-6 nes-w-full">
+        <nes-radio-panel
+          label="Vertek of aankomst"
+          hidden-label
+          name="depart"
+          nes-id="depart"
+          [options]="[{
+              value: true,
+              label: 'Vertrek',
+              checked: true
+            },{
+              value: false,
+              label: 'Aankomst'
+            }]"
+        >
+        </nes-radio-panel>
+        <div class="
+          nes-bg-elevated
+          nes-p-6
+          nes-rounded
+        ">
+          <div class="
+            nes-flex
+            nes-gap-6
+            nes-items-center
+          ">
+            <div class="
+              nes-w-full
+              nes-text-center
+              nes-text-[calc(1.5vw+32px)]
+              nes-font-bold
+              nes-text-heading
+              nes-leading-none
+              nes-tracking-[0.02em]
+            ">
+              09:30
+            </div>
+            <div class="nes-flex nes-items-center nes-gap-3">
+              <nes-button
+                icon-leading="minus"
+                icon-only
+                variant="secondary"
+              ></nes-button>
+              <nes-button
+                icon-leading="plus"
+                icon-only
+                variant="secondary"
+              ></nes-button>
+            </div>
+          </div>
+        </div>
+        <nes-button
+          icon-leading="refresh"
+          variant="secondary"
+          width-full
+        >Nu</nes-button>
+      </div>
+    </div>
+  </div>
+</div>

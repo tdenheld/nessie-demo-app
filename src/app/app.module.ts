@@ -15,6 +15,7 @@ import { MoreFlexComponent } from './components/more-flex/more-flex.component';
 import { FromtoComponent } from './components/planner/fromto/fromto.component';
 import { PlanbarComponent } from './components/planner/planbar/planbar.component';
 import { PlannerComponent } from './components/planner/planner.component';
+import { PlannerCalendarComponent } from './components/planner/calendar/calendar.component';
 
 import { PageFormComponent } from './pages/form/form.component';
 import { PageIndexComponent } from './pages/index/index.component';
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
     PlanbarComponent,
     PlannerComponent,
     PageReisplannerComponent,
+    PlannerCalendarComponent,
   ],
   imports: [
     BrowserModule,

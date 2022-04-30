@@ -13,10 +13,6 @@ export class PlanbarComponent implements OnInit {
   fromFocus = false;
   toFocus = false;
   swap = false;
-  mobile = true;
-  timeModal = false;
-  showTimeModal = false;
-  HIDE_DELAY = 300;
 
   stations = [{}];
   station = false;
@@ -25,40 +21,6 @@ export class PlanbarComponent implements OnInit {
 
   @ViewChild('locationFrom') locationFrom: any;
   @ViewChild('locationTo') locationTo: any;
-  @ViewChild('timeModalBtn') timeModalBtn: any;
-  @ViewChild('modal') modal: any;
-
-  @HostListener('document:click', ['$event'])
-  onClick(e: Event) {
-    this.hideTimeModal(e);
-  }
-
-  @HostListener('document:focusin', ['$event'])
-  onFocusIn(e: Event) {
-    this.hideTimeModal(e);
-  }
-
-  hideTimeModal(e: Event) {
-    const btn = this.timeModalBtn.nativeElement;
-
-    if (!btn.contains(e.target)) {
-      this.timeModal = false;
-      setTimeout(() => {
-        this.showTimeModal = false;
-      }, this.HIDE_DELAY);
-    }
-  }
-
-  toggleTimeModal() {
-    this.timeModal = !this.timeModal;
-    if (this.timeModal) {
-      this.showTimeModal = true;
-    } else {
-      setTimeout(() => {
-        this.showTimeModal = false;
-      }, this.HIDE_DELAY);
-    }
-  }
 
   focusTo() {
     this.locationTo.nativeElement.nesFocus();
@@ -132,8 +94,5 @@ export class PlanbarComponent implements OnInit {
   }
 
   constructor(private router: Router) { }
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void { }
 }

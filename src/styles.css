@@ -92,7 +92,7 @@
     --nes-color-form-val-checked: var(--nes-color-gray-100);
     --nes-color-form-placeholder: var(--nes-color-gray-500);
     --nes-color-form-icon: var(--nes-color-light-blue-400);
-    --nes-color-radio-panel-bg: var(--nes-color-gray-700);
+    --nes-color-radio-panel-bg: var(--nes-alpha-white-75);
     --nes-color-radio-panel-bg-checked: var(--nes-color-gray-800);
     --nes-color-focus-default: var(--nes-color-light-blue-400);
     --nes-color-focus-pressed: var(--nes-color-light-blue-400);
@@ -154,5 +154,17 @@
     nes-leading-tight
     nes-tracking-tight
     nes-text-heading;
+  }
+
+  .c-planner-btn {
+    @apply nes-text-default
+    nes-text-base
+    nes-inline-grid
+    nes-items-center
+    nes-h-8
+    nes-transition
+    nes-rounded-sm
+    nes-px-2
+    focus:nes-ring;
   }
 }
