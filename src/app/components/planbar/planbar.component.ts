@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import places from 'src/data/places.json';
 
 @Component({
@@ -19,10 +20,23 @@ export class PlanbarComponent implements OnInit {
 
   mockGroupedAPI = places;
 
+  @ViewChild('locationFrom') locationFrom: any;
   @ViewChild('locationTo') locationTo: any;
 
   focusTo() {
     this.locationTo.nativeElement.nesFocus();
+  }
+
+  submit() {
+    if (!this.locationFrom.nativeElement.value) {
+      this.locationFrom.nativeElement.nesFocus();
+    }
+    if (this.locationFrom.nativeElement.value && !this.locationTo.nativeElement.value) {
+      this.locationTo.nativeElement.nesFocus();
+    }
+    if (this.locationFrom.nativeElement.value && this.locationTo.nativeElement.value) {
+      this.router.navigate([`/planner`]);
+    }
   }
 
   setSwap() {
@@ -80,7 +94,7 @@ export class PlanbarComponent implements OnInit {
     return localStorage.getItem(location) || '';
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
   ngOnInit(): void {
 
   }

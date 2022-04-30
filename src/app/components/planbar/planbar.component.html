@@ -31,6 +31,7 @@
       (nesOnEnter)="focusTo()"
       box-width="175%"
       box-max-height="310px"
+      #locationFrom
     ></nes-autosuggest>
 
     <!-- Swap button -->
@@ -84,5 +85,6 @@
   <nes-button
     icon-only
     icon-leading="search"
+    (click)="submit()"
   ></nes-button>
 </form>
