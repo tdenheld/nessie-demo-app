@@ -12,8 +12,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductTableComponent } from './components/product-table/product-table.component';
 import { ProductPreviewComponent } from './components/product-preview/product-preview.component';
 import { MoreFlexComponent } from './components/more-flex/more-flex.component';
-import { FromtoComponent } from './components/fromto/fromto.component';
-import { PlanbarComponent } from './components/planbar/planbar.component';
+import { FromtoComponent } from './components/planner/fromto/fromto.component';
+import { PlanbarComponent } from './components/planner/planbar/planbar.component';
+import { PlannerComponent } from './components/planner/planner.component';
 
 import { PageFormComponent } from './pages/form/form.component';
 import { PageIndexComponent } from './pages/index/index.component';
@@ -23,11 +24,13 @@ import { PageAbonnementenDetailComponent } from './pages/abonnementen-detail/abo
 import { PageCheckoutComponent } from './pages/kaartjes/checkout/checkout.component';
 import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 import { PageHomeComponent } from './pages/home/home.component';
+import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
   { path: 'home', component: PageHomeComponent },
   { path: 'form', component: PageFormComponent },
+  { path: 'reisplanner', component: PageReisplannerComponent },
   { path: 'campaign', component: PageCampaignComponent },
   { path: 'abonnementen', component: PageAbonnementenComponent },
   { path: 'abonnementen/:id', component: PageAbonnementenDetailComponent },
@@ -54,6 +57,8 @@ const appRoutes: Routes = [
     PageCheckoutComponent,
     PageHomeComponent,
     PlanbarComponent,
+    PlannerComponent,
+    PageReisplannerComponent,
   ],
   imports: [
     BrowserModule,

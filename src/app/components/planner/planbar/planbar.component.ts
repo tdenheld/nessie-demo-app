@@ -35,7 +35,7 @@ export class PlanbarComponent implements OnInit {
       this.locationTo.nativeElement.nesFocus();
     }
     if (this.locationFrom.nativeElement.value && this.locationTo.nativeElement.value) {
-      this.router.navigate([`/planner`]);
+      this.router.navigate([`/reisplanner`]);
     }
   }
 
