@@ -1,0 +1,57 @@
+[
+  {
+    "heading": "Favorieten",
+    "items": [
+      {
+        "label": "Utrecht Centraal",
+        "subtext": "Thuis",
+        "icon": "station",
+        "button": {
+          "ariaLabel": "Menu",
+          "icon": "menu-dots"
+        }
+      }
+    ]
+  },
+  {
+    "heading": "Eerder gekozen",
+    "items": [
+      {
+        "label": "Deventer",
+        "subtext": "Treinstation",
+        "icon": "station",
+        "button": {
+          "ariaLabel": "Favorite",
+          "icon": "heart"
+        }
+      },
+      {
+        "label": "Rotterdam Alexander",
+        "subtext": "Treinstation",
+        "icon": "station",
+        "button": {
+          "ariaLabel": "Favorite",
+          "icon": "heart"
+        }
+      },
+      {
+        "label": "Leeuwarden Camminghauren",
+        "subtext": "Treinstation",
+        "icon": "station",
+        "button": {
+          "ariaLabel": "Favorite",
+          "icon": "heart"
+        }
+      },
+      {
+        "label": "Bunnik",
+        "subtext": "Treinstation",
+        "icon": "station",
+        "button": {
+          "ariaLabel": "Favorite",
+          "icon": "heart"
+        }
+      }
+    ]
+  }
+]

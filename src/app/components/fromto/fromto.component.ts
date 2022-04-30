@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import places from 'src/data/places.json';
 
 @Component({
   selector: 'app-fromto',
@@ -16,40 +17,7 @@ export class FromtoComponent implements OnInit {
   stations = [{}];
   station = false;
 
-  mockGroupedAPI = [
-    {
-      heading: 'Favorieten',
-      items: [{
-        label: 'Utrecht Centraal',
-        subtext: 'Thuis',
-        icon: 'station',
-      },],
-    },
-    {
-      heading: 'Eerder gekozen',
-      items: [{
-        label: 'Deventer',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      {
-        label: 'Rotterdam Alexander',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      {
-        label: 'Leeuwarden Camminghaburen',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      {
-        label: 'Bunnik',
-        subtext: 'Treinstation',
-        icon: 'station',
-      },
-      ],
-    },
-  ];
+  mockGroupedAPI = places;
 
   setSwap() {
     const from = this.getStoredStation('locationFrom') || '';
