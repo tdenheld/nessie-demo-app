@@ -1,4 +1,7 @@
-<form action="#" class="nes-grid nes-grid-cols-1-m nes-gap-2">
+<form
+  action="#"
+  class="nes-grid nes-grid-cols-1-m nes-gap-2"
+>
   <div class="
     nes-relative
     nes-bg-form-bg
@@ -68,23 +71,18 @@
 
     <div class="nes-px-4 nes-flex nes-items-center nes-gap-3">
       <div class="nes-border-l nes-h-6"></div>
-      <button
-        (click)="$event.preventDefault()"
-        class="s-btn"
-      >
+      <div role="button" tabindex="0" aria-expanded="false" class="s-btn">
         <div><b>Vertrek:</b> nu</div>
-      </button>
+      </div>
       <div class="nes-border-l nes-h-6"></div>
-      <button
-        (click)="$event.preventDefault()"
-        class="s-btn"
-      >
+      <div role="button" tabindex="0" aria-expanded="false" class="s-btn">
         <div><b>Reisvoorkeuren</b></div>
-      </button>
+      </div>
     </div>
   </div>
 
-  <nes-button icon-only icon-leading="search">
-    
-  </nes-button>
+  <nes-button
+    icon-only
+    icon-leading="search"
+  ></nes-button>
 </form>
