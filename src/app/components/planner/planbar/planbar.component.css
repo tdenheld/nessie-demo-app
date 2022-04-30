@@ -9,3 +9,41 @@
   nes-px-2
   focus:nes-ring;
 }
+
+.s-modal {
+  @apply nes-bg-tint-primary
+  nes-absolute
+  nes-w-full
+  nes-rounded
+  nes-p-6
+  nes-shadow-md
+  nes-z-10;
+  top: calc(100% + theme('spacing.1'));
+  animation: fade-in 500ms theme('transitionTimingFunction.DEFAULT') both;
+}
+
+.s-modal.is-fadingOut {
+  animation: fade-out 300ms theme('transitionTimingFunction.DEFAULT') both;
+}
+
+@keyframes fade-in {
+  0% {
+    @apply nes-opacity-0;
+    transform: scale(0.95);
+  }
+  100% {
+    @apply nes-opacity-100;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    @apply nes-opacity-100;
+    transform: scale(1);
+  }
+  100% {
+    @apply nes-opacity-0;
+    transform: scale(0.95);
+  }
+}
