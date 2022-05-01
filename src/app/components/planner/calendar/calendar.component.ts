@@ -18,6 +18,8 @@ export class PlannerCalendarComponent implements OnInit {
   private timeInterval: any;
   private timeIncrement = 0;
 
+  public depArrToggle = 'Vertrek';
+
   @ViewChild('calendar') modal: any;
 
   public setTimeNow() {

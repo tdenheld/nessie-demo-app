@@ -4,7 +4,7 @@
     (click)="$event.preventDefault(); toggleModal()"
   >
     <div>
-      <b>Vertrek:</b> {{ getTimeNow() }}
+      <b>{{ depArrToggle }}:</b> {{ getTimeNow() }}
     </div>
   </button>
   <div
@@ -23,12 +23,13 @@
           hidden-label
           name="depart"
           nes-id="depart"
+          (input)="depArrToggle === 'Vertrek' ? 
+            depArrToggle = 'Aankomst' : 
+            depArrToggle = 'Vertrek'"
           [options]="[{
-              value: true,
               label: 'Vertrek',
               checked: true
             },{
-              value: false,
               label: 'Aankomst'
             }]"
         >
