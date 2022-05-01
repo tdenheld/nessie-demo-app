@@ -13,10 +13,7 @@
     [ngClass]="{'s-fade-out': !active}"
   >
     <div class="nes-flex nes-gap-6">
-      <img
-        src="./assets/img/calendar.svg"
-        alt="calendar"
-      >
+      <svg-icon src="./assets/img/calendar.svg"></svg-icon>
       <div class="nes-space-y-6 nes-w-full">
         <nes-radio-panel
           label="Vertek of aankomst"
@@ -53,6 +50,7 @@
               nes-text-heading
               nes-leading-none
               nes-tracking-[0.02em]
+              nes-bg-transparent
             "
               [value]="time"
               type="text"
