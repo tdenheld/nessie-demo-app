@@ -4,7 +4,7 @@
     (click)="$event.preventDefault(); toggleModal()"
   >
     <div>
-      <b>Vertrek:</b> nu
+      <b>Vertrek:</b> {{ getTimeNow() }}
     </div>
   </button>
   <div
@@ -43,7 +43,8 @@
             nes-gap-6
             nes-items-center
           ">
-            <div class="
+            <input
+              class="
               nes-w-full
               nes-text-center
               nes-text-[calc(1.5vw+32px)]
@@ -51,19 +52,25 @@
               nes-text-heading
               nes-leading-none
               nes-tracking-[0.02em]
-            ">
-              09:30
-            </div>
+            "
+              [value]="time"
+              type="text"
+              maxlength="5"
+              name="tijd"
+              id="tijd"
+            />
             <div class="nes-flex nes-items-center nes-gap-3">
               <nes-button
                 icon-leading="minus"
                 icon-only
                 variant="secondary"
+                (click)="changeTime('-')"
               ></nes-button>
               <nes-button
                 icon-leading="plus"
                 icon-only
                 variant="secondary"
+                (click)="changeTime('+')"
               ></nes-button>
             </div>
           </div>
@@ -72,6 +79,7 @@
           icon-leading="refresh"
           variant="secondary"
           width-full
+          (click)="setTimeNow()"
         >Nu</nes-button>
       </div>
     </div>

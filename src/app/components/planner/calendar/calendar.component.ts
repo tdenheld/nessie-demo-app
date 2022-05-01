@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import * as moment from 'moment';
+import 'moment/locale/nl';
+moment.locale('nl');
 
 @Component({
   selector: 'planner-calendar',
@@ -6,13 +9,47 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
   styleUrls: ['./calendar.component.css']
 })
 export class PlannerCalendarComponent implements OnInit {
-  active = false;
-  show = false;
-  HIDE_DELAY = 300;
+  private HIDE_DELAY = 300;
+
+  public active = false;
+  public show = false;
+
+  public time = '';
+  private timeInterval: any;
+  private timeIncrement = 0;
 
   @ViewChild('calendar') modal: any;
 
-  toggleModal() {
+  public setTimeNow() {
+    this.time = moment().format('LT');
+
+    this.timeInterval = setInterval(() => {
+      this.time = moment().format('LT');
+    }, 1000);
+
+    this.timeIncrement = 0;
+    this.getTimeNow();
+  }
+
+  public getTimeNow() {
+    const now = moment().format('LT');
+    return this.time === now ? 'nu' : this.time;
+  }
+
+  public changeTime(direction: string) {
+    if (direction === '-') {
+      this.timeIncrement -= 30;
+    } else {
+      this.timeIncrement += 30;
+    }
+
+    const remainder = this.timeIncrement - (moment().minute() % 30);
+    this.time = moment().add(remainder, 'minutes').format('LT');
+    clearInterval(this.timeInterval);
+    this.getTimeNow();
+  }
+
+  public toggleModal() {
     this.active = !this.active;
     if (this.active) {
       this.show = true;
@@ -23,7 +60,7 @@ export class PlannerCalendarComponent implements OnInit {
     }
   }
 
-  hideModal(e: Event) {
+  public hideModal(e: Event) {
     if (!this.modal.nativeElement.contains(e.target)) {
       this.active = false;
       setTimeout(() => {
@@ -43,5 +80,8 @@ export class PlannerCalendarComponent implements OnInit {
   }
 
   constructor() { }
-  ngOnInit(): void { }
+
+  ngOnInit(): void {
+    this.setTimeNow();
+  }
 }
