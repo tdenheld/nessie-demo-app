@@ -7,7 +7,7 @@
   nes-p-6
   nes-bg-tint-primary
   nes-shadow-md
-  nes-z-10;
+  nes-z-menu;
   top: calc(100% + theme('spacing.1'));
   animation: fade-in 500ms theme('transitionTimingFunction.DEFAULT') both;
 }

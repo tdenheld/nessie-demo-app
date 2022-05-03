@@ -19,7 +19,7 @@
     (nesOnFocus)="fromFocus = true"
     (nesOnBlur)="fromFocus = false"
     class="nes-relative"
-    [ngClass]="{'nes-z-10': !toFocus}"
+    [ngClass]="{'nes-z-raised': !toFocus}"
     [hiddenLabelIcon]="mobile"
     hidden-clear-input
     (nesOnChange)="getStations($event); storeStation($event);"
@@ -41,7 +41,7 @@
     (nesOnFocus)="toFocus = true"
     (nesOnBlur)="toFocus = false"
     class="nes-relative"
-    [ngClass]="{'nes-z-10': toFocus}"
+    [ngClass]="{'nes-z-raised': toFocus}"
     [hiddenLabelIcon]="mobile"
     hidden-clear-input
     (nesOnChange)="getStations($event); storeStation($event);"
@@ -68,7 +68,7 @@
     md:nes-hidden
     nes-justify-items-center
     nes-left-4
-    nes-z-10"
+    nes-z-raised"
     [ngClass]="{'nes-invisible': toFocus || fromActive}"
   >
     <div class="
@@ -110,7 +110,7 @@
     nes-grid
     nes-place-content-center
     nes-bg-form-bg
-    nes-z-10
+    nes-z-raised
     nes-transition"
     [ngClass]="{'nes-opacity-0': toFocus || fromFocus || fromActive}"
   >
