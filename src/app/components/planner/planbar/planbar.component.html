@@ -71,14 +71,12 @@
       <div class="nes-border-l nes-h-6"></div>
       <planner-calendar></planner-calendar>
       <div class="nes-border-l nes-h-6"></div>
-      <div
-        role="button"
-        tabindex="0"
-        aria-expanded="false"
+      <button
         class="c-planner-btn"
+        (click)="$event.preventDefault()"
       >
         <div><b>Voorkeuren</b></div>
-      </div>
+      </button>
     </div>
   </div>
 
