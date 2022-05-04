@@ -16,6 +16,7 @@ export class PlannerCalendarComponent implements OnInit {
 
   public time = '';
   private timeInterval: any;
+  private timer: any;
   private timeIncrement = 0;
 
   public depArrToggle = 'Vertrek';
@@ -53,10 +54,12 @@ export class PlannerCalendarComponent implements OnInit {
 
   public toggleModal() {
     this.active = !this.active;
+
     if (this.active) {
       this.show = true;
+      clearTimeout(this.timer);
     } else {
-      setTimeout(() => {
+      this.timer = setTimeout(() => {
         this.show = false;
       }, this.HIDE_DELAY);
     }
