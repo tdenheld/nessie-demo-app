@@ -1,18 +1,31 @@
 <section class="nes-section nes-bg-brand-primary">
   <nes-container>
     <nes-heading>Koop je treinkaartjes online</nes-heading>
-    <form
-      action="#"
-      class="nes-max-w-xl nes-mt-8"
-    >
-      <app-fromto></app-fromto>
-      <nes-button
-        class="nes-mt-6 nes-mb-2"
-        routerLink="/kaartjes/checkout"
+    <div class="nes-grid nes-gutter lg:nes-grid-cols-2 xl:nes-grid-cols-2-3 nes-mt-8">
+      <form action="#">
+        <app-fromto></app-fromto>
+        <nes-button
+          class="nes-mt-6 nes-mb-2"
+          routerLink="/kaartjes/checkout"
+        >
+          Bekijk ticketprijs
+        </nes-button>
+      </form>
+      <nes-text-list
+        list-type="checked"
+        size="lg"
+        color="text-default"
       >
-        Bekijk ticketprijs
-      </nes-button>
-    </form>
+        <nes-text-list-item
+          list-type="checked"
+          size="lg"
+          color="text-default"
+          *ngFor="let entry of usps"
+        >
+          {{ entry }}
+        </nes-text-list-item>
+      </nes-text-list>
+    </div>
   </nes-container>
 </section>
 

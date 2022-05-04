@@ -41,6 +41,12 @@ export class PageKaartjesComponent implements OnInit {
     }
   ];
 
+  usps = [
+    "Geen toeslag van € 1 op je treinkaartje",
+    "Geen wachtrijen bij de balie of kaartautomaat",
+    "Direct op pad!",
+  ];
+
   constructor() { }
   ngOnInit(): void { }
 
