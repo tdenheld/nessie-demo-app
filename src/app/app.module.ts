@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { AppComponent } from './app.component';
-import { LogoComponent } from './components/logo/logo.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductTableComponent } from './components/product-table/product-table.component';
@@ -47,7 +46,6 @@ const appRoutes: Routes = [
     PageIndexComponent,
     PageCampaignComponent,
     PageAbonnementenComponent,
-    LogoComponent,
     FooterComponent,
     PageAbonnementenDetailComponent,
     ProductTableComponent,
