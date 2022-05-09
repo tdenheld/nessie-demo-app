@@ -31,15 +31,23 @@
 <section class="nes-section nes-bg-brand-primary">
   <nes-container>
     <nes-heading tag="h2">Plan je reis</nes-heading>
-    <div class="nes-grid nes-gutter lg:nes-grid-cols-2 xl:nes-grid-cols-2-3 nes-mt-8">
+    <div class="nes-grid nes-gutter lg:nes-grid-cols-2 xl:nes-grid-cols-2-3 nes-mt-8 nes-mb-2">
       <form action="#">
         <app-fromto></app-fromto>
-        <nes-button
-          class="nes-mt-6 nes-mb-2"
-          routerLink="/kaartjes/checkout"
-        >
-          Bekijk ticketprijs
-        </nes-button>
+        <div class="nes-grid md:nes-grid-cols-1-m nes-gap-6 nes-items-end">
+          <nes-input
+            label="Reisdatum"
+            nes-id="travelDate"
+            name="travelDate"
+            type="date"
+            border="false"
+            class="nes-mt-8"
+            required
+          ></nes-input>
+          <nes-button routerLink="/kaartjes/checkout">
+            Bekijk ticketprijs
+          </nes-button>
+        </div>
       </form>
       <nes-text-list
         list-type="checked"
