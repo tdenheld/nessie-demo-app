@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PageIndexComponent implements OnInit {
   routes = [
     { name: 'Homepage', subtext: 'NS.nl landing', url: '/home' },
+    { name: 'Traject', subtext: 'Dynamische trajectpagina', url: '/kaartjes/traject' },
     { name: 'Campaign', subtext: 'NS Flex abonnementen', url: '/campaign' },
     { name: 'Abonnementen', subtext: 'Overzichtspagina', url: '/abonnementen' },
     { name: 'Product', subtext: 'Dal Voordeel', url: '/abonnementen/dal-voordeel' },

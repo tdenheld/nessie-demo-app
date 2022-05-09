@@ -25,6 +25,7 @@ import { PageCheckoutComponent } from './pages/kaartjes/checkout/checkout.compon
 import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 import { PageHomeComponent } from './pages/home/home.component';
 import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
+import { PageTrajectComponent } from './pages/kaartjes/traject/traject.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
   { path: 'abonnementen/:id', component: PageAbonnementenDetailComponent },
   { path: 'kaartjes', component: PageKaartjesComponent },
   { path: 'kaartjes/checkout', component: PageCheckoutComponent },
+  { path: 'kaartjes/traject', component: PageTrajectComponent },
 ];
 
 @NgModule({
@@ -59,6 +61,7 @@ const appRoutes: Routes = [
     PlannerComponent,
     PageReisplannerComponent,
     PlannerCalendarComponent,
+    PageTrajectComponent,
   ],
   imports: [
     BrowserModule,

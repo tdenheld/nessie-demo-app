@@ -1,0 +1,63 @@
+<nes-hero
+  src="./assets/img/girl-train.jpg"
+  alt="Dame die danst met een koptelefoon op"
+  sub-heading="Met de trein van"
+  heading="Amsterdam naar Utrecht"
+  align-content="bottom"
+>
+
+  <div slot="breadcrumb">
+    <nes-link
+      routerLink="/kaartjes"
+      stand-alone
+      icon="arrow-left-xs"
+      class="nes-relative nes--left-1"
+      color="text-light"
+    >Losse kaartjes en toeslagen</nes-link>
+  </div>
+
+</nes-hero>
+
+<div class="nes-section">
+  <nes-container>
+    <p class="nes-text-body nes-text-lg nes-max-w-prose nes-leading-relaxed">
+      Online koopt u gemakkelijk een treinkaartje, zonder boekingskosten. En op het
+      station stapt u direct in de trein. Zo reist u comfortabel tussen <b>Amsterdam</b>
+      en <b>Utrecht</b> in <b>30 minuten</b>. Boek uw e-tickets online vanaf <b>€ 10</b>.
+    </p>
+  </nes-container>
+</div>
+
+<section class="nes-section nes-bg-brand-primary">
+  <nes-container>
+    <nes-heading tag="h2">Plan je reis</nes-heading>
+    <div class="nes-grid nes-gutter lg:nes-grid-cols-2 xl:nes-grid-cols-2-3 nes-mt-8">
+      <form action="#">
+        <app-fromto></app-fromto>
+        <nes-button
+          class="nes-mt-6 nes-mb-2"
+          routerLink="/kaartjes/checkout"
+        >
+          Bekijk ticketprijs
+        </nes-button>
+      </form>
+      <nes-text-list
+        list-type="checked"
+        size="lg"
+        color="text-default"
+      >
+        <nes-text-list-item
+          list-type="checked"
+          size="lg"
+          color="text-default"
+          *ngFor="let entry of usps"
+        >
+          {{ entry }}
+        </nes-text-list-item>
+      </nes-text-list>
+    </div>
+  </nes-container>
+</section>
+
+<section class="nes-section nes-pb-0"></section>
+<app-footer></app-footer>
