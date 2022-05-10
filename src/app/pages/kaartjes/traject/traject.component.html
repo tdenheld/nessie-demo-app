@@ -18,9 +18,9 @@
 
 </nes-hero>
 
-<div class="nes-section">
+<div class="nes-section xl:nes-py-32">
   <nes-container>
-    <p class="nes-text-body nes-text-lg nes-max-w-prose nes-leading-relaxed">
+    <p class="nes-text-body nes-text-lg lg:nes-text-2xl nes-max-w-prose nes-leading-relaxed">
       Online koop je gemakkelijk een treinkaartje, zonder boekingskosten. Op het
       station stapt u direct in de trein. Zo reis je comfortabel tussen <b>Amsterdam</b>
       en <b>Utrecht</b> in <b>30 minuten</b>. Boek je e-tickets online vanaf <b>€ 10</b>.
@@ -28,18 +28,18 @@
   </nes-container>
 </div>
 
-<section class="nes-section nes-bg-brand-primary">
+<section class="nes-section nes-bg-brand-primary xl:nes-py-32">
   <nes-container>
-    <nes-heading tag="h2">Bekijk e-ticketprijs</nes-heading>
+    <nes-heading tag="h2">Koop je e-ticket</nes-heading>
     <div class="
       nes-grid
-      lg:nes-flex
+      lg:nes-grid-cols-2
       nes-gutter
       nes-mt-6
       nes-mb-2">
       <form
         action="#"
-        class="nes-w-full nes-max-w-2xl"
+        class="nes-max-w-2xl"
       >
         <app-fromto></app-fromto>
         <div class="nes-grid md:nes-grid-cols-1-m nes-gap-6 nes-items-end nes-relative nes-z-0">
@@ -76,7 +76,7 @@
   </nes-container>
 </section>
 
-<nes-section>
+<section class="nes-section xl:nes-py-32">
   <nes-container>
     <nes-heading
       tag="h2"
@@ -84,59 +84,84 @@
     >
       Binnen 12 minuten van Utrecht naar Amsterdam
     </nes-heading>
-
-    <div class="
-      nes-mt-6
-      nes-rounded
-      nes-bg-tint-secondary
-      nes-p-5
-      nes-space-y-6
-      nes-max-w-2xl
-    ">
-      <div>
-        <nes-route location="Amsterdam Centraal"></nes-route>
-        <nes-route
-          location="Utrecht Centraal"
-          arrival
-        ></nes-route>
+    <div class="nes-mt-8 nes-grid lg:nes-grid-cols-2 nes-gutter">
+      <div class="
+          nes-rounded
+          nes-bg-tint-secondary
+          nes-p-5
+          nes-space-y-6
+          nes-max-w-2xl
+        ">
+        <div>
+          <nes-route location="Amsterdam Centraal"></nes-route>
+          <nes-route
+            location="Utrecht Centraal"
+            arrival
+          ></nes-route>
+        </div>
+        <nes-price
+          price="4.6"
+          leading-text="Vanaf"
+        ></nes-price>
+        <ul class="nes-flex nes-flex-wrap nes-gap-x-6 nes-gap-y-3">
+          <li
+            *ngFor="let entry of specs"
+            class="
+                nes-flex
+                nes-items-center
+                nes-text-default
+                nes-gap-2"
+          >
+            <div class="nes-w-6 nes-h-6 nes-flex nes-place-content-center">
+              <nes-icon [name]="entry.icon"></nes-icon>
+            </div>
+            <p>{{ entry.label }}</p>
+          </li>
+          <!-- <li class="
+              nes-flex
+              nes-items-center
+              nes-text-default
+              nes-gap-2"
+            >
+              <div class="nes-w-6 nes-h-6 nes-flex nes-place-content-center">
+                <nes-rush status="busy"></nes-rush>
+              </div>
+              <p>Drukker in de trein</p>
+            </li> -->
+        </ul>
       </div>
-
-      <nes-price
-        price="4.6"
-        leading-text="Vanaf"
-      ></nes-price>
-
-      <ul class="nes-flex nes-flex-wrap nes-gap-x-6 nes-gap-y-3">
-        <li
-          *ngFor="let entry of specs"
-          class="
-            nes-flex
-            nes-items-center
-            nes-text-default
-            nes-gap-2"
-        >
-          <div class="nes-w-6 nes-h-6 nes-flex nes-place-content-center">
-            <nes-icon [name]="entry.icon"></nes-icon>
-          </div>
-          <p>{{ entry.label }}</p>
-        </li>
-        <!-- <li class="
-          nes-flex
-          nes-items-center
-          nes-text-default
-          nes-gap-2"
-        >
-          <div class="nes-w-6 nes-h-6 nes-flex nes-place-content-center">
-            <nes-rush status="busy"></nes-rush>
-          </div>
-          <p>Drukker in de trein</p>
-        </li> -->
-      </ul>
+      <p class="nes-text-body nes-max-w-prose nes-text-lg nes-leading-relaxed">
+        Met de trein van Amsterdam naar Utrecht reist u ontspannen en comfortabel. Het duurt gemiddeld 12 minuten om met
+        de trein van Amsterdam naar Utrecht te reizen over een afstand van 16 kilometer. Er vertrekken dagelijks 172
+        treinen en de laagste prijs voor een e-ticket is € 4,60.
+      </p>
     </div>
 
-
   </nes-container>
-</nes-section>
+</section>
 
-<section class="nes-section nes-pb-0"></section>
+<section class="nes-section xl:nes-py-32 nes-border-t">
+  <nes-container>
+    <nes-heading tag="h2">
+      Veelgestelde vragen
+    </nes-heading>
+    <div class="nes-mt-8 nes-max-w-3xl">
+      <nes-expandable
+        *ngFor="let entry of faq; let index = index"
+        [attr.border-top]="index === 0"
+        border-bottom
+        [heading]="entry.heading"
+      >
+        <nes-text>
+          {{ entry.body }}
+        </nes-text>
+      </nes-expandable>
+    </div>
+    <nes-text class="nes-mt-6">
+      Staat je vraag er niet tussen?
+      Ga naar <nes-link nes-href="#">Klantenservice</nes-link>.
+    </nes-text>
+  </nes-container>
+</section>
+
 <app-footer></app-footer>

@@ -27,6 +27,37 @@ export class PageTrajectComponent implements OnInit {
     }
   ]
 
+  public faq = [
+    {
+      heading: 'Wat is een Dagretour?',
+      body: 'Philosophy love moral good disgust transvaluation mountains love justice faith sexuality good hatred reason. Justice madness endless grandeur hope suicide contradict philosophy. Christianity disgust suicide ideal christian ultimate pious justice. Madness god deceptions ultimate morality free justice faith against superiority abstract mountains self burying.'
+    },
+    {
+      heading: 'Kan ik op tussengelegen stations uitstappen?',
+      body: 'Philosophy love moral good disgust transvaluation mountains love justice faith sexuality good hatred reason. Justice madness endless grandeur hope suicide contradict philosophy. Christianity disgust suicide ideal christian ultimate pious justice. Madness god deceptions ultimate morality free justice faith against superiority abstract mountains self burying.'
+    },
+    {
+      heading: 'Is het e-ticket persoonsgebonden?',
+      body: 'Philosophy love moral good disgust transvaluation mountains love justice faith sexuality good hatred reason. Justice madness endless grandeur hope suicide contradict philosophy. Christianity disgust suicide ideal christian ultimate pious justice. Madness god deceptions ultimate morality free justice faith against superiority abstract mountains self burying.'
+    },
+    {
+      heading: 'Kan ik mijn treinkaartje laden op een OV-chipkaart?',
+      body: 'Philosophy love moral good disgust transvaluation mountains love justice faith sexuality good hatred reason. Justice madness endless grandeur hope suicide contradict philosophy. Christianity disgust suicide ideal christian ultimate pious justice. Madness god deceptions ultimate morality free justice faith against superiority abstract mountains self burying.'
+    },
+    {
+      heading: 'Hoe laad ik mijn treinkaartje op mijn mobiel?',
+      body: 'Philosophy love moral good disgust transvaluation mountains love justice faith sexuality good hatred reason. Justice madness endless grandeur hope suicide contradict philosophy. Christianity disgust suicide ideal christian ultimate pious justice. Madness god deceptions ultimate morality free justice faith against superiority abstract mountains self burying.'
+    },
+    {
+      heading: 'Hoe kan ik inchecken met een treinkaartje op mijn mobiel?',
+      body: 'Philosophy love moral good disgust transvaluation mountains love justice faith sexuality good hatred reason. Justice madness endless grandeur hope suicide contradict philosophy. Christianity disgust suicide ideal christian ultimate pious justice. Madness god deceptions ultimate morality free justice faith against superiority abstract mountains self burying.'
+    },
+    {
+      heading: 'De treinkaarten op de selfservice pagina doen het niet.',
+      body: 'Philosophy love moral good disgust transvaluation mountains love justice faith sexuality good hatred reason. Justice madness endless grandeur hope suicide contradict philosophy. Christianity disgust suicide ideal christian ultimate pious justice. Madness god deceptions ultimate morality free justice faith against superiority abstract mountains self burying.'
+    }
+  ];
+
   constructor() { }
   ngOnInit(): void { }
 
