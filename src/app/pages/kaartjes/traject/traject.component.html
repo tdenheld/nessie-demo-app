@@ -142,25 +142,27 @@
 
 <section class="nes-section xl:nes-py-32 nes-border-t">
   <nes-container>
-    <nes-heading tag="h2">
-      Veelgestelde vragen
-    </nes-heading>
-    <div class="nes-mt-8 nes-max-w-3xl">
-      <nes-expandable
-        *ngFor="let entry of faq; let index = index"
-        [attr.border-top]="index === 0"
-        border-bottom
-        [heading]="entry.heading"
-      >
-        <nes-text>
-          {{ entry.body }}
-        </nes-text>
-      </nes-expandable>
+    <div class="nes-max-w-4xl">
+      <nes-heading tag="h2">
+        Veelgestelde vragen
+      </nes-heading>
+      <div class="nes-mt-8">
+        <nes-expandable
+          *ngFor="let entry of faq; let index = index"
+          [attr.border-top]="index === 0"
+          border-bottom
+          [heading]="entry.heading"
+        >
+          <nes-text>
+            {{ entry.body }}
+          </nes-text>
+        </nes-expandable>
+      </div>
+      <nes-text class="nes-mt-6">
+        Staat je vraag er niet tussen?
+        Ga naar <nes-link nes-href="#">Klantenservice</nes-link>.
+      </nes-text>
     </div>
-    <nes-text class="nes-mt-6">
-      Staat je vraag er niet tussen?
-      Ga naar <nes-link nes-href="#">Klantenservice</nes-link>.
-    </nes-text>
   </nes-container>
 </section>
 
