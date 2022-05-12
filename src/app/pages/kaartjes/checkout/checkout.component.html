@@ -171,13 +171,17 @@
             nes-p-5
             nes-space-y-4
             nes-text-default">
-          <div>
-            <nes-route [location]="getStoredStation('locationFrom') || 'Utrecht Centraal'"></nes-route>
-            <nes-route
-              [location]="getStoredStation('locationTo') || 'Rotterdam Alexander'"
-              arrival
-            ></nes-route>
-          </div>
+          <ul>
+            <li>
+              <nes-route [location]="getStoredStation('locationFrom') || 'Utrecht Centraal'"></nes-route>
+            </li>
+            <li>
+              <nes-route
+                [location]="getStoredStation('locationTo') || 'Rotterdam Alexander'"
+                arrival
+              ></nes-route>
+            </li>
+          </ul>
           <div class="nes-flex nes-items-center nes-gap-2 nes-text-body">
             <nes-icon
               name="calendar"
