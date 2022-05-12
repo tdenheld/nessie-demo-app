@@ -41,7 +41,7 @@
         action="#"
         class="nes-max-w-2xl"
       >
-        <app-fromto></app-fromto>
+        <app-fromto class="nes-relative nes-z-50"></app-fromto>
         <div class="nes-grid md:nes-grid-cols-1-m nes-gap-6 nes-items-end nes-relative nes-z-menu">
           <nes-datepicker-input
             label="Reisdatum"
@@ -51,6 +51,7 @@
             class="nes-mt-8"
             [value]="today()"
             required
+            type="date"
           ></nes-datepicker-input>
           <nes-button routerLink="/kaartjes/checkout">
             Bekijk e-ticketprijs
