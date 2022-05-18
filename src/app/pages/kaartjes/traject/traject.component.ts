@@ -63,9 +63,9 @@ export class PageTrajectComponent implements OnInit {
 
   getStoredStation(location: string) {
     return localStorage.getItem(location) ||
-      location === 'locationFrom' ?
-      'Utrecht Zuilen' :
-      'Amsterdam Amstel';
+      (location === 'locationFrom' ?
+        'Utrecht Zuilen' :
+        'Amsterdam Amstel');
   }
 
   constructor() { }
