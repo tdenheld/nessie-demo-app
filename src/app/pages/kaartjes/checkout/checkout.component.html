@@ -19,14 +19,23 @@
           Reisgegevens
         </nes-heading>
         <div class="nes-space-y-8">
-          <nes-input
+          <!-- <nes-input
             label="Reisdatum"
             nes-id="travel-date"
             required
             type="date"
             value="2022-04-28"
             max-width="240px"
-          ></nes-input>
+          ></nes-input> -->
+          <nes-datepicker-input
+          label="Reisdatum"
+          nes-id="travelDate"
+          name="travelDate"
+          class="nes-mt-6"
+          [value]="today()"
+          required
+          type="date"
+        ></nes-datepicker-input>
           <nes-stepper
             label="Volwassene"
             value="1"
@@ -188,7 +197,7 @@
               class="nes-relative nes--top-px"
               color="text-default"
             ></nes-icon>
-            donderdag 28 april 2022
+            donderdag 28 mei 2022
           </div>
           <nes-divider></nes-divider>
           <div class="nes-space-y-1">

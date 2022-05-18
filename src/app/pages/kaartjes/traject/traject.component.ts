@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { today } from 'src/utils';
 
 @Component({
   selector: 'app-traject',
@@ -25,7 +26,7 @@ export class PageTrajectComponent implements OnInit {
       icon: "train",
       label: "172 dagelijkse treinen"
     }
-  ]
+  ];
 
   public faq = [
     {
@@ -58,13 +59,13 @@ export class PageTrajectComponent implements OnInit {
     }
   ];
 
-  public today() {
-    const today = new Date();
-    const dd = String(today.getDate()).padStart(2, '0');
-    const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-    const yyyy = today.getFullYear();
+  public today = () => today();
 
-    return dd + '-' + mm + '-' + yyyy;    
+  getStoredStation(location: string) {
+    return localStorage.getItem(location) ||
+      location === 'locationFrom' ?
+      'Utrecht Zuilen' :
+      'Amsterdam Amstel';
   }
 
   constructor() { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { today } from 'src/utils';
 
 @Component({
   selector: 'app-checkout',
@@ -9,6 +10,8 @@ export class PageCheckoutComponent implements OnInit {
   getStoredStation(location: string) {
     return localStorage.getItem(location);
   }
+
+  public today = () => today();
 
   constructor() { }
   ngOnInit(): void {
