@@ -92,7 +92,7 @@
     --nes-color-form-placeholder: var(--nes-color-gray-500);
     --nes-color-form-icon: var(--nes-color-light-blue-400);
     --nes-color-radio-panel-bg: var(--nes-alpha-white-50);
-    --nes-color-radio-panel-bg-checked: var(--nes-color-gray-800);
+    --nes-color-radio-panel-bg-checked: var(--nes-alpha-white-50);
     --nes-color-focus-default: var(--nes-color-light-blue-400);
     --nes-color-focus-pressed: var(--nes-color-light-blue-400);
     --nes-color-toggle-bg: var(--nes-alpha-white-100);
