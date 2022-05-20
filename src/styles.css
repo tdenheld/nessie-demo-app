@@ -110,7 +110,7 @@
     --nes-color-logo-default: var(--nes-color-yellow);
 
     --nes-color-expandable-text: var(--nes-color-light-blue-400);
-    --nes-color-expandable-text-pressed: var(--nes-color-light-blue-100);
+    --nes-color-expandable-text-pressed: var(--nes-color-light-blue-400);
     --nes-color-expandable-border: var(--nes-alpha-white-100);
 
     --nes-color-sticker-subtle-filled-bg: var(--nes-alpha-white-100);
