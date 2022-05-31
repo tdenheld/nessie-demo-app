@@ -1,0 +1,30 @@
+.selector {
+  @apply nes-relative
+  nes-w-full
+  nes-border
+  nes-border-form-border
+  nes-p-5
+  nes-rounded
+  nes-transition
+  nes-cursor-pointer
+  hover:nes-border-form-border-pressed
+
+  before:nes-absolute
+  before:nes--inset-1
+  before:nes-ring
+  before:nes-rounded-[8px]
+  before:nes-transition
+  before:nes-opacity-0
+  
+  focus-visible:before:nes-opacity-100;
+}
+
+.selector.is-active {
+  @apply nes-ring-1
+  nes-border-focus-default
+  hover:nes-border-focus-default;
+}
+
+.selector__container {
+  @apply nes-relative nes-z-raised;
+}

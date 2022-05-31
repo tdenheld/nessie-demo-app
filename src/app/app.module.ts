@@ -26,6 +26,7 @@ import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 import { PageHomeComponent } from './pages/home/home.component';
 import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
 import { PageTrajectComponent } from './pages/kaartjes/traject/traject.component';
+import { SelectorComponent } from './components/selector/selector.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -62,6 +63,7 @@ const appRoutes: Routes = [
     PageReisplannerComponent,
     PlannerCalendarComponent,
     PageTrajectComponent,
+    SelectorComponent,
   ],
   imports: [
     BrowserModule,
