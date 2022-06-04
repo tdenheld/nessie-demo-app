@@ -1,15 +1,15 @@
 {
   "version": "v1",
   "packages": {
-    "@nessie/webcomponents": {
-      "signature": "3757a525a4e340908796d6de4595da47",
-      "file": true,
-      "replaced": "^2.3.0"
-    },
     "@nessie/web-fundamentals": {
       "signature": "77bfa318ea968b112a77144c0d135640",
       "file": true,
       "replaced": "^1.6.0"
+    },
+    "@nessie/webcomponents": {
+      "signature": "5a5db987aad10c10d370f85c1837faba",
+      "file": true,
+      "replaced": "^2.3.0"
     }
   }
 }
