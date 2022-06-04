@@ -153,13 +153,6 @@
 }
 
 @layer components {
-  .nes-heading {
-    @apply nes-font-bold
-    nes-leading-tight
-    nes-tracking-tight
-    nes-text-heading;
-  }
-
   .c-planner-btn {
     @apply nes-text-default
     nes-text-base
