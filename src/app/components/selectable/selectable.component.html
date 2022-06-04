@@ -1,9 +1,9 @@
 <button
-  class="selector"
+  class="selectable"
   (click)="active = !active"
   [class]="{'is-active': active}"
 >
-  <div class="selector__container">
+  <div class="selectable__container">
     <ng-content></ng-content>
   </div>
 </button>

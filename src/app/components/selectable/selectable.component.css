@@ -1,4 +1,4 @@
-.selector {
+.selectable {
   @apply nes-relative
   nes-w-full
   nes-border
@@ -20,12 +20,12 @@
   focus-visible:before:nes-opacity-100;
 }
 
-.selector.is-active {
+.selectable.is-active {
   @apply nes-ring-1
   nes-border-focus-default
   hover:nes-border-focus-default;
 }
 
-.selector__container {
+.selectable__container {
   @apply nes-relative nes-z-raised;
 }
