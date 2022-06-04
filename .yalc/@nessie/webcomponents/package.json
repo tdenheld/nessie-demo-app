@@ -1,0 +1,48 @@
+{
+  "name": "@nessie/webcomponents",
+  "version": "2.3.0",
+  "description": "Nessie - Webcomponents",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/design-system-stenciljs/design-system-stenciljs.esm.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "npm run before-build && stencil build --docs",
+    "start": "npm run before-build && stencil build --dev --watch --serve --docs",
+    "test": "stencil test --spec",
+    "test.watch": "stencil test --spec --watch",
+    "test.e2e": "stencil test --spec --e2e",
+    "test.e2e.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "storybook": "start-storybook -p 6006 --quiet -s www",
+    "build-storybook": "node ./scripts/netlify-preinstall.js && stencil build && build-storybook -s www",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run storybook\"",
+    "lint": "eslint src/**/*{.ts,.tsx}",
+    "format": "prettier --write .",
+    "release": "npm --no-git-tag-version version",
+    "before-build": "node ./scripts/list-components-scss.js && node ./scripts/copy-files.js",
+    "coverage": "node ./scripts/open-coverage-report.js"
+  },
+  "dependencies": {
+    "@nessie/web-fundamentals": "file:.yalc/@nessie/web-fundamentals",
+    "@stencil/core": "2.12.0",
+    "hammerjs": "^2.0.8"
+  },
+  "license": "MIT",
+  "optionalDependencies": {
+    "@nessie/design-tokens": "2.2.0",
+    "@nessie/web-fundamentals": "1.6.0"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.topaas.ns.nl/repository/NS_DSM_NPM/"
+  },
+  "yalcSig": "3757a525a4e340908796d6de4595da47"
+}
