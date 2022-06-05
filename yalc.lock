@@ -7,7 +7,8 @@
       "replaced": "^1.6.0"
     },
     "@nessie/webcomponents": {
-      "signature": "5a5db987aad10c10d370f85c1837faba",
+      "version": "2.3.0",
+      "signature": "b578649f72c9ea28ba993d611ee68b09",
       "file": true,
       "replaced": "^2.3.0"
     }

@@ -32,7 +32,6 @@
     "coverage": "node ./scripts/open-coverage-report.js"
   },
   "dependencies": {
-    "@nessie/web-fundamentals": "file:.yalc/@nessie/web-fundamentals",
     "@stencil/core": "2.12.0",
     "hammerjs": "^2.0.8"
   },
@@ -44,5 +43,5 @@
   "publishConfig": {
     "registry": "https://nexus.topaas.ns.nl/repository/NS_DSM_NPM/"
   },
-  "yalcSig": "5a5db987aad10c10d370f85c1837faba"
+  "yalcSig": "b578649f72c9ea28ba993d611ee68b09"
 }
