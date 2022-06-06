@@ -1,0 +1,9 @@
+:host {
+  @apply nes-block;
+}
+
+@media (max-width: 350px) {
+  .s-day {
+    @apply nes-hidden;
+  }
+}

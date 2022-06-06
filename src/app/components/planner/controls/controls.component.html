@@ -1,0 +1,51 @@
+<div class="nes-flex nes-gap-4">
+  <div class="nes-flex nes-gap-px nes-w-full">
+    <button
+      (click)="$event.preventDefault(); departure = !departure"
+      class="
+        nes-h-10
+        nes-px-4
+        nes-text-default
+        nes-bg-alpha-subtle
+        nes-transition
+        nes-w-full
+        nes-block
+        hover:nes-bg-alpha-strong
+        nes-rounded-l
+        nes-font-bold
+        focus:nes-ring-center
+    ">
+      {{ departure ? 'Vertrek' : 'Aankomst' }}
+    </button>
+    <div class="
+      nes-relative
+      nes-grid
+      nes-h-10
+      nes-text-default
+      nes-px-4
+      nes-place-content-center
+      nes-bg-alpha-subtle
+      nes-transition
+      hover:nes-bg-alpha-medium
+      nes-rounded-r
+    ">
+      <span class="nes-whitespace-nowrap">
+        <span class="s-day">ma</span> 28 sep, 23:45
+      </span>
+      <input
+        class="
+          nes-opacity-0
+          nes-absolute nes-inset-0
+          nes-appearance-none
+          nes-cursor-pointer"
+        type="datetime-local"
+      />
+    </div>
+  </div>
+  <nes-button
+    compact
+    icon-only
+    variant="secondary"
+    icon-leading="settings"
+  ></nes-button>
+</div>
