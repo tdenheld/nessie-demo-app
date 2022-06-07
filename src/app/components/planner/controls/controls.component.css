@@ -2,7 +2,7 @@
   @apply nes-block;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 374px) {
   .s-day {
     @apply nes-hidden;
   }
