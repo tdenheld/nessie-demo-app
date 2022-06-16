@@ -18,12 +18,12 @@
   before:nes-opacity-0
   
   focus-visible:before:nes-opacity-100;
-}
 
-.selectable.is-active {
-  @apply nes-ring-1
-  nes-border-focus-default
-  hover:nes-border-focus-default;
+  &.is-active {
+    @apply nes-ring-1
+    nes-border-focus-default
+    hover:nes-border-focus-default;
+  }  
 }
 
 .selectable__container {
