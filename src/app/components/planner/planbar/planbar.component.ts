@@ -5,7 +5,7 @@ import places from 'src/data/places.json';
 @Component({
   selector: 'app-planbar',
   templateUrl: './planbar.component.html',
-  styleUrls: ['./planbar.component.css']
+  styleUrls: ['./planbar.component.scss']
 })
 export class PlanbarComponent implements OnInit {
   fromActive = false;

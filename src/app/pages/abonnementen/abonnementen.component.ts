@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-abonnementen',
   templateUrl: './abonnementen.component.html',
-  styleUrls: ['./abonnementen.component.css']
+  styleUrls: ['./abonnementen.component.scss']
 })
 export class PageAbonnementenComponent implements OnInit {
   showMessageToast = false;

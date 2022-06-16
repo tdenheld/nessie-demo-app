@@ -4,7 +4,7 @@ import places from 'src/data/places.json';
 @Component({
   selector: 'app-fromto',
   templateUrl: './fromto.component.html',
-  styleUrls: ['./fromto.component.css']
+  styleUrls: ['./fromto.component.scss']
 })
 export class FromtoComponent implements OnInit {
   fromActive = false;

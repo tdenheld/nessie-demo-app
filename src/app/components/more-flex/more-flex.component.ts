@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-more-flex',
   templateUrl: './more-flex.component.html',
-  styleUrls: ['./more-flex.component.css']
+  styleUrls: ['./more-flex.component.scss']
 })
 export class MoreFlexComponent implements OnInit {
   more = [{

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-kaartjes',
   templateUrl: './kaartjes.component.html',
-  styleUrls: ['./kaartjes.component.css']
+  styleUrls: ['./kaartjes.component.scss']
 })
 export class PageKaartjesComponent implements OnInit {
   tickets = [

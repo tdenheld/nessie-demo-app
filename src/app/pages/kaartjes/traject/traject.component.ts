@@ -4,7 +4,7 @@ import { today } from 'src/utils';
 @Component({
   selector: 'app-traject',
   templateUrl: './traject.component.html',
-  styleUrls: ['./traject.component.css']
+  styleUrls: ['./traject.component.scss']
 })
 export class PageTrajectComponent implements OnInit {
   public usps = [

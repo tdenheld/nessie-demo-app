@@ -5,7 +5,7 @@ import subscriptions from 'src/data/subscriptions.json';
 @Component({
   selector: 'app-abonnementen-detail',
   templateUrl: './abonnementen-detail.component.html',
-  styleUrls: ['./abonnementen-detail.component.css']
+  styleUrls: ['./abonnementen-detail.component.scss']
 })
 export class PageAbonnementenDetailComponent implements OnInit {
   product: any;

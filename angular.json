@@ -39,7 +39,7 @@
             ],
             "styles": [
               "./node_modules/@nessie/webcomponents/dist/design-system-stenciljs/design-system-stenciljs.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -106,12 +106,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
     }
   },
   "defaultProject": "nessie-demo-app"

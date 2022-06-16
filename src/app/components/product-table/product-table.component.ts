@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-product-table',
   templateUrl: './product-table.component.html',
-  styleUrls: ['./product-table.component.css']
+  styleUrls: ['./product-table.component.scss']
 })
 export class ProductTableComponent implements OnInit {
   @Input() features = [
