@@ -1,0 +1,9 @@
+@tailwind base;
+@import "elements.fonts";
+@import "elements.page";
+@import "themes.dark";
+
+@tailwind components;
+@import "components.button";
+
+@tailwind utilities;

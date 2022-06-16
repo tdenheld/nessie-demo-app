@@ -1,0 +1,13 @@
+@layer components {
+  .c-planner-btn {
+    @apply nes-text-default
+    nes-text-base
+    nes-inline-grid
+    nes-items-center
+    nes-h-8
+    nes-transition
+    nes-rounded-sm
+    nes-px-2
+    focus:nes-ring;
+  }
+}
