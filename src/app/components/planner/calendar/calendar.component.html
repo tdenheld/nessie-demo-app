@@ -13,8 +13,12 @@
     [ngClass]="{'s-fade-out': !active}"
   >
     <div class="nes-flex nes-gap-6">
-      <div class="nes-shrink-0 nes-overflow-hidden nes-rounded nes-bg-elevated">
-        <nes-calendar class="nes-w-[380px]"></nes-calendar>
+      <div class="nes-shrink-0">
+        <nes-calendar
+          class="nes-w-[380px]"
+          shadow="false"
+          background-color="bg-elevated"
+        ></nes-calendar>
       </div>
       <div class="nes-space-y-6 nes-w-full">
         <nes-radio-panel
