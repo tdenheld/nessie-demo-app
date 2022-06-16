@@ -70,13 +70,21 @@
     <div class="nes-px-4 nes-flex nes-items-center nes-gap-3">
       <div class="nes-border-l nes-h-6"></div>
       <planner-calendar></planner-calendar>
-      <div class="nes-border-l nes-h-6"></div>
+      <div class="nes-border-l nes-h-6 md:nes-hidden lg:nes-block"></div>
       <button
-        class="c-planner-btn"
+        class="c-planner-btn md:nes-hidden lg:nes-inline-grid"
         (click)="$event.preventDefault()"
       >
         <div><b>Voorkeuren</b></div>
       </button>
+      <nes-button
+        icon-only
+        variant="tertiary"
+        icon-leading="settings"
+        (click)="$event.preventDefault()"
+        icon-leading-color="text-default"
+        class="lg:nes-hidden"
+      ></nes-button>
     </div>
   </div>
 

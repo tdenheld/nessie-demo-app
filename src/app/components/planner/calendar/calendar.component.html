@@ -15,7 +15,7 @@
     <div class="nes-flex nes-gap-6">
       <div class="nes-shrink-0">
         <nes-calendar
-          class="nes-w-[380px]"
+          class="md:nes-w-[320px] lg:nes-w-[380px]"
           shadow="false"
           background-color="bg-elevated"
         ></nes-calendar>
@@ -31,9 +31,10 @@
             depArrToggle = 'Vertrek'"
           [options]="[{
               label: 'Vertrek',
-              checked: true
+              checked: depArrToggle === 'Vertrek'
             },{
-              label: 'Aankomst'
+              label: 'Aankomst',
+              checked: depArrToggle === 'Aankomst'
             }]"
         >
         </nes-radio-panel>
@@ -43,7 +44,8 @@
           nes-rounded
         ">
           <div class="
-            nes-flex
+            nes-grid
+            lg:nes-grid-flow-col
             nes-gap-6
             nes-items-center
           ">
@@ -65,7 +67,7 @@
               id="tijd"
               autocomplete="off"
             />
-            <div class="nes-flex nes-items-center nes-gap-3">
+            <div class="nes-flex nes-items-center nes-gap-3 nes-justify-center">
               <nes-button
                 icon-leading="minus"
                 icon-only
