@@ -6,7 +6,6 @@
 
 <nes-section>
   <nes-container>
-    <!-- <div>{{ semanticColors }}</div> -->
     <div class="nes-space-y-24">
       <div *ngFor="let category of colorCategories">
         <h2 class="nes-heading nes-text-2xl nes-capitalize">
@@ -41,11 +40,11 @@
               </p>
               <p>
                 <span class="nes-w-16 nes-hidden sm:nes-inline-block">HEX: </span>
-                <b>{{ getColorHex(category.colorsRGB, index) }}</b>
+                <b class="nes-uppercase">{{ getColorHex(category.colorsRGB, index) }}</b>
               </p>
               <p *ngIf="category.title !== 'Palet'">
                 <span class="nes-w-16 nes-hidden sm:nes-inline-block">Palet: </span>
-                <b>{{ getColorPalet(getColorRGB(category.colorsRGB, index)) }}</b>
+                <b>{{ getColorPalet(category.colorsRGB, index) }}</b>
               </p>
             </div>
           </li>

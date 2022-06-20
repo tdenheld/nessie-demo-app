@@ -28,8 +28,6 @@ export class PageFundamentalsComponent implements OnInit {
     ...this.semanticColors
   ];
 
-  // Private functions
-  // ----------------------------------------------------------
   public fromEntries(obj: any) {
     return Object.fromEntries(obj);
   }
@@ -57,20 +55,18 @@ export class PageFundamentalsComponent implements OnInit {
       this.componentToHex(parseInt(rgbArray[2], 10));
   }
 
-  // Public functions
-  // ----------------------------------------------------------
-  public getColorRGB(arr: any, index: number) {
-    return arr[index][1];
-  }
-
   public getColorHex(arr: any, index: number) {
-    const value: string = this.getColorRGB(arr, index);
-    return this.rgbToHex(value.replace('rgb(', '').replace(')', ''));
+    return this.rgbToHex(this.getColorRGB(arr, index));
   }
 
-  public getColorPalet(val: any) {
-    const object: any = colorsPaletRGB;
-    return Object.keys(object).find(key => object[key] === val);
+  public getColorRGB(arr: any, index: number) {
+    const value: string = arr[index][1];
+    return value.replace('rgb(', '').replace(')', '');
+  }
+
+  public getColorPalet(arr: any, index: number) {
+    const obj: any = colorsPaletRGB;
+    return Object.keys(obj).find(key => obj[key] === arr[index][1]);
   }
 
   // Constructor
