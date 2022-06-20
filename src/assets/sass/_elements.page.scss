@@ -5,6 +5,8 @@
   }
 
   html {
-    @apply nes-bg-default nes-transition;
+    @apply nes-text-default
+    nes-bg-default
+    nes-transition;
   }
 }

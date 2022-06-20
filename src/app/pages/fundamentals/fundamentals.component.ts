@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import colors from '@nessie/web-fundamentals/build/web/tokens-colors-css.json';
 import colorsRGB from '@nessie/web-fundamentals/build/web/tokens-colors.json';
-import colorsPalet from '@nessie/web-fundamentals/build/web/tokens-colors-palet.json';
+import colorsPalet from '@nessie/web-fundamentals/build/web/tokens-colors-palet-css.json';
+import colorsPaletRGB from '@nessie/web-fundamentals/build/web/tokens-colors-palet.json';
+import semanticColors from '@nessie/design-tokens/properties/semantic-colors.json';
 
 @Component({
   selector: 'app-fundamentals',
@@ -9,7 +11,38 @@ import colorsPalet from '@nessie/web-fundamentals/build/web/tokens-colors-palet.
   styleUrls: ['./fundamentals.component.scss']
 })
 export class PageFundamentalsComponent implements OnInit {
-  public colors = Object.entries(colors);
+  public semanticColors = Object.keys(semanticColors.color).map((key) => {
+    return {
+      title: key,
+      colors: [...this.filterKeys(colors, key)],
+      colorsRGB: [...this.filterKeys(colorsRGB, key)]
+    };
+  });
+
+  public colorCategories = [
+    {
+      title: 'Palet',
+      colors: Object.entries(colorsPalet),
+      colorsRGB: Object.entries(colorsPaletRGB),
+    },
+    ...this.semanticColors
+  ];
+
+  // Private functions
+  // ----------------------------------------------------------
+  public fromEntries(obj: any) {
+    return Object.fromEntries(obj);
+  }
+
+  private filterKeys(obj: {}, str: string) {
+    return Object.entries(obj).filter(([key, value]) => {
+      if (key.startsWith(str)) {
+        return key.includes(str);
+      } else {
+        return '';
+      }
+    });
+  }
 
   private componentToHex(c: number) {
     var hex = c.toString(16);
@@ -24,25 +57,24 @@ export class PageFundamentalsComponent implements OnInit {
       this.componentToHex(parseInt(rgbArray[2], 10));
   }
 
-  public getColorPalet(index: number) {
-    const object: any = colorsPalet;
-    const value: string = this.getColorRGB(index);
-    return Object.keys(object).find(key => object[key] === value);
+  // Public functions
+  // ----------------------------------------------------------
+  public getColorRGB(arr: any, index: number) {
+    return arr[index][1];
   }
 
-  public getColorRGB(index: number) {
-    const arr = Object.values(colorsRGB);
-    return arr[index];
+  public getColorHex(arr: any, index: number) {
+    const value: string = this.getColorRGB(arr, index);
+    return this.rgbToHex(value.replace('rgb(', '').replace(')', ''));
   }
 
-  public getColorHex(index: number) {
-    const arr = Object.values(colorsRGB);
-    return this.rgbToHex(arr[index].replace('rgb(', '').replace(')', ''));
+  public getColorPalet(val: any) {
+    const object: any = colorsPaletRGB;
+    return Object.keys(object).find(key => object[key] === val);
   }
 
+  // Constructor
+  // ----------------------------------------------------------
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

@@ -6,43 +6,51 @@
 
 <nes-section>
   <nes-container>
-    <h2 class="nes-heading">Colors</h2>
-    <ul class="
-      nes-mt-6
-      nes-grid
-      nes-grid-cols-2
-      md:nes-grid-cols-4
-      xl:nes-grid-cols-6
-      nes-gap-4
-      sm:nes-gap-6
-    ">
-      <li
-        *ngFor="let entry of colors; let index = index"
-        class="nes-p-2 nes-bg-elevated nes-border nes-border-subtle nes-rounded-lg"
-      >
-        <div
-          [style]="{backgroundColor: entry[1]}"
-          class="nes-pb-[67%] nes-rounded nes-border nes-border-alpha-black-75"
-        ></div>
-        <div class="nes-mt-2 nes-space-y-1 nes-text-subtle nes-text-2xs nes-leading-tight">
-          <p>
-            <span class="nes-w-16 nes-hidden sm:nes-inline-block">Token: </span>
-            <b>{{ entry[0] }}</b>
-          </p>
-          <p>
-            <span class="nes-w-16 nes-hidden sm:nes-inline-block">RGB: </span>
-            <b>{{ getColorRGB(index) }}</b>
-          </p>
-          <p>
-            <span class="nes-w-16 nes-hidden sm:nes-inline-block">HEX: </span>
-            <b>{{ getColorHex(index) }}</b>
-          </p>
-          <p>
-            <span class="nes-w-16 nes-hidden sm:nes-inline-block">Palet: </span>
-            <b>{{ getColorPalet(index) }}</b>
-          </p>
-        </div>
-      </li>
-    </ul>
+    <!-- <div>{{ semanticColors }}</div> -->
+    <div class="nes-space-y-24">
+      <div *ngFor="let category of colorCategories">
+        <h2 class="nes-heading nes-text-2xl nes-capitalize">
+          Colors {{ category.title }}
+        </h2>
+        <ul class="
+          nes-mt-6
+          nes-grid
+          nes-grid-cols-2
+          md:nes-grid-cols-4
+          xl:nes-grid-cols-6
+          nes-gap-4
+          sm:nes-gap-6
+        ">
+
+          <li
+            *ngFor="let entry of category.colors; let index = index"
+            class="nes-p-2 nes-bg-elevated nes-border nes-border-subtle nes-rounded-lg"
+          >
+            <div
+              [style]="{backgroundColor: entry[1]}"
+              class="nes-pb-[33%] nes-rounded nes-border nes-border-alpha-black-75"
+            ></div>
+            <div class="nes-mt-2 nes-space-y-1 nes-text-subtle nes-text-2xs nes-leading-tight">
+              <p>
+                <span class="nes-w-16 nes-hidden sm:nes-inline-block">Token: </span>
+                <b>{{ entry[0] }}</b>
+              </p>
+              <p>
+                <span class="nes-w-16 nes-hidden sm:nes-inline-block">RGB: </span>
+                <b>{{ getColorRGB(category.colorsRGB, index) }}</b>
+              </p>
+              <p>
+                <span class="nes-w-16 nes-hidden sm:nes-inline-block">HEX: </span>
+                <b>{{ getColorHex(category.colorsRGB, index) }}</b>
+              </p>
+              <p *ngIf="category.title !== 'Palet'">
+                <span class="nes-w-16 nes-hidden sm:nes-inline-block">Palet: </span>
+                <b>{{ getColorPalet(getColorRGB(category.colorsRGB, index)) }}</b>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nes-container>
 </nes-section>
