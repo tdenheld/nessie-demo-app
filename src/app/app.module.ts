@@ -15,6 +15,8 @@ import { FromtoComponent } from './components/planner/fromto/fromto.component';
 import { PlanbarComponent } from './components/planner/planbar/planbar.component';
 import { PlannerComponent } from './components/planner/planner.component';
 import { PlannerCalendarComponent } from './components/planner/calendar/calendar.component';
+import { SelectableComponent } from './components/selectable/selectable.component';
+import { ControlsComponent } from './components/planner/controls/controls.component';
 
 import { PageFormComponent } from './pages/form/form.component';
 import { PageIndexComponent } from './pages/index/index.component';
@@ -26,8 +28,7 @@ import { PageKaartjesComponent } from './pages/kaartjes/kaartjes.component';
 import { PageHomeComponent } from './pages/home/home.component';
 import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
 import { PageTrajectComponent } from './pages/kaartjes/traject/traject.component';
-import { SelectableComponent } from './components/selectable/selectable.component';
-import { ControlsComponent } from './components/planner/controls/controls.component';
+import { PageFundamentalsComponent } from './pages/fundamentals/fundamentals.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   { path: 'kaartjes', component: PageKaartjesComponent },
   { path: 'kaartjes/checkout', component: PageCheckoutComponent },
   { path: 'kaartjes/traject', component: PageTrajectComponent },
+  { path: 'fundamentals', component: PageFundamentalsComponent },
 ];
 
 @NgModule({
@@ -66,6 +68,7 @@ const appRoutes: Routes = [
     PageTrajectComponent,
     SelectableComponent,
     ControlsComponent,
+    PageFundamentalsComponent,
   ],
   imports: [
     BrowserModule,

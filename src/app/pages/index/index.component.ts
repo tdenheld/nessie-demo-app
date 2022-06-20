@@ -15,6 +15,7 @@ export class PageIndexComponent implements OnInit {
     { name: 'Tickets', subtext: 'Losse kaartjes en toeslagen', url: '/kaartjes' },
     { name: 'Checkout', subtext: 'Koop een treinkaartje', url: '/kaartjes/checkout' },
     { name: 'Form', subtext: 'Geld terug bij vertraging', url: '/form' },
+    { name: 'Fundamentals', subtext: 'Colors, Typography and more', url: '/fundamentals' },
   ];
   constructor() { }
   ngOnInit(): void { }
