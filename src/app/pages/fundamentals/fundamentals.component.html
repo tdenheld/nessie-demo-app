@@ -35,10 +35,11 @@
                 <b>{{ entry[0] }}</b>
               </p>
               <p>
-                <span class="nes-w-16 nes-hidden sm:nes-inline-block">RGB: </span>
+                <span class="nes-w-16 nes-hidden sm:nes-inline-block">
+                  RGB{{ getRGBA(category.colorsRGB, index) }}: </span>
                 <b>{{ getColorRGB(category.colorsRGB, index) }}</b>
               </p>
-              <p>
+              <p *ngIf="getColorHex(category.colorsRGB, index)">
                 <span class="nes-w-16 nes-hidden sm:nes-inline-block">HEX: </span>
                 <b class="nes-uppercase">{{ getColorHex(category.colorsRGB, index) }}</b>
               </p>

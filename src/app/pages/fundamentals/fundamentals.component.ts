@@ -56,12 +56,19 @@ export class PageFundamentalsComponent implements OnInit {
   }
 
   public getColorHex(arr: any, index: number) {
-    return this.rgbToHex(this.getColorRGB(arr, index));
+    const value = arr[index][1];
+    return value.startsWith('rgba') ? '' :
+      this.rgbToHex(value.replace('rgb(', '').replace(')', ''));
   }
 
   public getColorRGB(arr: any, index: number) {
-    const value: string = arr[index][1];
-    return value.replace('rgb(', '').replace(')', '');
+    const value = arr[index][1];
+    const a = value.startsWith('rgba') ? 'a' : '';
+    return value.replace(`rgb${a}(`, '').replace(')', '');
+  }
+
+  public getRGBA(arr: any, index: number) {
+    return arr[index][1].startsWith('rgba') ? 'A' : '';
   }
 
   public getColorPalet(arr: any, index: number) {
