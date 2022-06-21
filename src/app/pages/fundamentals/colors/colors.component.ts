@@ -43,7 +43,7 @@ export class ColorsComponent implements OnInit {
     },
     ...Object.keys(semanticColors.color).map((key) => {
       return {
-        title: key,
+        title: key.replace('-', ' ').replace('bg', 'background'),
         colors: [...this.filterKeys(colors, key)],
       };
     })

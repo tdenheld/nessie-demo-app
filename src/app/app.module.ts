@@ -17,7 +17,8 @@ import { PlannerComponent } from './components/planner/planner.component';
 import { PlannerCalendarComponent } from './components/planner/calendar/calendar.component';
 import { SelectableComponent } from './components/selectable/selectable.component';
 import { ControlsComponent } from './components/planner/controls/controls.component';
-
+import { ColorsComponent } from './pages/fundamentals/colors/colors.component';
+import { SubnavComponent } from './pages/fundamentals/subnav/subnav.component';
 import { PageFormComponent } from './pages/form/form.component';
 import { PageIndexComponent } from './pages/index/index.component';
 import { PageCampaignComponent } from './pages/campaign/campaign.component';
@@ -29,7 +30,6 @@ import { PageHomeComponent } from './pages/home/home.component';
 import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
 import { PageTrajectComponent } from './pages/kaartjes/traject/traject.component';
 import { PageFundamentalsComponent } from './pages/fundamentals/fundamentals.component';
-import { ColorsComponent } from './pages/fundamentals/colors/colors.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -71,6 +71,7 @@ const appRoutes: Routes = [
     ControlsComponent,
     PageFundamentalsComponent,
     ColorsComponent,
+    SubnavComponent,
   ],
   imports: [
     BrowserModule,

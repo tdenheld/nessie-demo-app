@@ -1,42 +1,32 @@
-<div class="
-  nes-sticky
-  nes-top-0
-  nes-py-4
-  nes-bg-elevated
-  nes-z-navigation
-  nes-shadow-navbar
-  nes-border-t
-">
-  <div class="nes-container">
-    <ul class="nes-flex nes-items-center nes-gap-8">
-      <li>
-        <a routerLink="./" fragment="colors">
-          Colors
-        </a>
-      </li>
-      <li>
-        <a routerLink="./" fragment="typography">
-          Typography
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+<app-subnav></app-subnav>
 
 <section class="nes-section nes-pb-0">
   <nes-container>
-    <h1 class="nes-heading nes-text-4xl lg:nes-text-10xl">Fundamentals</h1>
+    <h1 class="nes-heading nes-text-4xl lg:nes-text-10xl">
+      Fundamentals
+    </h1>
   </nes-container>
 </section>
 
 <nes-section id="colors">
   <nes-container>
-    <app-colors></app-colors>
+    <h2 class="s-heading">
+      Colors
+    </h2>
+    <nes-divider class="nes-mt-2"></nes-divider>
+    <div class="nes-mt-8">
+      <app-colors></app-colors>
+    </div>
   </nes-container>
 </nes-section>
 
 <nes-section>
   <nes-container>
-    <div id="typography"></div>
+    <div id="typography">
+      <h2 class="s-heading">
+        Typography
+      </h2>
+      <nes-divider class="nes-mt-2"></nes-divider>
+    </div>
   </nes-container>
 </nes-section>
