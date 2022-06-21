@@ -1,21 +1,33 @@
-<div class="nes-space-y-6">
-  <div *ngFor="let entry of type">
-    <div>{{ replace(entry[0]) }}</div>
-    <div
-      class="nes-heading nes-truncate"
-      [style]="{ fontSize: entry[1] }"
-    >
-      Sexy qua lijf, doch bang voor het zwempak.
+<div class="
+  nes-grid
+  lg:nes-grid-cols-2
+  nes-gap-16
+  nes-overflow-hidden 
+">
+  <div class="nes-space-y-8">
+    <div *ngFor="let entry of type">
+      <div class="nes-text-body" style="font-family: 'Courier New';">
+        nes-text-{{ replace(entry[0]) }}
+      </div>
+      <div
+        class="nes-heading nes-truncate"
+        [style]="{ fontSize: entry[1] }"
+      >
+        Sexy qua lijf, doch bang voor het zwempak.
+      </div>
     </div>
   </div>
-  <div class="nes-py-8"></div>
-  <div *ngFor="let entry of type">
-    <div>{{ replace(entry[0]) }}</div>
-    <div
-      class="nes-truncate"
-      [style]="{ fontSize: entry[1] }"
-    >
-      Sexy qua lijf, doch bang voor het zwempak.
+  <div class="nes-space-y-8">
+    <div *ngFor="let entry of type">
+      <div class="nes-text-body" style="font-family: 'Courier New';">
+        nes-text-{{ replace(entry[0]) }}
+      </div>
+      <div
+        class="nes-leading-heading nes-truncate"
+        [style]="{ fontSize: entry[1] }"
+      >
+        Sexy qua lijf, doch bang voor het zwempak.
+      </div>
     </div>
   </div>
 </div>
