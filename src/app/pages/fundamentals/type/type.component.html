@@ -1,0 +1,21 @@
+<div class="nes-space-y-6">
+  <div *ngFor="let entry of type">
+    <div>{{ replace(entry[0]) }}</div>
+    <div
+      class="nes-heading nes-truncate"
+      [style]="{ fontSize: entry[1] }"
+    >
+      Sexy qua lijf, doch bang voor het zwempak.
+    </div>
+  </div>
+  <div class="nes-py-8"></div>
+  <div *ngFor="let entry of type">
+    <div>{{ replace(entry[0]) }}</div>
+    <div
+      class="nes-truncate"
+      [style]="{ fontSize: entry[1] }"
+    >
+      Sexy qua lijf, doch bang voor het zwempak.
+    </div>
+  </div>
+</div>

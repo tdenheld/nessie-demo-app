@@ -30,6 +30,7 @@ import { PageHomeComponent } from './pages/home/home.component';
 import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
 import { PageTrajectComponent } from './pages/kaartjes/traject/traject.component';
 import { PageFundamentalsComponent } from './pages/fundamentals/fundamentals.component';
+import { TypeComponent } from './pages/fundamentals/type/type.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -72,6 +73,7 @@ const appRoutes: Routes = [
     PageFundamentalsComponent,
     ColorsComponent,
     SubnavComponent,
+    TypeComponent,
   ],
   imports: [
     BrowserModule,
