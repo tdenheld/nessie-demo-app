@@ -29,6 +29,7 @@ import { PageHomeComponent } from './pages/home/home.component';
 import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
 import { PageTrajectComponent } from './pages/kaartjes/traject/traject.component';
 import { PageFundamentalsComponent } from './pages/fundamentals/fundamentals.component';
+import { ColorsComponent } from './pages/fundamentals/colors/colors.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -69,6 +70,7 @@ const appRoutes: Routes = [
     SelectableComponent,
     ControlsComponent,
     PageFundamentalsComponent,
+    ColorsComponent,
   ],
   imports: [
     BrowserModule,
