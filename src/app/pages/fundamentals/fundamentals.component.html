@@ -30,21 +30,34 @@
               class="nes-pb-[33%] nes-rounded nes-border nes-border-alpha-black-75"
             ></div>
             <div class="nes-mt-2 nes-space-y-1 nes-text-subtle nes-text-2xs nes-leading-tight">
-              <p>
-                <span class="nes-w-16 nes-hidden sm:nes-inline-block">Token: </span>
+              <p class="nes-grid nes-grid-cols-1-4 nes-gap-1">
+                <span class="nes-hidden sm:nes-block">
+                  Token:
+                </span>
                 <b>{{ entry[0] }}</b>
               </p>
-              <p>
-                <span class="nes-w-16 nes-hidden sm:nes-inline-block">
-                  RGB{{ getRGBA(category.colorsRGB, index) }}: </span>
+              <p class="nes-grid nes-grid-cols-1-4 nes-gap-1">
+                <span class="nes-hidden sm:nes-block">
+                  RGB{{ getRGBA(category.colorsRGB, index) }}:
+                </span>
                 <b>{{ getColorRGB(category.colorsRGB, index) }}</b>
               </p>
-              <p *ngIf="getColorHex(category.colorsRGB, index)">
-                <span class="nes-w-16 nes-hidden sm:nes-inline-block">HEX: </span>
+              <p
+                class="nes-grid nes-grid-cols-1-4 nes-gap-1"
+                *ngIf="getColorHex(category.colorsRGB, index)"
+              >
+                <span class="nes-hidden sm:nes-block">
+                  HEX:
+                </span>
                 <b class="nes-uppercase">{{ getColorHex(category.colorsRGB, index) }}</b>
               </p>
-              <p *ngIf="category.title !== 'Palet'">
-                <span class="nes-w-16 nes-hidden sm:nes-inline-block">Palet: </span>
+              <p
+                class="nes-grid nes-grid-cols-1-4 nes-gap-1"
+                *ngIf="category.title !== 'Palet'"
+              >
+                <span class="nes-hidden sm:nes-block">
+                  Palet:
+                </span>
                 <b>{{ getColorPalet(category.colorsRGB, index) }}</b>
               </p>
             </div>
