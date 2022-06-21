@@ -38,18 +38,18 @@
               </p>
               <p class="nes-grid nes-grid-cols-1-4 nes-gap-1">
                 <span class="nes-hidden sm:nes-block">
-                  RGB{{ getRGBA(category.colorsRGB, index) }}:
+                  RGB{{ getRGBA(entry[1]) }}:
                 </span>
-                <b>{{ getColorRGB(category.colorsRGB, index) }}</b>
+                <b>{{ getColorRGB(entry[1]) }}</b>
               </p>
               <p
                 class="nes-grid nes-grid-cols-1-4 nes-gap-1"
-                *ngIf="getColorHex(category.colorsRGB, index)"
+                *ngIf="getColorHex(entry[1])"
               >
                 <span class="nes-hidden sm:nes-block">
                   HEX:
                 </span>
-                <b class="nes-uppercase">{{ getColorHex(category.colorsRGB, index) }}</b>
+                <b class="nes-uppercase">{{ getColorHex(entry[1]) }}</b>
               </p>
               <p
                 class="nes-grid nes-grid-cols-1-4 nes-gap-1"
@@ -58,7 +58,7 @@
                 <span class="nes-hidden sm:nes-block">
                   Palet:
                 </span>
-                <b>{{ getColorPalet(category.colorsRGB, index) }}</b>
+                <b>{{ getColorPalet(entry[1]) }}</b>
               </p>
             </div>
           </li>
