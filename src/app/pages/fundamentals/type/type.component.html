@@ -10,12 +10,11 @@
   >
     <div *ngFor="let entry of type">
       <div class="nes-text-body nes-font-mono">
-        <nes-sticker
-          compact
-          type="offer"
-        >
-          <span class="nes-font-mono">nes-text-{{ remove(entry[0], 'nesFontSize') }}</span>
-        </nes-sticker>
+        <app-css-code
+          util="nes-heading nes-text-{{ entry[0] }}"
+          cssProp="font-size"
+          cssVal="{{ entry[1] }}"
+        ></app-css-code>
       </div>
       <div
         class="nes-truncate nes-mt-1"
@@ -24,6 +23,30 @@
       >
         Sexy qua lijf, doch bang voor het zwempak.
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="nes-pt-16">
+  <h3 class="nes-heading nes-text-2xl md:nes-text-4xl">
+    Line heights
+  </h3>
+  <div class="nes-grid nes-grid-cols-4 nes-gap-8 nes-mt-6">
+    <div *ngFor="let entry of leading">
+      <app-css-code
+        util="nes-leading-{{ entry[0] }}"
+        cssProp="line-height"
+        cssVal="{{ entry[1] }}"
+      ></app-css-code>
+      <nes-divider class="nes-my-3"></nes-divider>
+      <p
+        [style]="{lineHeight: entry[1]}"
+        class="nes-text-body"
+      >
+        Sweet fruitcake sweet roll jujubes carrot cake cotton candy. Chocolate marshmallow pastry gingerbread
+        bear claw chocolate bar apple pie tiramisu liquorice. Jelly apple pie tiramisu gummies tiramisu soufflé jelly
+        beans. Marshmallow gingerbread sweet cookie croissant liquorice cake.
+      </p>
     </div>
   </div>
 </div>
