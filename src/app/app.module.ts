@@ -81,7 +81,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
-      scrollOffset: [0, 48]
+      scrollOffset: [0, 48],
+      onSameUrlNavigation: 'reload',
     }),
     HttpClientModule,
     AngularSvgIconModule.forRoot(),
