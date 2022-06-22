@@ -14,6 +14,9 @@ module.exports = {
         '2-3': '2fr 3fr',
         '1-4': '1fr 4fr',
       },
+      fontFamily: {
+        mono: '"IBM Plex Mono", monospace',
+      },
       animation: {
         'fade-in': 'fade-in 1000ms var(--nes-motion-ease-out) both',
       },

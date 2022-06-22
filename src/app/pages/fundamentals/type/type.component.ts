@@ -19,9 +19,11 @@ export class TypeComponent implements OnInit {
 
   public type = this.filterKeys(tokens, 'nesFontSize').reverse();
 
-  public replace(str: string) {
-    return str.replace('nesFontSize', '').toLowerCase();
+  public remove(str: string, removeStr: string) {
+    return str.replace(removeStr, '').toLowerCase();
   }
+
+  public fontWeights = ['bold', 'regular'];
 
   constructor() { }
   ngOnInit(): void { }

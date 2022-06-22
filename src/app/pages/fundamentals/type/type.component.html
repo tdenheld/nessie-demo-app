@@ -2,28 +2,24 @@
   nes-grid
   lg:nes-grid-cols-2
   nes-gap-16
-  nes-overflow-hidden 
+  nes-overflow-hidden
 ">
-  <div class="nes-space-y-8">
+  <div
+    class="nes-space-y-8"
+    *ngFor="let fontWeight of fontWeights"
+  >
     <div *ngFor="let entry of type">
-      <div class="nes-text-body" style="font-family: 'Courier New';">
-        nes-text-{{ replace(entry[0]) }}
+      <div class="nes-text-body nes-font-mono">
+        <nes-sticker
+          compact
+          type="offer"
+        >
+          <span class="nes-font-mono">nes-text-{{ remove(entry[0], 'nesFontSize') }}</span>
+        </nes-sticker>
       </div>
       <div
-        class="nes-heading nes-truncate"
-        [style]="{ fontSize: entry[1] }"
-      >
-        Sexy qua lijf, doch bang voor het zwempak.
-      </div>
-    </div>
-  </div>
-  <div class="nes-space-y-8">
-    <div *ngFor="let entry of type">
-      <div class="nes-text-body" style="font-family: 'Courier New';">
-        nes-text-{{ replace(entry[0]) }}
-      </div>
-      <div
-        class="nes-leading-heading nes-truncate"
+        class="nes-truncate nes-mt-1"
+        [ngClass]="fontWeight === 'bold' ? 'nes-heading' : 'nes-leading-heading'"
         [style]="{ fontSize: entry[1] }"
       >
         Sexy qua lijf, doch bang voor het zwempak.
