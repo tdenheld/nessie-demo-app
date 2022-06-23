@@ -8,8 +8,9 @@ const tailwind = require('@nessie/web-fundamentals/build/web/tailwind.config');
 })
 export class TypeComponent implements OnInit {
 
-  public type = Object.entries(tailwind.theme.fontSize).reverse();
+  public size = Object.entries(tailwind.theme.fontSize).reverse();
   public leading = Object.entries(tailwind.theme.lineHeight);
+  public tracking = Object.entries(tailwind.theme.letterSpacing);
 
   public remove(str: string, removeStr: string) {
     return str.replace(removeStr, '').toLowerCase();

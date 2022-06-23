@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CssCodeComponent implements OnInit {
   @Input() util: string = '';
-  @Input() cssProp: string = '';
-  @Input() cssVal: string = '';
+  @Input() class: string = '';
+  @Input() html: string = '';
 
   constructor() { }
   ngOnInit(): void { }

@@ -1,10 +1,14 @@
 <div class="nes-mt-2 nes-text-xs nes-font-mono nes-text-body">
-  <p>
-    <span class="nes-text-cta-default">@apply </span>
-    <span class="nes-text-success-contrast">{{ util }}</span>;
-  </p>
-  <p>
-    <span class="nes-text-cta-default">{{ cssProp }}</span>:
-    <span class="nes-text-success-contrast">{{ cssVal }}</span>;
-  </p>
+  <div *ngIf="html">
+    <p class="nes-bg-tint-primary nes-px-0.5 nes-rounded-sm nes-inline-block">
+      <span class="nes-text-[#644BA8]">{{ html }}</span>
+    </p>
+  </div>
+
+  <div *ngIf="class" class="nes-mt-1">
+    <p class="nes-bg-tint-primary nes-px-0.5 nes-rounded-sm nes-inline-block">
+      <span class="nes-text-cta-default">class=</span>
+      <span class="nes-text-success-contrast">"{{ class }}"</span>
+    </p>
+  </div>
 </div>

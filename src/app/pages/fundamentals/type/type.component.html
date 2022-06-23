@@ -8,12 +8,11 @@
     class="nes-space-y-8"
     *ngFor="let fontWeight of fontWeights"
   >
-    <div *ngFor="let entry of type">
+    <div *ngFor="let entry of size">
       <div class="nes-text-body nes-font-mono">
         <app-css-code
-          util="nes-heading nes-text-{{ entry[0] }}"
-          cssProp="font-size"
-          cssVal="{{ entry[1] }}"
+          class="nes-heading nes-text-{{ entry[0] }}"
+          html='<nes-heading size="{{ entry[0] }}"></nes-heading>'
         ></app-css-code>
       </div>
       <div
@@ -34,9 +33,8 @@
   <div class="nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-4 nes-gap-8 nes-mt-6">
     <div *ngFor="let entry of leading">
       <app-css-code
-        util="nes-leading-{{ entry[0] }}"
-        cssProp="line-height"
-        cssVal="{{ entry[1] }}"
+        class="nes-leading-{{ entry[0] }}"
+        html='<nes-text line-height="{{ entry[0] }}"></nes-text>'
       ></app-css-code>
       <nes-divider class="nes-my-3"></nes-divider>
       <p
@@ -47,6 +45,26 @@
         bear claw chocolate bar apple pie tiramisu liquorice. Jelly apple pie tiramisu gummies tiramisu soufflé jelly
         beans. Marshmallow gingerbread sweet cookie croissant liquorice cake.
       </p>
+    </div>
+  </div>
+</div>
+
+<div class="nes-pt-24">
+  <h3 class="nes-heading nes-text-2xl md:nes-text-4xl">
+    Letter spacings
+  </h3>
+  <div class="nes-grid md:nes-grid-cols-2 xl:nes-grid-cols-3 nes-gap-8 nes-mt-6">
+    <div *ngFor="let entry of tracking">
+      <app-css-code
+        class="nes-tracking-{{ entry[0] }}"
+      ></app-css-code>
+      <nes-divider class="nes-my-3"></nes-divider>
+      <div
+        [style]="{letterSpacing: entry[1]}"
+        class="nes-heading nes-text-[12vw] nes-overflow-hidden"
+      >
+        Abc
+      </div>
     </div>
   </div>
 </div>
