@@ -115,5 +115,89 @@
   </nes-container>
 </nes-section>
 
+<nes-dialog
+  active
+  heading="Reis toevoegen"
+  divider
+>
+  <div slot="content">
+    <div class="nes-w-screen"></div>
+    <form
+      action=""
+      class="nes-space-y-8"
+    >
+      <div class="nes-relative nes-z-menu">
+        <app-fromto [yellow]="false"></app-fromto>
+      </div>
+      <fieldset>
+        <legend class="nes-font-bold nes-text-form-label">Wanneer reis je?</legend>
+        <nes-checkbox label="Heen- en terugreis apart invullen"></nes-checkbox>
+        <nes-radio-panel
+          class="nes-mt-2"
+          label="Doordeweeks of in het weekend?"
+          hidden-label
+          name="period1"
+          nes-id="period1"
+          [options]="[{
+              label: 'Doordeweeks',
+              checked: true
+            },{
+              label: 'In het weekend'
+            }]"
+        >
+        </nes-radio-panel>
+        <nes-radio-panel
+          class="nes-mt-4"
+          label="In de spits of in de daluren?"
+          hidden-label
+          name="period2"
+          nes-id="period2"
+          [options]="[{
+              label: 'In de spits',
+              checked: true
+            },{
+              label: 'In de daluren'
+            }]"
+        >
+        </nes-radio-panel>
+        <div class="nes-mt-4">
+          <nes-link
+            icon="info"
+            stand-alone
+          >Wat zijn de tijden voor spits, daluren & weekend?</nes-link>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="nes-font-bold nes-text-form-label">Hoe vaak maak je deze reis?</legend>
+        <div class="nes-mt-2 nes-flex nes-gap-4 nes-items-center">
+          <nes-input
+            type="tel"
+            value="3"
+            label="Aantal reizen"
+            hidden-label
+            nes-id="amount-travel"
+            name="amount-travel"
+            max-width="80px"
+          ></nes-input>
+          <div class="nes-text-form-val">keer per</div>
+          <nes-select
+            label="Periode"
+            nes-id="select-period"
+            name="select-period"
+            hidden-label
+            class="nes-grow"
+            [options]="[{label: 'Week'}, {label: 'Maand'}, {label: 'Jaar'}]"
+          >
+          </nes-select>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div slot="button-group-footer">
+    <nes-button>Toevoegen</nes-button>
+  </div>
+</nes-dialog>
+
 <div class="nes-section nes-pb-0"></div>
 <app-footer></app-footer>

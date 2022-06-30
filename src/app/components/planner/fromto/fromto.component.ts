@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import places from 'src/data/places.json';
 
 @Component({
@@ -7,6 +7,8 @@ import places from 'src/data/places.json';
   styleUrls: ['./fromto.component.scss']
 })
 export class FromtoComponent implements OnInit {
+  @Input() yellow: boolean = true;
+
   fromActive = false;
   toActive = false;
   fromFocus = false;
