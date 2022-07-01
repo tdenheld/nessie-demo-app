@@ -34,6 +34,7 @@ import { TypeComponent } from './pages/fundamentals/type/type.component';
 import { CssCodeComponent } from './pages/fundamentals/css-code/css-code.component';
 import { ColorDataComponent } from './pages/fundamentals/color-data/color-data.component';
 import { FeatureTipComponent } from './components/feature-tip/feature-tip.component';
+import { AddTripComponent } from './components/add-trip/add-trip.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -80,6 +81,7 @@ const appRoutes: Routes = [
     CssCodeComponent,
     ColorDataComponent,
     FeatureTipComponent,
+    AddTripComponent,
   ],
   imports: [
     BrowserModule,
