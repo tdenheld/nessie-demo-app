@@ -33,6 +33,7 @@ import { PageFundamentalsComponent } from './pages/fundamentals/fundamentals.com
 import { TypeComponent } from './pages/fundamentals/type/type.component';
 import { CssCodeComponent } from './pages/fundamentals/css-code/css-code.component';
 import { ColorDataComponent } from './pages/fundamentals/color-data/color-data.component';
+import { FeatureTipComponent } from './components/feature-tip/feature-tip.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -78,6 +79,7 @@ const appRoutes: Routes = [
     TypeComponent,
     CssCodeComponent,
     ColorDataComponent,
+    FeatureTipComponent,
   ],
   imports: [
     BrowserModule,

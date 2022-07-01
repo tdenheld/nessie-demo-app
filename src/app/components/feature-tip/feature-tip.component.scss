@@ -1,0 +1,48 @@
+.s-feature-tip {
+  @apply nes-px-4
+  nes-py-3
+  nes-bg-purple
+  nes-text-light
+  nes-rounded
+  nes-inline-block
+  nes-absolute
+  nes-max-w-prose
+  nes-z-menu
+  nes-translate-y-4
+  nes-shadow;
+
+  animation: fade-in 500ms theme('transitionTimingFunction.DEFAULT') 700ms both;
+
+  &:before {
+    @apply nes-absolute
+    nes--top-2
+    nes-left-1/2
+    nes--translate-x-1/2;
+    content: '';
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid theme('backgroundColor.purple');
+  }
+}
+
+.s-fade-out {
+  animation: fade-out 300ms theme('transitionTimingFunction.DEFAULT') both;
+}
+
+@keyframes fade-in {
+  0% {
+    @apply nes-opacity-0 nes-scale-95;
+  }
+  100% {
+    @apply nes-opacity-100 nes-scale-100;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    @apply nes-opacity-100 nes-scale-100;
+  }
+  100% {
+    @apply nes-opacity-0 nes-scale-95;
+  }
+}
