@@ -8,5 +8,14 @@ import { Component, OnInit } from '@angular/core';
 
 export class PageFundamentalsComponent implements OnInit {
   constructor() { }
-  ngOnInit(): void { }
+
+  private className: string = 'nes-scroll-smooth';
+
+  ngOnInit(): void {
+    document.querySelector('html')?.classList.add(this.className);
+  }
+
+  ngOnDestroy() {
+    document.querySelector('html')?.classList.remove(this.className);
+  }
 }
