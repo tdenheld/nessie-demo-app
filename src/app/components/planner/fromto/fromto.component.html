@@ -1,11 +1,13 @@
-<div class="
+<div
+  class="
   nes-relative
   nes-border
   nes-border-transparent
   nes-bg-form-bg
   nes-rounded
   nes-transition"
-  [ngClass]="{'nes-border-form-border': !yellow && !fromActive}">
+  [ngClass]="{'nes-border-form-border': !yellow && !fromActive}"
+>
 
   <nes-autosuggest
     border="false"
@@ -135,6 +137,11 @@
       nes-inset-0
       nes-bg-brand-primary
       nes-pointer-events-none"
-    [ngClass]="{'nes-opacity-0': !fromActive, 'nes-bg-brand-primary': yellow, 'nes-bg-form-bg': !yellow}"
+    [ngClass]="
+      {
+        'nes-opacity-0': !fromActive, 
+        'nes-bg-brand-primary': yellow, 
+        'nes-bg-form-bg': !yellow
+      }"
   ></div>
 </div>
