@@ -1,0 +1,64 @@
+<nes-section background-color="bg-tint-secondary">
+  <nes-container>
+    <div class="nes-grid md:nes-grid-cols-3-2">
+      <div>
+        <header class="md:nes-col-span-4">
+          <nes-link
+            routerLink="/abonnementen"
+            stand-alone
+            icon="arrow-left-xs"
+            class="nes-relative nes--left-1"
+          >Opnieuw invullen</nes-link>
+          <nes-heading
+            [size]="{xs: '5xl', md: '7xl', lg: '8xl', xl: '9xl'}"
+            class="nes-mt-1"
+          >
+            Advies
+          </nes-heading>
+        </header>
+        <div class="nes-mt-8">
+          <nes-divider type="brand"></nes-divider>
+        </div>
+        <div class="nes-mt-16 ">
+          <nes-heading
+            tag="h2"
+            weight="normal"
+          >
+            De beste keuze voor jou
+          </nes-heading>
+          <div class="nes-mt-8">
+            <app-selectable>
+              <nes-tile-product
+                border="false"
+                [list]="subFeatured.usps"
+                [price]="subFeatured.price"
+                price-trailing-text="/ mnd"
+                hover="false"
+                shadow="false"
+                class="nes-grid"
+              >
+                <header slot="header">
+                  <div role="doc-subtitle">NS Flex</div>
+                  <nes-heading
+                    tag="h3"
+                    [size]="{ xs: 'xl', md: '2xl'}"
+                  >{{ subFeatured.title }}</nes-heading>
+                  <div class="nes-absolute nes-top-0 nes-right-0">
+                    <nes-price
+                      [price]="subFeatured.price"
+                      trailing-text="/ mnd"
+                      stacked
+                      size="xl"
+                    ></nes-price>
+                  </div>
+                </header>
+              </nes-tile-product>
+            </app-selectable>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nes-container>
+</nes-section>
+
+<app-footer></app-footer>

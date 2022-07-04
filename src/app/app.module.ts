@@ -30,6 +30,7 @@ import { PageHomeComponent } from './pages/home/home.component';
 import { PageReisplannerComponent } from './pages/reisplanner/reisplanner.component';
 import { PageTrajectComponent } from './pages/kaartjes/traject/traject.component';
 import { PageFundamentalsComponent } from './pages/fundamentals/fundamentals.component';
+import { PageKeuzehulpResultComponent } from './pages/keuzehulp-result/keuzehulp-result.component';
 import { TypeComponent } from './pages/fundamentals/type/type.component';
 import { CssCodeComponent } from './pages/fundamentals/css-code/css-code.component';
 import { ColorDataComponent } from './pages/fundamentals/color-data/color-data.component';
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
   { path: 'campaign', component: PageCampaignComponent },
   { path: 'abonnementen', component: PageAbonnementenComponent },
   { path: 'abonnementen/:id', component: PageAbonnementenDetailComponent },
+  { path: 'abonnementen/keuzehulp/resultaat', component: PageKeuzehulpResultComponent },
   { path: 'kaartjes', component: PageKaartjesComponent },
   { path: 'kaartjes/checkout', component: PageCheckoutComponent },
   { path: 'kaartjes/traject', component: PageTrajectComponent },
@@ -82,6 +84,7 @@ const appRoutes: Routes = [
     ColorDataComponent,
     FeatureTipComponent,
     AddTripComponent,
+    PageKeuzehulpResultComponent,
   ],
   imports: [
     BrowserModule,

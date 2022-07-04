@@ -16,7 +16,7 @@ export class ProductPreviewComponent implements OnInit {
     subs.title === 'Weekend Voordeel' ||
     subs.title === 'Dal Voordeel' ||
     subs.title === 'Altijd Voordeel'
-  );;
+  );
 
   constructor() { }
   ngOnInit(): void { }
