@@ -34,5 +34,18 @@
         ></nes-route>
       </li>
     </ul>
+
+    <div class="nes-border-t nes-border-alpha"></div>
+
+    <div class="nes-flex nes-justify-between nes-gap-4">
+      <div class="nes-flex nes-items-center nes-gap-1">
+        Per maand <nes-tooltip-button></nes-tooltip-button>
+      </div>
+      <nes-price
+        [price]="price"
+        [discount]="discount"
+        size="2xl"
+      ></nes-price>
+    </div>
   </div>
 </nes-tile-container>
