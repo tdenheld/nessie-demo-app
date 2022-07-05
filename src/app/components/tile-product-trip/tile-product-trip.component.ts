@@ -15,6 +15,8 @@ export class TileProductTripComponent implements OnInit {
   @Input() discount: number | undefined;
   @Input() tinted: boolean = false;
 
+  public tooltip: boolean = false;
+
   constructor() { }
   ngOnInit(): void { }
 }

@@ -26,4 +26,6 @@ export class PageKeuzehulpResultComponent implements OnInit {
   public subRest = subscriptions.filter(subs =>
     subs.title === 'Altijd Vrij' ||
     subs.title === 'Dal Vrij');
+
+  public selected: number = 1;
 }

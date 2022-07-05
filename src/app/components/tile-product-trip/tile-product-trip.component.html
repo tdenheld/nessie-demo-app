@@ -4,26 +4,30 @@
   [border]="tinted === false"
   [tinted]="tinted"
 >
+  <nes-button
+    variant="tertiary"
+    icon-only
+    icon-leading="edit"
+    class="nes-absolute nes--top-1 nes--right-1"
+  ></nes-button>
+
   <div class="nes-space-y-4">
-    <div class="nes-flex nes-gap-6 nes-justify-between">
-      <h4 class="nes-text-lg nes-text-heading">
-        {{ title }}
-      </h4>
-      <nes-button
-        variant="tertiary"
-        icon-only
-        icon-leading="edit"
-      ></nes-button>
-    </div>
+    <h4
+      class="nes-text-lg nes-text-heading nes-pr-8"
+      *ngIf="title"
+    >
+      {{ title }}
+    </h4>
 
     <nes-button
+      *ngIf="button"
       variant="brand"
       width-full
     >
       {{ button }}
     </nes-button>
 
-    <ul>
+    <ul class="nes-pr-8">
       <li>
         <nes-route [location]="route.from"></nes-route>
       </li>
@@ -35,17 +39,40 @@
       </li>
     </ul>
 
+    <p
+      *ngIf="description"
+      class="nes-text-body nes-text-sm"
+    >
+      {{ description }}
+    </p>
+
+    <nes-sticker
+      *ngIf="sticker"
+      compact
+      type="offer"
+    >
+      {{ sticker }}
+    </nes-sticker>
+
     <div class="nes-border-t nes-border-alpha"></div>
 
     <div class="nes-flex nes-justify-between nes-gap-4">
       <div class="nes-flex nes-items-center nes-gap-1">
-        Per maand <nes-tooltip-button></nes-tooltip-button>
+        Per maand <nes-tooltip-button (click)="tooltip = !tooltip"></nes-tooltip-button>
       </div>
-      <nes-price
-        [price]="price"
-        [discount]="discount"
-        size="2xl"
-      ></nes-price>
+      <div>
+        <nes-price
+          [price]="price"
+          [discount]="discount"
+          size="2xl"
+        ></nes-price>
+      </div>
     </div>
+    <nes-tooltip-content
+      [expanded]="tooltip"
+      arrow-x="94px"
+    >
+      Het maandbedrag is exclusief reiskosten buiten het traject.
+    </nes-tooltip-content>
   </div>
 </nes-tile-container>
