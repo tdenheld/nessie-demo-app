@@ -1,100 +1,127 @@
 <nes-section background-color="bg-tint-secondary">
   <nes-container>
-    <header class="md:nes-col-span-4">
-      <nes-link
-        routerLink="/abonnementen"
-        stand-alone
-        icon="arrow-left-xs"
-        class="nes-relative nes--left-1"
-      >Opnieuw invullen</nes-link>
-      <nes-heading
-        [size]="{xs: '5xl', md: '7xl', lg: '8xl', xl: '9xl'}"
-        class="nes-mt-1"
-      >
-        Advies
-      </nes-heading>
-    </header>
-    <div class="nes-mt-8">
-      <nes-divider type="brand"></nes-divider>
-    </div>
-
-
-    <div class="nes-mt-16 nes-grid md:nes-grid-cols-3-2">
+    <div class="
+      nes-grid
+      md:nes-grid-cols-3-2
+      nes-gutter
+      nes-relative
+    ">
       <div>
         <!-- Page body -->
         <!-- ---------------------------------- -->
-        <div>
+        <header class="md:nes-col-span-4">
+          <nes-link
+            routerLink="/abonnementen"
+            stand-alone
+            icon="arrow-left-xs"
+            class="nes-relative nes--left-1"
+          >Opnieuw invullen</nes-link>
           <nes-heading
-            tag="h2"
-            weight="normal"
+            [size]="{xs: '8xl', xl: '9xl'}"
+            class="nes-mt-1"
           >
-            De beste keuze voor jou
+            Advies
           </nes-heading>
-          <div class="nes-mt-8">
-            <!-- <app-tile-product-selectable
-              [title]="subFeatured.title"
-              subtitle="NS Flex"
-              [usps]="subFeatured.usps"
-              [price]="subFeatured.price"
-              [checked]="true"
-            ></app-tile-product-selectable> -->
-            <app-selectable>
-              <nes-tile-product
-                border="false"
-                hover="false"
-                shadow="false"
-                [heading]="subFeatured.title"
-                [list]="subFeatured.usps"
-                [price]="subFeatured.price"
-                price-trailing-text="/ mnd*"
-                meta="NS Flex"
-              ></nes-tile-product>
-            </app-selectable>
-          </div>
+        </header>
+        <div class="nes-mt-8">
+          <nes-divider type="brand"></nes-divider>
         </div>
 
-        <div class="nes-mt-16">
-          <nes-heading
-            tag="h2"
-            weight="normal"
-          >
-            Ook interessant voor jou
-          </nes-heading>
-          <div class="nes-mt-8 nes-grid nes-gap-8">
-            <app-selectable *ngFor="let entry of subRest">
-              <nes-tile-product
-                border="false"
-                hover="false"
-                shadow="false"
-                [heading]="entry.title"
-                [list]="entry.usps"
-                [price]="entry.price"
-                price-trailing-text="/ mnd*"
-                meta="NS Flex"
-              >
-                <div
-                  slot="sticker"
-                  *ngIf="entry.title === 'Altijd Vrij'"
-                >
-                  <nes-sticker
-                    filled
-                    compact
-                    type="offer"
-                  >Onbeperkt reizen voor + € 54,40</nes-sticker>
-                </div>
-              </nes-tile-product>
-            </app-selectable>
+        <div class="nes-mt-8 md:nes-mt-16 nes-max-w-3xl">
+          <div>
+            <nes-heading
+              tag="h2"
+              weight="normal"
+            >
+              De beste keuze voor jou
+            </nes-heading>
+            <div class="nes-mt-8">
+              <!-- <app-tile-product-selectable
+                [title]="subFeatured.title"
+                subtitle="NS Flex"
+                [usps]="subFeatured.usps"
+                [price]="subFeatured.price"
+                [checked]="true"
+              ></app-tile-product-selectable> -->
+              <app-selectable [active]="true">
+                <nes-tile-product
+                  border="false"
+                  hover="false"
+                  shadow="false"
+                  [heading]="subFeatured.title"
+                  [list]="subFeatured.usps"
+                  [price]="subFeatured.price"
+                  price-trailing-text="/ mnd*"
+                  meta="NS Flex"
+                ></nes-tile-product>
+              </app-selectable>
+            </div>
           </div>
-          <p class="nes-mt-4 nes-text-default nes-text-sm">
-            *Inclusief reis- en abonnementskosten.
-          </p>
+          <div class="nes-mt-16">
+            <nes-heading
+              tag="h2"
+              weight="normal"
+            >
+              Ook interessant voor jou
+            </nes-heading>
+            <div class="nes-mt-8 nes-grid nes-gap-8">
+              <app-selectable *ngFor="let entry of subRest">
+                <nes-tile-product
+                  border="false"
+                  hover="false"
+                  shadow="false"
+                  [heading]="entry.title"
+                  [list]="entry.usps"
+                  [price]="entry.price"
+                  price-trailing-text="/ mnd*"
+                  meta="NS Flex"
+                >
+                  <div
+                    slot="sticker"
+                    *ngIf="entry.title === 'Altijd Vrij'"
+                  >
+                    <nes-sticker
+                      filled
+                      compact
+                      type="offer"
+                    >Onbeperkt reizen voor + € 54,40</nes-sticker>
+                  </div>
+                </nes-tile-product>
+              </app-selectable>
+            </div>
+            <p class="nes-mt-4 nes-text-default nes-text-sm">
+              *Inclusief reis- en abonnementskosten.
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- Receipt -->
       <!-- ---------------------------------- -->
       <div>
-        
+        <div class="
+          nes-sticky
+          nes-top-12
+          nes-bg-elevated
+          nes-rounded-lg
+          nes-p-8
+        ">
+          <nes-heading
+            tag="h2"
+            weight="normal"
+          >
+            Mijn reiskosten
+          </nes-heading>
+          <div class="nes-mt-8">
+            <nes-heading
+              tag="h3"
+              [size]="{ xs: 'xl', md: '2xl'}"
+            >
+              Abonnement
+            </nes-heading>
+            <div></div>
+          </div>
+        </div>
       </div>
 
     </div>
