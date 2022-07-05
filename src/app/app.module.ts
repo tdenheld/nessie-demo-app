@@ -36,6 +36,7 @@ import { CssCodeComponent } from './pages/fundamentals/css-code/css-code.compone
 import { ColorDataComponent } from './pages/fundamentals/color-data/color-data.component';
 import { FeatureTipComponent } from './components/feature-tip/feature-tip.component';
 import { AddTripComponent } from './components/add-trip/add-trip.component';
+import { TileProductSelectableComponent } from './components/tile-product-selectable/tile-product-selectable.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -85,6 +86,7 @@ const appRoutes: Routes = [
     FeatureTipComponent,
     AddTripComponent,
     PageKeuzehulpResultComponent,
+    TileProductSelectableComponent,
   ],
   imports: [
     BrowserModule,
