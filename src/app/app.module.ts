@@ -37,6 +37,7 @@ import { ColorDataComponent } from './pages/fundamentals/color-data/color-data.c
 import { FeatureTipComponent } from './components/feature-tip/feature-tip.component';
 import { AddTripComponent } from './components/add-trip/add-trip.component';
 import { TileProductSelectableComponent } from './components/tile-product-selectable/tile-product-selectable.component';
+import { TileProductTripComponent } from './components/tile-product-trip/tile-product-trip.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -87,6 +88,7 @@ const appRoutes: Routes = [
     AddTripComponent,
     PageKeuzehulpResultComponent,
     TileProductSelectableComponent,
+    TileProductTripComponent,
   ],
   imports: [
     BrowserModule,

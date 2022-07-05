@@ -2,11 +2,13 @@
   <nes-container>
     <div class="
       nes-grid
-      md:nes-grid-cols-3-2
-      nes-gutter
+      lg:nes-grid-cols-2
+      xl:nes-grid-cols-3-2
+      nes-gap-16
       nes-relative
     ">
       <div>
+        <!-- ------------------------------------------ -->
         <!-- Page body -->
         <!-- ---------------------------------- -->
         <header class="md:nes-col-span-4">
@@ -43,7 +45,7 @@
                 [price]="subFeatured.price"
                 [checked]="true"
               ></app-tile-product-selectable> -->
-              
+
               <app-selectable [active]="true">
                 <nes-tile-product
                   border="false"
@@ -97,8 +99,9 @@
         </div>
       </div>
 
+      <!-- ------------------------------------------ -->
       <!-- Receipt -->
-      <!-- ---------------------------------- -->
+      <!-- ------------------------------------------ -->
       <div>
         <div class="
           nes-sticky
@@ -106,6 +109,8 @@
           nes-bg-elevated
           nes-rounded-lg
           nes-p-8
+          nes-max-w-lg
+          nes-ml-auto
         ">
           <nes-heading
             tag="h2"
@@ -120,7 +125,13 @@
             >
               Abonnement
             </nes-heading>
-            <div></div>
+            <div class="nes-mt-4">
+              <app-tile-product-trip
+                title="Traject Vrij 2e klas"
+                [tinted]="true"
+                button="Bekijk abonnement"
+              ></app-tile-product-trip>
+            </div>
           </div>
         </div>
       </div>

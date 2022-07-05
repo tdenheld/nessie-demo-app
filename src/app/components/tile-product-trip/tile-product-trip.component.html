@@ -1,0 +1,38 @@
+<nes-tile-container
+  shadow="false"
+  hover="false"
+  [border]="tinted === false"
+  [tinted]="tinted"
+>
+  <div class="nes-space-y-4">
+    <div class="nes-flex nes-gap-6 nes-justify-between">
+      <h4 class="nes-text-lg nes-text-heading">
+        {{ title }}
+      </h4>
+      <nes-button
+        variant="tertiary"
+        icon-only
+        icon-leading="edit"
+      ></nes-button>
+    </div>
+
+    <nes-button
+      variant="brand"
+      width-full
+    >
+      {{ button }}
+    </nes-button>
+
+    <ul>
+      <li>
+        <nes-route [location]="route.from"></nes-route>
+      </li>
+      <li>
+        <nes-route
+          [location]="route.to"
+          arrival
+        ></nes-route>
+      </li>
+    </ul>
+  </div>
+</nes-tile-container>
