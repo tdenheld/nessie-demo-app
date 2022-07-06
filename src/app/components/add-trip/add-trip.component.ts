@@ -12,8 +12,4 @@ export class AddTripComponent implements OnInit {
   @Input() active:boolean = false;
 
   @Output() close = new EventEmitter();
-
-  log() {
-    console.log("test");
-  }
 }
