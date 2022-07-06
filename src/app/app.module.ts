@@ -38,6 +38,7 @@ import { FeatureTipComponent } from './components/feature-tip/feature-tip.compon
 import { AddTripComponent } from './components/add-trip/add-trip.component';
 import { TileProductSelectableComponent } from './components/tile-product-selectable/tile-product-selectable.component';
 import { TileProductTripComponent } from './components/tile-product-trip/tile-product-trip.component';
+import { ReceiptKeuzehulpComponent } from './components/receipt-keuzehulp/receipt-keuzehulp.component';
 
 const appRoutes: Routes = [
   { path: '', component: PageIndexComponent },
@@ -89,6 +90,7 @@ const appRoutes: Routes = [
     PageKeuzehulpResultComponent,
     TileProductSelectableComponent,
     TileProductTripComponent,
+    ReceiptKeuzehulpComponent,
   ],
   imports: [
     BrowserModule,
