@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-add-trip',
@@ -9,4 +9,5 @@ export class AddTripComponent implements OnInit {
   constructor() { }
   ngOnInit(): void { }
 
+  @Input() active:boolean = false;
 }

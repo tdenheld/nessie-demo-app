@@ -57,9 +57,11 @@
         variant="secondary"
         icon-leading="plus"
         width-full
+        (click)="addTripActive = true"
       >
         Reis toevoegen
       </nes-button>
+      <app-add-trip [active]="addTripActive"></app-add-trip>
     </div>
   </div>
 

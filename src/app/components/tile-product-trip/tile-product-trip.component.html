@@ -1,14 +1,12 @@
-<nes-tile-container
-  shadow="false"
-  hover="false"
-  [border]="tinted === false"
-  [tinted]="tinted"
+<div
+  class="nes-rounded nes-p-5 nes-relative"
+  [ngClass]="{'nes-border': !tinted, 'nes-bg-tint-secondary': tinted}"
 >
   <nes-button
     variant="tertiary"
     icon-only
     icon-leading="edit"
-    class="nes-absolute nes--top-1 nes--right-1"
+    class="nes-absolute nes-top-4 nes-right-4"
   ></nes-button>
 
   <div class="nes-space-y-4">
@@ -75,4 +73,4 @@
       Het maandbedrag is exclusief reiskosten buiten het traject.
     </nes-tooltip-content>
   </div>
-</nes-tile-container>
+</div>
