@@ -11,6 +11,7 @@ import {
   templateUrl: './tile-product-trip.component.html',
   styleUrls: ['./tile-product-trip.component.scss']
 })
+
 export class TileProductTripComponent implements OnInit {
   @Input() title: string | undefined;
   @Input() button: string | undefined;

@@ -64,7 +64,10 @@
       >
         Reis toevoegen
       </nes-button>
-      <app-add-trip [active]="addTripActive"></app-add-trip>
+      <app-add-trip
+        [active]="addTripActive"
+        (close)="addTripActive = false"
+      ></app-add-trip>
     </div>
   </div>
 
@@ -100,5 +103,8 @@
     </div>
   </div>
 
-  <nes-button variant="brand" width-full>Bekijk abonnement</nes-button>
+  <nes-button
+    variant="brand"
+    width-full
+  >Bekijk abonnement</nes-button>
 </div>

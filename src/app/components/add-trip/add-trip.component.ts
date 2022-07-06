@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-trip',
@@ -10,4 +10,10 @@ export class AddTripComponent implements OnInit {
   ngOnInit(): void { }
 
   @Input() active:boolean = false;
+
+  @Output() close = new EventEmitter();
+
+  log() {
+    console.log("test");
+  }
 }

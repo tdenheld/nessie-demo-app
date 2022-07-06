@@ -10,4 +10,8 @@ export class ReceiptKeuzehulpComponent implements OnInit {
   ngOnInit(): void { }
 
   public addTripActive: boolean = false;
+  
+  log() {
+    console.log("test");
+  }
 }
