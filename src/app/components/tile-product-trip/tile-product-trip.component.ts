@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  EventEmitter,
+  Output
+} from '@angular/core';
 
 @Component({
   selector: 'app-tile-product-trip',
@@ -14,6 +20,8 @@ export class TileProductTripComponent implements OnInit {
   @Input() price: number = 0;
   @Input() discount: number | undefined;
   @Input() tinted: boolean = false;
+
+  @Output() edit = new EventEmitter();
 
   public tooltip: boolean = false;
 
