@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class SelectableComponent implements OnInit {
   @Input() active: boolean = false;
-  @Input() selectable: boolean = true;
 
   constructor() { }
   ngOnInit(): void { }

@@ -1,18 +1,9 @@
-<ng-template #content>
-  <ng-content></ng-content>
-</ng-template>
-
 <button
-  *ngIf="selectable"
   class="selectable"
   (click)="active = !active"
   [class]="{'is-active': active}"
 >
   <div class="selectable__container">
-    <ng-container *ngTemplateOutlet="content"></ng-container>
+    <ng-content></ng-content>
   </div>
 </button>
-
-<div *ngIf="!selectable">
-  <ng-container *ngTemplateOutlet="content"></ng-container>
-</div>
