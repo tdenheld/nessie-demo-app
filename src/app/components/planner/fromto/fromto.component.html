@@ -15,7 +15,7 @@
     nes-id="locationFrom"
     name="locationFrom"
     [itemGroups]="mockGroupedAPI"
-    [placeholder]="!fromActive && mobile ? 'Waar vandaan?' : 'station, adres postcode'"
+    [placeholder]="!fromActive && mobile ? 'Waar vandaan?' : placeholder"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
     (nesOnActive)="fromActive = true; station = false"
@@ -37,7 +37,7 @@
     nes-id="locationTo"
     name="locationTo"
     [itemGroups]="mockGroupedAPI"
-    [placeholder]="!toActive && mobile ? 'Waar wil je heen?' : 'station, adres postcode'"
+    [placeholder]="!toActive && mobile ? 'Waar wil je heen?' : placeholder"
     full-screen
     [fixedLabelWidth]="!mobile ? '44px' : '28px'"
     (nesOnActive)="toActive = true; station = false;"

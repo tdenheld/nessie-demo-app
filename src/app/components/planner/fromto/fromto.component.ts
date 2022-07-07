@@ -8,6 +8,7 @@ import places from 'src/data/places.json';
 })
 export class FromtoComponent implements OnInit {
   @Input() yellow: boolean = true;
+  @Input() placeholder: string = 'station, adres, postcode';
 
   fromActive = false;
   toActive = false;
