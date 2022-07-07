@@ -31,12 +31,25 @@
 
         <div class="nes-mt-8 md:nes-mt-16 nes-max-w-3xl">
           <div>
-            <nes-heading
-              tag="h2"
-              weight="normal"
-            >
-              De beste keuze voor jou
-            </nes-heading>
+            <header class="
+              md:nes-flex
+              md:nes-gap-4
+              md:nes-items-center
+              md:nes-justify-between
+              lg:nes-block
+              xl:nes-flex
+            ">
+              <nes-heading
+                tag="h2"
+                weight="normal"
+              >
+                De beste keuze voor jou
+              </nes-heading>
+              <nes-toggle
+                label="Laat prijzen zien voor 1e klas"
+                class="nes-relative nes-top-0.5 nes-max-w-sm nes-shrink-0"
+              ></nes-toggle>
+            </header>
             <div class="nes-mt-8">
               <app-selectable
                 [active]="selected === 1"
