@@ -10,7 +10,7 @@
     --nes-color-bg-brand-secondary: var(--nes-color-gray-800);
     --nes-color-bg-tint-primary: var(--nes-color-gray-700);
     --nes-color-bg-tint-primary-medium: var(--nes-color-gray-700);
-    --nes-color-bg-tint-secondary: #071d41;
+    --nes-color-bg-tint-secondary: var(--nes-color-gray-700);
     --nes-color-text-default: var(--nes-color-gray-100);
     --nes-color-text-heading: var(--nes-color-gray-100);
     --nes-color-text-body: var(--nes-color-gray-300);
@@ -80,6 +80,8 @@
     --nes-color-sticker-default-filled-text: var(--nes-color-gray-100);
     --nes-color-sticker-default-border: var(--nes-alpha-white-100);
     --nes-color-sticker-default-text: var(--nes-color-light-blue-400);
+    --nes-color-sticker-offer-bg: var(--nes-color-green-700);
+    --nes-color-sticker-offer-text: var(--nes-color-green-50);
 
     --nes-color-destructive-pressed: var(--nes-color-red-700);
     --nes-color-destructive-default: var(--nes-color-red-600);

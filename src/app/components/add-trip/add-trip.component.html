@@ -1,6 +1,6 @@
 <nes-dialog
   [active]="active"
-  (nesOnHide)="close.emit()"
+  (nesOnCloseClick)="close.emit()"
   heading="Reis toevoegen"
   divider
 >
@@ -79,6 +79,6 @@
     </form>
   </div>
   <div slot="button-group-footer">
-    <nes-button>Toevoegen</nes-button>
+    <nes-button (click)="close.emit()">Toevoegen</nes-button>
   </div>
 </nes-dialog>

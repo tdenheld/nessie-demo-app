@@ -1,3 +1,13 @@
 :host {
   display: block;
 }
+
+.s-persuasion {
+  @apply nes-mt-3
+  nes-px-4
+  nes-py-3
+  nes-rounded;
+
+  color: var(--nes-color-sticker-offer-text);
+  background-color: var(--nes-color-sticker-offer-bg);
+}
