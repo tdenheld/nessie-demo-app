@@ -1,12 +1,13 @@
 <div
   class="
   nes-relative
-  nes-border
-  nes-border-transparent
   nes-bg-form-bg
   nes-rounded
   nes-transition"
-  [ngClass]="{'nes-border-form-border': !yellow && !fromActive}"
+  [ngClass]="{
+    'nes-border nes-border-transparent': !yellow,
+    'nes-border-form-border': !fromActive
+  }"
 >
 
   <nes-autosuggest
