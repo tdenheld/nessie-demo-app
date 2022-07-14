@@ -15,7 +15,6 @@ import { FromtoComponent } from './components/planner/fromto/fromto.component';
 import { PlanbarComponent } from './components/planner/planbar/planbar.component';
 import { PlannerComponent } from './components/planner/planner.component';
 import { PlannerCalendarComponent } from './components/planner/calendar/calendar.component';
-import { SelectableComponent } from './components/selectable/selectable.component';
 import { ControlsComponent } from './components/planner/controls/controls.component';
 import { ColorsComponent } from './pages/fundamentals/colors/colors.component';
 import { SubnavComponent } from './pages/fundamentals/subnav/subnav.component';
@@ -36,7 +35,6 @@ import { CssCodeComponent } from './pages/fundamentals/css-code/css-code.compone
 import { ColorDataComponent } from './pages/fundamentals/color-data/color-data.component';
 import { FeatureTipComponent } from './components/feature-tip/feature-tip.component';
 import { AddTripComponent } from './components/add-trip/add-trip.component';
-import { TileProductSelectableComponent } from './components/tile-product-selectable/tile-product-selectable.component';
 import { TileProductTripComponent } from './components/tile-product-trip/tile-product-trip.component';
 import { ReceiptKeuzehulpComponent } from './components/receipt-keuzehulp/receipt-keuzehulp.component';
 
@@ -77,7 +75,6 @@ const appRoutes: Routes = [
     PageReisplannerComponent,
     PlannerCalendarComponent,
     PageTrajectComponent,
-    SelectableComponent,
     ControlsComponent,
     PageFundamentalsComponent,
     ColorsComponent,
@@ -88,7 +85,6 @@ const appRoutes: Routes = [
     FeatureTipComponent,
     AddTripComponent,
     PageKeuzehulpResultComponent,
-    TileProductSelectableComponent,
     TileProductTripComponent,
     ReceiptKeuzehulpComponent,
   ],

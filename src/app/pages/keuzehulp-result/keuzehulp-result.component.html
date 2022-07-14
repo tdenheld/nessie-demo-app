@@ -51,7 +51,7 @@
               ></nes-toggle>
             </header>
             <div class="nes-mt-8">
-              <app-selectable
+              <nes-selectable
                 [active]="selected === 1"
                 (click)="selected = 1"
               >
@@ -65,7 +65,7 @@
                   price-trailing-text="/ mnd*"
                   meta="NS Flex"
                 ></nes-tile-product>
-              </app-selectable>
+              </nes-selectable>
             </div>
           </div>
           <div class="nes-mt-16">
@@ -76,7 +76,7 @@
               Ook interessant voor jou
             </nes-heading>
             <div class="nes-mt-8 nes-grid nes-gap-8">
-              <app-selectable
+              <nes-selectable
                 *ngFor="let entry of subRest; let index = index"
                 [active]="selected === index + 2"
                 (click)="selected = index + 2"
@@ -102,7 +102,7 @@
                     >Onbeperkt reizen voor + € 54,40</nes-sticker>
                   </div>
                 </nes-tile-product>
-              </app-selectable>
+              </nes-selectable>
             </div>
             <p class="nes-mt-4 nes-text-default nes-text-sm">
               *Inclusief reis- en abonnementskosten.
