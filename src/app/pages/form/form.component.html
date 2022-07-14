@@ -16,13 +16,54 @@
   </section>
 
   <nes-section>
+    <div class="nes-pb-16">
+      <nes-button
+        id="context-menu-trigger"
+        (click)="context = !context"
+      >Context menu</nes-button>
+      <nes-context-menu
+        [refSelector]="'#context-menu-trigger'"
+        placement="right-start"
+        fallback-placement="bottom-start"
+        [active]="context"
+        (nesOnHideComplete)="context = false"
+        (click)="context = false"
+      >
+        <ul>
+          <li>
+            <nes-list-item
+              label="Leeuwarden Camminghaburen"
+              icon-leading="station"
+              indent
+            ></nes-list-item>
+          </li>
+          <li>
+            <nes-list-item
+              label="Utrecht Centraal"
+              icon-leading="station"
+              indent
+            ></nes-list-item>
+          </li>
+          <li>
+            <nes-list-item
+              label="Rotterdam Alexander"
+              icon-leading="station"
+              indent
+            ></nes-list-item>
+          </li>
+        </ul>
+      </nes-context-menu>
+    </div>
+  </nes-section>
+
+  <nes-section>
     <div class="nes-grid nes-grid-cols-3 nes-gutter nes-text-default">
-      <app-selectable>
+      <nes-selectable>
         <div class="nes-grid nes-place-content-center nes-justify-items-center nes-gap-2 nes-p-5">
           <nes-icon-detail name="calendar" color="inherit"></nes-icon-detail>
           <nes-heading tag="h6">September</nes-heading>
         </div>
-      </app-selectable>
+      </nes-selectable>
       <app-selectable>
         <div class="nes-grid nes-place-content-center nes-justify-items-center nes-gap-2 nes-p-5">
           <nes-icon-detail name="calendar" color="inherit"></nes-icon-detail>

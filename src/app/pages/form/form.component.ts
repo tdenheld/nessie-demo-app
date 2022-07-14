@@ -9,6 +9,8 @@ import places from 'src/data/places.json';
 export class PageFormComponent implements OnInit {
   mockGroupedAPI = places;
 
+  context: boolean = false;
+
   transportOptions = [{
     value: true,
     label: 'OV-chipkaart',

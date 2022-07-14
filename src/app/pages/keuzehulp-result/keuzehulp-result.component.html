@@ -8,44 +8,6 @@
       nes-relative
     ">
       <div>
-        <div class="nes-pb-16">
-          <nes-button
-            id="context-menu-trigger"
-            (click)="context = !context"
-          >Context menu</nes-button>
-          <nes-context-menu
-            [refSelector]="'#context-menu-trigger'"
-            placement="right-start"
-            fallback-placement="bottom-start"
-            [active]="context"
-            (nesOnHideComplete)="context = false"
-            (click)="context = false"
-          >
-            <ul>
-              <li>
-                <nes-list-item
-                  label="Leeuwarden Camminghaburen"
-                  icon-leading="station"
-                  indent
-                ></nes-list-item>
-              </li>
-              <li>
-                <nes-list-item
-                  label="Utrecht Centraal"
-                  icon-leading="station"
-                  indent
-                ></nes-list-item>
-              </li>
-              <li>
-                <nes-list-item
-                  label="Rotterdam Alexander"
-                  icon-leading="station"
-                  indent
-                ></nes-list-item>
-              </li>
-            </ul>
-          </nes-context-menu>
-        </div>
         <!-- ------------------------------------------ -->
         <!-- Page body -->
         <!-- ---------------------------------- -->
