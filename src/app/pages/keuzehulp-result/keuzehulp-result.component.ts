@@ -10,6 +10,8 @@ export class PageKeuzehulpResultComponent implements OnInit {
   constructor() { }
   ngOnInit(): void { }
 
+  public context: boolean = false;
+
   public subFeatured = {
     "title": "Traject Vrij",
     "id": "traject-vrij",
