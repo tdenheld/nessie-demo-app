@@ -7,43 +7,59 @@
       nes-mt-6
       nes-grid
       nes-grid-cols-2
+      sm:nes-grid-cols-3
       md:nes-grid-cols-4
-      xl:nes-grid-cols-6
+      xl:nes-grid-cols-1
       nes-gap-4
       sm:nes-gap-6
+      xl:nes-gap-0
     ">
 
       <li
         *ngFor="let entry of category.colors; let index = index"
-        class="nes-p-2 nes-bg-elevated nes-border nes-border-subtle nes-rounded-lg"
+        class="
+          nes-p-2
+          xl:nes-px-0
+          nes-bg-elevated
+          nes-border
+          xl:nes-border-[0]
+          xl:first:nes-border-t
+          xl:nes-border-b
+          nes-border-subtle
+          nes-rounded-lg
+          xl:nes-rounded-none"
       >
-        <div
-          [style]="{backgroundColor: entry[1]}"
-          class="nes-pb-[33%] nes-rounded nes-border nes-border-alpha-black-75"
-        ></div>
         <div class="
-          nes-mt-2
-          nes-space-y-1
+          nes-grid
+          nes-gap-1
+          xl:nes-grid-cols-5
+          xl:nes-gap-8
+          xl:nes-items-center
         ">
+          <div
+            [style]="{backgroundColor: entry[1]}"
+            class="nes-pb-16 nes-rounded nes-border nes-border-alpha-black-75 nes-mb-1 xl:nes-mb-0"
+          ></div>
+
           <app-color-data
-            key="token"
+            key="token:"
             value="{{ entry[0] }}"
           ></app-color-data>
 
           <app-color-data
-            *ngIf="category.title !== 'Palet'"
-            key="palet"
+            [ngClass]="{'nes-hidden xl:nes-block': category.title === 'Palet'}"
+            key="palet:"
             value="{{ getColorPalet(entry[1]) }}"
           ></app-color-data>
 
           <app-color-data
-            key="RGB{{ getRGBA(entry[1]) }}"
+            key="RGB:{{ getRGBA(entry[1]) }}"
             value="{{ getColorRGB(entry[1]) }}"
           ></app-color-data>
 
           <app-color-data
-          *ngIf="getColorHex(entry[1])"
-            key="HEX"
+            *ngIf="getColorHex(entry[1])"
+            key="HEX:"
             value="{{ getColorHex(entry[1]) }}"
           ></app-color-data>
         </div>
